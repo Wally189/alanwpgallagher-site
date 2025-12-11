@@ -843,3 +843,100 @@ body.ag-shell main.ag-section p {
   color: var(--ag-text-muted);
   max-width: 44rem;
 }
+
+/* --- ABOUT SECTION LAYOUT --- */
+
+/* ------------------------------
+   ABOUT
+   ------------------------------ */
+
+/* ------------------------------
+   ABOUT LAYOUT
+   ------------------------------ */
+
+/* --- ABOUT: 3 Equal Cards in a Row --- */
+
+.ag-about-row {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;       /* centers the row */
+}
+
+.ag-about-card {
+  flex: 1;                       /* all 3 equal width */
+  max-width: 260px;              /* keeps them neat */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+/* Base card image styling */
+.ag-about-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Responsive stacking */
+@media (max-width: 900px) {
+  .ag-about-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ag-about-card {
+    max-width: 320px;
+  }
+
+  .ag-about-card img {
+    height: 240px;
+  }
+}
+
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .ag-about-visual {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ag-about-portrait {
+    flex: 0 0 auto;
+    max-width: 280px;
+  }
+
+  .ag-about-side {
+    width: 100%;
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ag-about-side-item img {
+    max-height: 200px;
+  }
+}
+
+/* Portrait of Alan (first card) */
+.ag-about-row .ag-about-card:nth-child(1) img {
+  height: 320px;           /* taller so head isn't cropped */
+  object-position: top;    /* keeps your forehead + face in view */
+}
+
+/* St Eunan’s (second card) */
+.ag-about-row .ag-about-card:nth-child(2) img {
+  height: 320px;
+  object-position: center top;  /* keeps the spire visible */
+}
+
+/* Make Do & Save (third card) */
+.ag-about-row .ag-about-card:nth-child(3) img {
+  height: 320px;
+  object-position: top;    /* ensures the crown stays visible */
+}
+
