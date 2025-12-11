@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="waylight">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan Gallagher · Systems & Web Design</title>
+  <link rel="stylesheet" href="/Assets/Index.css" />
+</head>
+
+<body class="ag-shell">
+  <!-- ========================================= -->
+  <!-- SITE HEADER                               -->
+  <!-- ========================================= -->
+  <header class="ag-site-header ag-animate ag-from-top">
+    <div class="ag-header-inner">
+      <div class="ag-brand">
+        <span class="ag-logo-mark">AG</span>
+        <div class="ag-logo-text">
+          <span class="ag-logo-name">Alan Gallagher</span>
+          <span class="ag-logo-tagline">Digital systems · Web design · Civic thinking · Ethical insight</span>
+        </div>
+      </div>
+
+      <div class="ag-header-right">
+        <span id="ag-greeting" class="ag-greeting">Good day</span>
+
+        <button id="ag-theme-toggle" class="ag-theme-toggle" type="button">
+  <span class="ag-theme-icon ag-theme-icon--light">☀️</span>
+  <span class="ag-theme-icon ag-theme-icon--dark">🌙</span>
+  <span class="ag-theme-label">WayLight</span>
+</button>
+
+
+        <!-- MAIN NAV + LANGUAGE TOGGLE -->
+        <nav class="ag-main-nav" aria-label="Main navigation">
+          <a href="#portfolio" class="ag-nav-link">Portfolio</a>
+          <a href="#contact" class="ag-nav-link">Contact</a>
+          <a href="Index-ga.html" class="ag-nav-link ag-nav-link--pill">As Gaeilge</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================= -->
+  <!-- MAIN CONTENT                              -->
+  <!-- ========================================= -->
+  <main class="ag-main">
+
+    <!-- HERO / INTRO -->
+    <section class="ag-section ag-hero ag-animate ag-from-bottom">
+      <div class="ag-hero-inner">
+        <div class="ag-hero-text">
+          <p class="ag-hero-kicker">Digital operating systems for real people</p>
+          <h1 class="ag-hero-title">
+            I design and build calm, clear systems and tools that make everyday work easier to manage.
+          </h1>
+          <p class="ag-hero-body">
+            A Bristol-based Irish diasporan, digital organiser, web designer, and civic systems thinker.
+            I build tools, websites, and systems that bring calm, clarity, and order to work, community,
+            and everyday life.
+          </p>
+
+          <div class="ag-hero-actions">
+            <a href="#portfolio" class="ag-btn ag-btn-primary">View portfolio</a>
+            <a href="#contact" class="ag-btn ag-btn-ghost">Contact Alan</a>
+          </div>
+        </div>
+
+        <div class="ag-hero-panel">
+          <div class="ag-hero-card">
+            <h2 class="ag-hero-card-title">Current focus</h2>
+            <ul class="ag-hero-list">
+              <li>PlayTriX · personal operating system console</li>
+              <li>WayLight · civic formation framework</li>
+              <li>Parish &amp; small business web design</li>
+            </ul>
+            <p class="ag-hero-note">
+              Available for small web projects, process mapping, and digital tidy-ups.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEPARATOR -->
+    <div class="ag-separator ag-animate ag-from-fade">
+      <div class="ag-halo"></div>
+      <div class="ag-divider"></div>
+    </div>
+
+    <!-- WHAT I DO -->
+    <section class="ag-section ag-services ag-animate ag-from-bottom">
+      <div class="ag-section-header">
+        <h2>What I do</h2>
+        <p>Three strands, one brain: systems, sites, and service.</p>
+      </div>
+
+      <div class="ag-card-grid ag-card-grid-3">
+        <article class="ag-card">
+          <h3>Digital systems &amp; OS design</h3>
+          <p>
+            Designing personal and organisational “operating systems” — dashboards,
+            workflows, and structures that reduce noise and make work feel manageable.
+          </p>
+          <ul class="ag-chip-list">
+            <li class="ag-chip">PlayTriX OS</li>
+            <li class="ag-chip">WayLight</li>
+            <li class="ag-chip">Organisation-ready structures</li>
+          </ul>
+        </article>
+
+        <article class="ag-card">
+          <h3>Web design &amp; templates</h3>
+          <p>
+            Clean, modern sites for parishes, small businesses, charities, and community projects —
+            with reusable templates that keep costs low and updates simple.
+          </p>
+          <ul class="ag-chip-list">
+            <li class="ag-chip">One-page sites</li>
+            <li class="ag-chip">Template library</li>
+            <li class="ag-chip">Local focus</li>
+          </ul>
+        </article>
+
+        <article class="ag-card">
+          <h3>Civic &amp; Catholic projects</h3>
+          <p>
+            Quietly building tools and spaces that support community, faith, and the common good:
+            digital parish life, Catholic experiments, and community OS work.
+          </p>
+          <ul class="ag-chip-list">
+            <li class="ag-chip">WayLight</li>
+            <li class="ag-chip">Parish websites</li>
+            <li class="ag-chip">Community operating systems</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="ag-section ag-portfolio ag-animate ag-from-bottom">
+      <div class="ag-section-header">
+        <h2>Selected work</h2>
+        <p>Systems, websites, and projects across work, civic life, faith, and personal tools.</p>
+      </div>
+
+      <!-- Filter pills -->
+      <div class="ag-filter-row" aria-label="Filter portfolio by theme">
+        <button class="ag-filter-pill is-active" data-filter="all" type="button">All</button>
+        <button class="ag-filter-pill" data-filter="work" type="button">Work</button>
+        <button class="ag-filter-pill" data-filter="civic" type="button">Civic</button>
+        <button class="ag-filter-pill" data-filter="faith" type="button">Faith</button>
+        <button class="ag-filter-pill" data-filter="personal" type="button">Personal</button>
+      </div>
+
+      <!-- Portfolio grid -->
+      <div class="ag-card-grid ag-card-grid-3" id="ag-portfolio-grid">
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="personal">
+          <div class="ag-card-thumb ag-thumb-playtrix"></div>
+          <h3>PlayTriX · Personal organiser console</h3>
+          <p>
+            A neon-OS style personal console that replaces scattered apps with a single,
+            ordered digital “personal organiser” for life, work, and projects.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Personal</span>
+            <span class="ag-chip">Systems</span>
+          </p>
+        </article>
+
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="civic">
+          <div class="ag-card-thumb ag-thumb-waylight"></div>
+          <h3>WayLight Commonwealth</h3>
+          <p>
+            A civic operating model for ethical projects, blending wartime resilience, BBC-style neutrality,
+            and modern digital tools.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Civic</span>
+            <span class="ag-chip">Methodology</span>
+          </p>
+        </article>
+
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="faith">
+          <div class="ag-card-thumb ag-thumb-faith"></div>
+          <h3>Catholic Experiment</h3>
+          <p>
+            A gentle digital space exploring prayer, parish life, and Catholic social teaching,
+            without noise or gimmicks.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Faith</span>
+            <span class="ag-chip">Web</span>
+          </p>
+        </article>
+
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="faith">
+          <div class="ag-card-thumb ag-thumb-parish"></div>
+          <h3>St Teresa Parish Concept</h3>
+          <p>
+            A calm, image-led parish website template with clear Mass times, sacramental info,
+            and parish life gallery.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Faith</span>
+            <span class="ag-chip">Template</span>
+          </p>
+        </article>
+
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="civic">
+          <div class="ag-card-thumb ag-thumb-ration"></div>
+          <h3>Make Do &amp; Save</h3>
+          <p>
+            A rationing-inspired cost-of-living project, blending WWII resilience with modern
+            budgeting and food planning.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Civic</span>
+            <span class="ag-chip">Rationing</span>
+          </p>
+        </article>
+
+        <article class="ag-card ag-portfolio-item ag-animate ag-from-bottom" data-category="work">
+          <div class="ag-card-thumb ag-thumb-nhs"></div>
+          <h3>Organisational digital spine</h3>
+          <p>
+            SharePoint structures, dashboards, and workflows for organisations,
+            designed to quietly modernise services.
+          </p>
+          <p class="ag-pill-line">
+            <span class="ag-chip">Work</span>
+            <span class="ag-chip">Governance</span>
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="ag-section ag-pricing ag-animate ag-from-bottom">
+      <div class="ag-section-header">
+        <h2>Simple pricing</h2>
+        <p>Fair, clear prices for small websites and tidy-up work.</p>
+      </div>
+
+      <div class="ag-card-grid ag-card-grid-3">
+        <article class="ag-card ag-pricing-card">
+          <h3>Starter page</h3>
+          <p class="ag-price">£120</p>
+          <p>Single-page website for a small business, parish, or project.</p>
+          <ul class="ag-pricing-list">
+            <li>Clean modern design</li>
+            <li>Mobile-friendly</li>
+            <li>Basic contact details &amp; socials</li>
+          </ul>
+        </article>
+
+        <article class="ag-card ag-pricing-card ag-pricing-card--highlight">
+          <h3>Full site</h3>
+          <p class="ag-price">£220–£260</p>
+          <p>Multi-section site for parishes, independents, or community groups.</p>
+          <ul class="ag-pricing-list">
+            <li>Home + content sections</li>
+            <li>Gallery or projects area</li>
+            <li>Help with structure &amp; wording</li>
+          </ul>
+        </article>
+
+        <article class="ag-card ag-pricing-card">
+          <h3>Ongoing support</h3>
+          <p class="ag-price">from £20 / month</p>
+          <p>For people who prefer to send updates rather than edit the site.</p>
+          <ul class="ag-pricing-list">
+            <li>Text &amp; image updates</li>
+            <li>Minor tweaks to layout</li>
+            <li>Light technical housekeeping</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="ag-section ag-about ag-animate ag-from-bottom">
+      <div class="ag-section-header">
+        <h2>About Alan</h2>
+        <p>Rooted in Bristol, shaped by faith, focused on useful things.</p>
+      </div>
+
+      <div class="ag-about-body">
+        <p>
+          I’m a Bristol-based health service administrator and digital organiser with a background in
+          information security, IT procurement, and hardware operations for Fortune 500 companies.
+          I specialise in turning chaos into clear, workable systems. Outside work, I build personal
+          operating systems, civic frameworks, and small, honest websites for people who just want
+          things to work.
+        </p>
+        <p>
+          My work is shaped by Catholic social teaching, wartime resilience, and a love of simple,
+          well-made tools. If you need a parish site, a personal console, or a local business page that
+          feels calm rather than shouty, I’m probably your man.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="ag-section ag-contact ag-animate ag-from-bottom">
+      <div class="ag-section-header">
+        <h2>Contact</h2>
+        <p>Ready for a small website, a tidy-up, or a systems conversation? Say hello.</p>
+      </div>
+
+      <form
+        class="ag-contact-form"
+        id="ag-contact-form"
+        action="https://formspree.io/f/mqaryzky"
+        method="POST"
+      >
+        <div class="ag-form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="ag-form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="ag-form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+
+        <p class="ag-gdpr-note">
+          By sending this message you agree that I may store your contact details for the purpose of replying.
+        </p>
+
+        <!-- Subject line for the email -->
+        <input type="hidden" name="_subject" value="New enquiry from AlanGallagher.uk" />
+
+        <!-- Simple spam honeypot -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <button class="ag-btn ag-btn-primary" type="submit">Send message</button>
+
+        <!-- Status text -->
+        <p id="ag-form-status" class="ag-form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ========================================= -->
+  <!-- OS-STYLE DOCK                             -->
+  <!-- ========================================= -->
+  <nav class="ag-dock" aria-label="Alan OS dock">
+    <button class="ag-dock-item" data-scroll="#portfolio">Web design</button>
+    <button class="ag-dock-item" data-scroll="#portfolio">PlayTriX OS</button>
+    <button class="ag-dock-item" data-scroll="#portfolio">WayLight</button>
+    <button class="ag-dock-item" data-scroll="#portfolio">Catholic projects</button>
+    <button class="ag-dock-item" data-scroll="#contact">Contact</button>
+  </nav>
+
+  <!-- ========================================= -->
+  <!-- FOOTER                                   -->
+  <!-- ========================================= -->
+  <footer class="ag-footer">
+    <p>
+      Built with clarity and purpose. © Alan Gallagher 2025 · 
+      <a href="/privacy.html">Privacy</a>
+    </p>
+  </footer>
+
+  <!-- ========================================= -->
+  <!-- SCRIPTS                                   -->
+  <!-- ========================================= -->
+  <script>
+    // Time-of-day greeting
+    (function () {
+      const el = document.getElementById("ag-greeting");
+      if (!el) return;
+      const hour = new Date().getHours();
+      let text = "Good day";
+      if (hour < 12) text = "Good morning";
+      else if (hour < 18) text = "Good afternoon";
+      else text = "Good evening";
+      el.textContent = text;
+    })();
+
+    // ================================
+// ================================
+//  THREE–THEME TOGGLE SYSTEM
+//  WayLight → Celtic → Éireann-Light → WayLight
+// ================================
+(function () {
+  const root = document.documentElement;
+  const btn = document.getElementById("ag-theme-toggle");
+  if (!btn) return;
+
+  // Respect page default theme unless user has chosen one before
+  const pageDefault = root.getAttribute("data-theme") || "waylight";
+  const saved = localStorage.getItem("agTheme") || pageDefault;
+
+  // Apply initial theme
+  const themes = ["waylight", "celtic", "eireann-light"];
+  root.setAttribute("data-theme", saved);
+
+  function updateLabel() {
+    const current = root.getAttribute("data-theme");
+    let label = "WayLight";
+
+    if (current === "waylight") label = "WayLight";
+    else if (current === "celtic") label = "Celtic";
+    else if (current === "eireann-light") label = "Ulaidh";
+
+    const labelSpan = btn.querySelector(".ag-theme-label");
+    if (labelSpan) labelSpan.textContent = label;
+  }
+
+  updateLabel();
+
+  btn.addEventListener("click", () => {
+    const current = root.getAttribute("data-theme");
+    const index = themes.indexOf(current);
+    const next = themes[(index + 1) % themes.length] || themes[0];
+
+    root.setAttribute("data-theme", next);
+    localStorage.setItem("agTheme", next);
+    updateLabel();
+  });
+})();
+
+
+
+    // Portfolio filter
+    (function () {
+      const pills = document.querySelectorAll(".ag-filter-pill");
+      const items = document.querySelectorAll(".ag-portfolio-item");
+      if (!pills.length || !items.length) return;
+
+      pills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          const filter = pill.dataset.filter;
+          pills.forEach((p) => p.classList.remove("is-active"));
+          pill.classList.add("is-active");
+
+          items.forEach((item) => {
+            const cat = item.dataset.category;
+            if (filter === "all" || cat === filter) {
+              item.classList.remove("is-hidden");
+            } else {
+              item.classList.add("is-hidden");
+            }
+          });
+        });
+      });
+    })();
+
+    // Dock smooth scroll
+    (function () {
+      const dockItems = document.querySelectorAll(".ag-dock-item[data-scroll]");
+      dockItems.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const target = document.querySelector(btn.dataset.scroll);
+          if (!target) return;
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    })();
+
+    // Scroll-in animations
+    (function () {
+      const animated = document.querySelectorAll(".ag-animate");
+      if (!animated.length) return;
+
+      if (!("IntersectionObserver" in window)) {
+        animated.forEach((el) => el.classList.add("ag-visible"));
+        return;
+      }
+
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("ag-visible");
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15 }
+      );
+
+      animated.forEach((el) => io.observe(el));
+    })();
+
+        // Contact form – Formspree handler
+    (function () {
+      const form = document.getElementById("ag-contact-form");
+      const status = document.getElementById("ag-form-status");
+      if (!form || !status) return;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+
+        status.textContent = "Sending…";
+        status.classList.remove("ag-form-status--ok", "ag-form-status--error");
+
+        try {
+          const data = new FormData(form);
+          const response = await fetch(form.action, {
+            method: form.method,
+            body: data,
+            headers: { Accept: "application/json" },
+          });
+
+          if (response.ok) {
+            form.reset();
+            status.textContent = "Thank you – your message has been sent.";
+            status.classList.add("ag-form-status--ok");
+          } else {
+            status.textContent = "Sorry, there was a problem. Please email me directly.";
+            status.classList.add("ag-form-status--error");
+          }
+        } catch (err) {
+          status.textContent = "Sorry, there was a problem. Please email me directly.";
+          status.classList.add("ag-form-status--error");
+        }
+      });
+    })();
+</Script>
+</body> 
