@@ -161,7 +161,7 @@ body.ag-shell {
   z-index: 20;
   backdrop-filter: blur(20px) saturate(180%);
   background: rgba(250, 249, 247, 0.85);
-  border-bottom: 1px solid var(--ag-border-soft);
+  border-bottom: 1px solid var(--ag-border);
   box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.5) inset;
 }
 
@@ -252,7 +252,10 @@ body.ag-shell {
   font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 [data-theme="celtic"] .ag-theme-toggle {
@@ -368,7 +371,10 @@ body.ag-shell {
   font-weight: 500;
   cursor: pointer;
   text-decoration: none;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-btn-primary {
@@ -457,7 +463,9 @@ body.ag-shell {
   box-shadow: var(--ag-shadow-soft);
   padding: 1.75rem 1.85rem;
   font-size: 0.92rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-hero-card:hover {
@@ -546,7 +554,9 @@ body.ag-shell {
   border: 1px solid var(--ag-border-soft);
   box-shadow: var(--ag-shadow-soft);
   padding: 1.6rem 1.65rem 1.55rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-card:hover {
@@ -602,7 +612,12 @@ body.ag-shell {
   background: var(--ag-bg-soft);
   color: var(--ag-text-soft);
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              font-weight 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-filter-pill:hover {
@@ -722,7 +737,7 @@ body.ag-shell {
   position: absolute;
   inset: 0;
   border-radius: var(--ag-radius-large);
-  background: linear-gradient(135deg, rgba(224, 181, 103, 0.08), rgba(224, 181, 103, 0.02));
+  background: linear-gradient(135deg, rgba(224, 181, 103, 0.12), rgba(224, 181, 103, 0.04));
   pointer-events: none;
 }
 
@@ -767,7 +782,8 @@ body.ag-shell {
   padding: 0.65rem 0.75rem;
   font: inherit;
   background: var(--ag-bg-soft);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-contact-form input:hover,
@@ -880,7 +896,9 @@ body.ag-shell {
   font-weight: 500;
   cursor: pointer;
   color: var(--ag-text-soft);
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-dock-item:hover {
@@ -958,7 +976,9 @@ body.ag-shell main.ag-section p {
   box-shadow: var(--ag-shadow-soft);
   background: var(--ag-bg-elevated);
   border: 1px solid var(--ag-border-soft);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ag-about-card:hover {
