@@ -1,4 +1,4 @@
-(() => {
+﻿(() => {
   const yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
@@ -60,7 +60,7 @@
       const month = pad2(now.getMonth() + 1);
       const hours = pad2(now.getHours());
       const minutes = pad2(now.getMinutes());
-      devotionEl.textContent = `Deo gratias · Anno Domini ${year} · ${day}.${month}.${year} · ${hours}:${minutes}`;
+      devotionEl.textContent = `Deo gratias ┬À Anno Domini ${year} ┬À ${day}.${month}.${year} ┬À ${hours}:${minutes}`;
     };
     formatDevotion();
     setInterval(formatDevotion, 60000);
