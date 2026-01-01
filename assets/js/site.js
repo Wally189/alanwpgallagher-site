@@ -74,6 +74,33 @@
     });
   }
 
+  const landingModal = document.querySelector("[data-landing-modal]");
+  if (landingModal) {
+    const modalKey = "landingNoticeDismissed";
+    const closeModal = () => {
+      landingModal.classList.add("is-hidden");
+      landingModal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      sessionStorage.setItem(modalKey, "1");
+    };
+    const openModal = () => {
+      landingModal.classList.remove("is-hidden");
+      landingModal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    };
+    if (!sessionStorage.getItem(modalKey)) {
+      openModal();
+    }
+    landingModal.querySelectorAll("[data-modal-close]").forEach((el) => {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !landingModal.classList.contains("is-hidden")) {
+        closeModal();
+      }
+    });
+  }
+
   const devotionEl = document.querySelector("[data-devotion-time]");
   if (devotionEl) {
     const pad2 = (value) => String(value).padStart(2, "0");
@@ -92,6 +119,32 @@
 
   const horaEls = document.querySelectorAll("[data-hora]");
   if (horaEls.length) {
+    const firstSaturdayOfMonth = (year, month) => {
+      const firstOfMonth = new Date(year, month, 1);
+      const offset = (6 - firstOfMonth.getDay() + 7) % 7;
+      return new Date(year, month, 1 + offset);
+    };
+
+    const getSaturdayRotationLabel = (date) => {
+      if (date.getDay() !== 6) {
+        return null;
+      }
+      const year = date.getFullYear();
+      const month = date.getMonth();
+      const firstSaturday = firstSaturdayOfMonth(year, month);
+      const saturdayNumber = Math.floor((date.getDate() - firstSaturday.getDate()) / 7) + 1;
+      if (saturdayNumber >= 5) {
+        return "Free";
+      }
+      const anchorSaturday = firstSaturdayOfMonth(2026, 0);
+      const dateMidnight = new Date(year, month, date.getDate());
+      const weeksSinceAnchor = Math.floor(
+        (dateMidnight - anchorSaturday) / (7 * 24 * 60 * 60 * 1000),
+      );
+      const rotationIndex = ((weeksSinceAnchor % 4) + 4) % 4;
+      return ["A", "B", "C", "D"][rotationIndex];
+    };
+
     const toMinutes = (hours, minutes) => hours * 60 + minutes;
     const formatRange = (start, end) => {
       const pad2 = (value) => String(value).padStart(2, "0");
@@ -127,8 +180,10 @@
         return;
       }
       const range = formatRange(entry.start, entry.end);
+      const saturdayLabel = getSaturdayRotationLabel(now);
+      const label = saturdayLabel ? `${entry.label} - ${saturdayLabel}` : entry.label;
       horaEls.forEach((el) => {
-        el.textContent = `${entry.label} · ${range}`;
+        el.textContent = `${label} · ${range}`;
       });
     };
 
@@ -226,4 +281,3 @@
     }
   }
 })();
-

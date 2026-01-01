@@ -1,37 +1,455 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Alan Gallagher's Website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alan Gallagher - Digital Home</title>
+  <meta name="description" content="Alan Gallagher's digital home: professional material, work notes, and optional deeper layers." />
+  <meta property="og:title" content="Alan Gallagher - Digital Home" />
+  <meta property="og:description" content="Alan Gallagher's digital home: professional material, work notes, and optional deeper layers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://alanwpgallagher.com/assets/img/alan-oxford-don.png" />
+  <meta property="og:url" content="https://alanwpgallagher.com/index.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alan Gallagher - Digital Home" />
+  <meta name="twitter:description" content="Alan Gallagher's digital home: professional material, work notes, and optional deeper layers." />
+  <meta name="twitter:image" content="https://alanwpgallagher.com/assets/img/alan-oxford-don.png" />
+  <link rel="canonical" href="https://alanwpgallagher.com/index.html" />
+  <link rel="icon" href="assets/img/irish-cross.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/img/irish-cross.svg" />
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>About Alan</h2>
-            <p>Hello! My name is Alan Gallagher. I am a web developer based in Ireland.</p>
-        </section>
-        <section>
-            <h2>Portfolio</h2>
-            <p>Check out my latest projects <a href="portfolio.html">here</a>.</p>
-        </section>
-        <section>
-            <h2>Contact</h2>
-            <p>If you'd like to get in touch, please visit my <a href="contact.html">contact page</a>.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Alan Gallagher. All rights reserved.</p>
-    </footer>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <div class="modal is-hidden" data-landing-modal aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close></div>
+    <div class="modal__card modal__card--accent" role="dialog" aria-modal="true" aria-labelledby="landing-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Close notice">Close</button>
+      <h2 id="landing-title">Failte,</h2>
+      <p><em>You are most welcome to my digital home!</em></p>
+      <h3 class="modal__heading">News &amp; Updates</h3>
+      <ul class="links">
+        <li>I am in the process of building my online digital home; please accept my humble apologies for any skelton pages or broken links. Work should be completed by February 2026. Thank you for your patience.</li>
+        <li>I currently have availability to assist with small digital projects such as website builds or digital organisation tasks - please use the Actions menu to discover more.</li>
+      </ul>
+      <p class="small"><em>Le Meas,</em><br>Alan</p>
+    </div>
+  </div>
+
+  <!-- Mobile navigation - top (menus) - hidden on desktop -->
+  <div class="mobile-nav-top" aria-label="Mobile navigation">
+    <div class="mobile-nav__row">
+      <div class="mobile-nav__title">Pillars</div>
+      <a href="index.html#vocation">Vocation</a>
+      <a href="index.html#formation">Formation</a>
+      <a href="index.html#household">Household</a>
+      <a href="index.html#community">Community</a>
+      <a href="index.html#rest">Rest</a>
+    </div>
+    <div class="mobile-nav__row" style="margin-top: 8px;">
+      <div class="mobile-nav__title">Actions</div>
+      <a href="index.html#contact">Contact</a>
+      <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+      <a href="availability.html">Availability</a>
+      <a href="life.html">Life</a>
+      <a href="principles.html">Principles</a>
+    </div>
+  </div>
+
+  <header class="masthead" role="banner">
+    <div class="wrap">
+      <div class="masthead__top">
+        <div class="identity">
+          <div class="kicker">My Digital Home</div>
+          <h1 class="title">Alan WP Gallagher</h1>
+          <p class="subtitle">Bristol, UK &middot; Administration & Operations Expert &middot; Business Analysis (BA) &middot; Custodianship & Order</p>
+        </div>
+
+        <div class="masthead__actions">
+          <button class="back" type="button" data-back="index.html">Home</button>
+          <nav class="lang" aria-label="Language selection">
+            <button class="lang__toggle" type="button" data-lang-target="index-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
+          </nav>
+          <span class="devotion" aria-hidden="true">JMJ</span>
+        </div>
+      </div>
+
+      <div class="frontis">
+        <div class="frontis__left">
+          <figure class="portrait">
+            <img src="assets/img/alan-oxford-don.png" alt="Alan Gallagher" loading="lazy" />
+          </figure>
+
+        <div class="rule">
+          Over time I've been guided by a personal rule of life - a disciplined, values-based approach that keeps my work
+          thoughtful, reliable, and human-centred. It's rooted in my Catholic faith, but expressed in a practical way
+          that's open and welcoming to all.
+          <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+        </div>
+        </div>
+
+        <div class="opening doorway" id="main">
+          <p class="lede"><strong>Failte.</strong><br>I'm Alan, and this is my digital home.</p>
+
+          <p>
+            You are most welcome. <br><br>Some things here are practical: professional material, my CV, and a simple way to get in touch.
+            There are other layers too — ideas, projects, and the strands of my life that shape how I work.
+          </p>
+
+          <p>
+            With experience, I have found that I am drawn to order, method, and work done carefully and well.
+            These instincts are often dressed up in different ways — Kaizen, Lean, Agile — or repackaged in self-help language.
+            I've used some of these approaches, and still do. Today, my work is grounded in ways of thinking that are much older, and in my view, more proven.
+          </p>
+
+          <p>
+            I'm interested in <em>slow technology</em>: tools and systems that protect time, dignity, and clarity.
+
+            <br><br>Le meas<br><br>Alan 
+          </p>
+
+          <p class="quiet">
+            You don't need to open every door. Just take what's useful...
+          </p>
+
+
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap" role="main">
+    <details id="vocation" class="panel doorway" open>
+      <summary class="panel__summary">
+        <h2>Vocation & Work</h2>
+      </summary>
+      <div class="panel__body">
+
+        <h3>Professional Vocation & Work</h3>
+        <p>If you're here as an employer or client, these are the essentials:</p>
+
+        <ul class="links">
+          <li><a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a></li>
+          <li><a href="assets/docs/Alan_Walter_Gallagher_CV.docx" target="_blank" rel="noopener noreferrer">CV (Word)</a></li>
+          <li><a href="assets/docs/Alan_Walter_Gallagher_Cover_Letter-1.docx" target="_blank" rel="noopener noreferrer">Cover Letter (Word)</a></li>
+        </ul>
+
+        <details class="details">
+          <summary>What I do</summary>
+          <p class="small">
+            In my work life, and indeed my life, I am a systems-oriented generalist who specialised in bringing order,
+            continuity, and clarity to complete human systems - particularly where those systems have grown messy,
+            informal or fragile.
+          </p>
+          <ul class="links">
+            <li><a href="information.html#methodologies">Methods and Approaches</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Work Journal</summary>
+          <p class="small">
+            Short notes: methods, small examples, and pieces that show how I approach systems and change
+            (without grandstanding and without marketing).
+          </p>
+          <ul class="links">
+            <li><a href="workjournal.html#prologue">Prologue</a></li>
+            <li><a href="workjournal.html#september-2025">This months thoughts</a></li>
+          </ul>
+        </details>
+
+        <h3>Personal Vocation & Work</h3>
+
+        <details class="details">
+          <summary>WayLight Commonwealth</summary>
+          <p class="small">
+            WayLight is a philosophy of work and life - simplification, low-noise, and systems that protect attention.
+            Not an "app". A way of doing.
+          </p>
+          <ul class="links">
+            <li><a href="https://waylight-atlantic.co.uk" target="_blank" rel="noopener noreferrer">waylight-atlantic.co.uk</a></li>
+            <li><span class="coming-soon">WayLight Companion (coming soon)</span></li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details id="formation" class="panel doorway">
+      <summary class="panel__summary">
+        <h2>Formation</h2>
+      </summary>
+      <div class="panel__body">
+        <details class="details">
+          <summary>Professional Formation</summary>
+          <p class="small">
+            Most of what I have learned, and continue to learn about work came not from training but from watching others fail and succeed in equal measure. Early on I mistook competence for confidence; later I understood that the quieter workers often carried more. Administrative work taught me that systems remember what people forget, and that small errors compound. I came to value procedure not as bureaucracy but as a form of care—a way of protecting those who come after you from the consequences of haste. The best professionals I encountered were not the most ambitious but the most attentive. I also learnt that there is value in every type of professional I have encountered - everyone can provide a moment of learning or being able to teach. This is what keeps me humble. 
+          </p>
+        </details>
+
+        <details class="details">
+          <summary>Moral Formation</summary>
+          <p class="small">
+            Conscience is not a feeling but a faculty, and like any faculty it must be trained. Mine was shaped first by my parents and family, then by life and failures, and finally by faith. I would love to say in that order but I have a strong suspicion the latter was there in the beginning; I was just too keen on the pints and the parties! I have done things I regret, and the weight of those acts has been more instructive than any sermon. What I learned is that morality is not a matter of avoiding wrong but of bearing responsibility for it when it comes. The examined life is not comfortable. But discomfort, properly attended to, becomes a kind of compass.
+          </p>
+        </details>
+
+        <details class="details">
+          <summary>Intellectual Formation</summary>
+          <p class="small">
+            I was educated in one of the best state schools in the City of Bristol, at the time of attendance - on one of it's so called 'rough council estates', Lockleaze. I have wonderful memories of certain teachers who gave me language for things I had already intuited, but more importantly it taught me the limits of cleverness. The intellect is a tool, not a destination. I have met brilliant people who could not act wisely, and simple people whose judgement was unerring. What matters is not how much one knows but how one holds what one knows—with humility, and a willingness to be corrected. Similarly those amazing teacher taught me how to teach myself and put me in good stead for the trauma that like can throw at you. Losing my mother at the age of 15 had a massive impact but I'll never forget Mrs. Paganotto telling me in her deep German accent remember Alan, nothing in this life lasts forever, not even bad times. That lesson has stayed with me. There was Mrs Beer who made science lessons the most exciting thing since the permanent wave...God rest her soul and Miss Liss-Carless, the exotic American who chose Lockleaze as her home ground having had an exciting life living in Paris and teaching me French and Science in such a way as it means I still have a great interest. Lastly, there was my Parents - I honestly could not have asked for more support than that of my Mum and Dad - if I needed anything to get through schooling they supported and provided it. 
+          </p>
+        </details>
+
+        <details class="details">
+          <summary>Practical Formation</summary>
+          <p class="small">
+            There is a kind of knowledge that only comes through the hands: mending, building, maintaining. I grew up around people who fixed things rather than replaced them, and that economy of effort left its mark. Practical work teaches patience and proportion. It teaches you that most problems are not solved by force but by understanding how things fit together. I distrust abstraction that cannot be tested against material reality. The best thinking I have done has often come while doing something else—something slower, something with a visible result. Precisely because of the intellectual formation I had I was able to be practical when the time came. Not always immediately but the people in my younger life had given me a a way to think, to plan, to build solutions and systems. That has stuck with me my entire life and quite literally to this day those mantra's are still ingrained and hel me success. Remember, I'm the boy with no education who worked up to running by the age of 18, a hotel by the age of 26 by 30 I had four years of team leadership under my belt and through my thirties I looked up to 40 staff at a time depending on my role. I was very priveleged as many of those I managed were highly educated and I had greater respet for them - it was a humbling experience but one that taught me so much about people and how to get the best out of them.
+          </p>
+        </details>
+
+        <details class="details">
+          <summary>Personal Formation</summary>
+          <p class="small">
+            The self is not fixed. It is shaped by habit, circumstance, and the slow pressure of time. I have been several people over the years, not all of them admirable, some of them shocking, some just a substance of the time and place I was at in my life. What remains constant is a certain orientation—toward order, toward quiet, toward fidelity to small things. Personal formation is not about self-improvement in the modern sense; it is about becoming someone who can be relied upon. That is harder than it sounds. It requires saying no more often than yes, and accepting that growth is often invisible, even to oneself. for someone like me who craves visible results, this has been a difficult lesson. But it is one I continue to learn.
+          </p>
+        </details>
+
+        <details class="details">
+          <summary>The Catholic Experiment</summary>
+          <ul class="links">
+            <li><a href="https://www.thecatholicexperiment.co.uk" target="_blank" rel="noopener noreferrer">www.thecatholicexperiment.co.uk</a></li>
+            <li><span class="coming-soon">Entry 2 (coming soon)</span></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Notes on "Ora et labora"</summary>
+          <ul class="links">
+            <li><a href="Oraetlabora.html">Rule of life notes</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Spiritual Study & Reading</summary>
+          <p class="small">
+            Plans and notes for daily Scripture, catechism, and spiritual reading.
+          </p>
+          <ul class="links">
+            <li><a href="readings.html">Daily Bible Readings</a></li>
+            <li><a href="catechism.html">Catechism Plan</a></li>
+            <li><a href="spiritual-reading.html">Spiritual Reading Plan</a></li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details id="household" class="panel doorway">
+      <summary class="panel__summary">
+        <h2>Household & Stewardship</h2>
+      </summary>
+      <div class="panel__body">
+        <details class="details">
+          <summary>Canonical Household Management - The Monastic Approach</summary>
+          <ul class="links">
+            <li><a href="canonicalhouseholdmanagement.html">Overview</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>The Good Life - The Monastery Garden (on a budget)</summary>
+          <ul class="links">
+            <li><a href="monasterygarden.html">Garden notes</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Kitchen & Food</summary>
+          <p class="small">
+            Simple recipes and weekly food plans for a calmer household rhythm - all based on traditional British & Irish seasonality.
+          </p>
+          <ul class="links">
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="foodplan.html">Food Plan</a></li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details id="community" class="panel doorway">
+      <summary class="panel__summary">
+        <h2>Community & Relationship</h2>
+      </summary>
+      <div class="panel__body">
+        <details class="details">
+          <summary>Parish Life</summary>
+          <ul class="links">
+            <li><a href="stmaryonthequay.html">St Mary on the Quay - Bristol</a></li>
+            <li><a href="stvincents.html">St Vincent's - Bristol</a></li>
+            <li><a href="stteresaofthechild.html">St Teresa of the Child - Bristol</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Volunteering</summary>
+          <ul class="links">
+            <li><a href="volunteering.html">Projects and service</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Community Projects</summary>
+          <ul class="links">
+            <li><a href="communityprojects.html">Local initiatives</a></li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <details id="rest" class="panel doorway">
+      <summary class="panel__summary">
+        <h2>Rest & Renewal</h2>
+      </summary>
+      <div class="panel__body">
+        <details class="details">
+          <summary>Pilgrimages</summary>
+          <ul class="links">
+            <li><a href="localpilgrimages.html">Local pilgrimages</a></li>
+            <li><a href="pilgrimagesabroad.html">Pilgrimages abroad</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Holidays & Days Out</summary>
+          <ul class="links">
+            <li><a href="holidays.html">Holidays</a></li>
+            <li><a href="daysout.html">Days out</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Hikes</summary>
+          <ul class="links">
+            <li><a href="hikes.html">Trails and notes</a></li>
+          </ul>
+        </details>
+
+        <details class="details">
+          <summary>Reading & Screens</summary>
+          <p class="small">
+            Lists and notes for books, films, and quiet entertainment.
+          </p>
+          <ul class="links">
+            <li><a href="books.html">Book List</a></li>
+            <li><a href="films.html">Films & TV</a></li>
+            <li><a href="entertainment.html">Entertainment</a></li>
+          </ul>
+        </details>
+      </div>
+    </details>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <details id="contact" class="panel doorway doorway__indent">
+      <summary class="panel__summary panel__summary--button">
+        <h2>Contact</h2>
+      </summary>
+      <div class="panel__body">
+        <ul class="links">          <li><a href="privacy.html">Privacy</a></li>
+        </ul>
+
+        <!-- Optional: Netlify form (works only on Netlify) -->
+        <form class="form" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <label>
+            Name
+            <input name="name" type="text" autocomplete="name" required />
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required />
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </details>
+  </main>
+
+  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
+  <div class="mobile-nav-bottom" aria-label="Current time">
+    <div class="mobile-nav__time">
+      <span><strong>Hora</strong>: <span data-hora></span></span>
+      <span><strong>Dies</strong>: <span data-date></span></span>
+      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <div class="footer__left">
+        <p class="small">&copy; <span id="year"></span> Alan Gallagher &middot; <a href="index-ga.html">Gaeilge</a> &middot; <a href="privacy.html">Privacy</a></p>
+      </div>
+      <div class="footer__center">
+        <p class="motto"><em>Ora et labora.</em></p>
+      </div>
+      <div class="footer__right">
+        <div class="footer__actions">
+          <button class="share" type="button" data-share>Share</button>
+          <span class="share__hint" data-share-hint aria-live="polite"></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="hora-fixed" aria-live="polite">
+    <strong>Hora</strong>: <span data-hora></span>
+    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+  </div>
+
+  <div class="date-fixed" aria-live="polite">
+    <strong>Dies</strong>: <span data-date></span>
+  </div>
+
+  <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
+    <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
+    <a href="index.html#vocation">Vocation & Work</a>
+    <a href="index.html#formation">Formation</a>
+    <a href="index.html#household">Household & Stewardship</a>
+    <a href="index.html#community">Community & Relationship</a>
+    <a href="index.html#rest">Rest & Renewal</a>
+    <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
+    <a href="life.html">Life in Brief</a>
+    <a href="principles.html">Principles & Values</a>
+  </nav>
+
+  <nav class="top-menu-fixed" aria-label="Actions">
+    <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
+    <a href="index.html#contact">Contact</a>
+    <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+    <a href="availability.html">Availability</a>
+    <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </nav>
+
+  <script src="assets/js/site.js" defer></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
