@@ -1,8 +1,8 @@
 ﻿/* Enhancements: motion, typography, accents, interactions */
 
 :root{
-  --accent: #2f6f6d;
-  --accent-soft: rgba(47,111,109,0.12);
+  --accent: #2b4a8a;
+  --accent-soft: rgba(43,74,138,0.14);
   --text: #1a1a1a;
   --bg: #ffffff;
 
@@ -13,9 +13,9 @@
 }
 
 /* Thematic accents */
-body.theme-vocation { --accent: #8a4b2a; --accent-soft: rgba(138,75,42,0.14); }
+body.theme-vocation { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
 body.theme-formation{ --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
-body.theme-rest     { --accent: #5a5a5a; --accent-soft: rgba(90,90,90,0.10); }
+body.theme-rest     { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
 
 /* Typography */
 h1,h2,h3,h4,h5,h6{
