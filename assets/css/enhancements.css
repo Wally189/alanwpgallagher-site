@@ -320,3 +320,11 @@ details.collapse[open]{ background: var(--accent-soft); }
   color: rgba(0,0,0,0.75);
   background: rgba(0,0,0,0.03);
 }
+
+@media (max-width: 700px){
+  .dies-badge{
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+  }
+}
