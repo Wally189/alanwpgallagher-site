@@ -54,7 +54,9 @@
 
     const text = document.createElement('span');
     text.className = 'dies-badge__text';
-    text.textContent = `${monthInfo.month}: ${monthInfo.theme}`;
+    const labelMonth = `${monthInfo.month}`;
+    const labelTheme = `${monthInfo.theme}`;
+    text.textContent = labelMonth;
 
     const infoLink = document.createElement('a');
     infoLink.className = 'dies-badge__info';
@@ -63,6 +65,16 @@
     infoLink.textContent = 'i';
 
     badge.append(tag, text, infoLink);
+
+    if (!reducedMotion) {
+      let showingTheme = false;
+      setInterval(() => {
+        showingTheme = !showingTheme;
+        text.textContent = showingTheme ? labelTheme : labelMonth;
+      }, 6000);
+    } else {
+      text.textContent = `${labelMonth}: ${labelTheme}`;
+    }
     document.body.appendChild(badge);
   }
 
