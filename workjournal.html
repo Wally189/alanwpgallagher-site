@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -19,6 +19,8 @@
   <link rel="alternate" hreflang="x-default" href="https://alanwpgallagher.com/workjournal.html" />
   <link rel="icon" href="assets/img/irish-cross.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="assets/img/irish-cross.svg" />
+    <link rel="stylesheet" href="assets/css/wl-core.css" />
+  <link rel="stylesheet" href="assets/css/site-theme.css" />
   <link rel="stylesheet" href="assets/css/site.css" />
   <link rel="stylesheet" href="assets/css/enhancements.css" />  <script type="application/ld+json">
   {
@@ -95,13 +97,13 @@
           I did not arrive at my working life by way of a single, tidy path. There were pauses, changes of direction, and moments when the route forward was unclear.
         </p>
         <p>
-          I grew up on a council estate, where resilience was learned early and opportunity was unevenly distributed. I did well at school, but life intervened. A family loss, time in care, and the need to become self-reliant brought formal education to an early close. What followed was not a plan so much as a series of necessary decisions — learning quickly how to support myself, adapt, and keep moving.
+          I grew up on a council estate, where resilience was learned early and opportunity was unevenly distributed. I did well at school, but life intervened. A family loss, time in care, and the need to become self-reliant brought formal education to an early close. What followed was not a plan so much as a series of necessary decisions ? learning quickly how to support myself, adapt, and keep moving.
         </p>
         <p>
-          My early working life took shape across a range of roles: cafés, shops, administrative posts, and later office environments. It was in an unassuming temporary role digitising vehicle records that I first encountered structured systems at scale. I discovered that I had an aptitude for order, for understanding how information moved, and for making things work more smoothly.
+          My early working life took shape across a range of roles: caf?s, shops, administrative posts, and later office environments. It was in an unassuming temporary role digitising vehicle records that I first encountered structured systems at scale. I discovered that I had an aptitude for order, for understanding how information moved, and for making things work more smoothly.
         </p>
         <p>
-          From there, I moved through a range of public and private sector roles — from government departments to legal and corporate environments — learning how organisations function in practice rather than on paper. I became comfortable working within complex systems, understanding the pressures they face, and finding ways to support them quietly and effectively.
+          From there, I moved through a range of public and private sector roles ? from government departments to legal and corporate environments ? learning how organisations function in practice rather than on paper. I became comfortable working within complex systems, understanding the pressures they face, and finding ways to support them quietly and effectively.
         </p>
         <p>
           A move north led to an unexpected chapter running a hotel, where responsibility was immediate and all-encompassing. It was an education in people, logistics, judgement, and endurance. Later roles brought me back into technology, operations, and governance, deepening my understanding of how structure, clarity, and good information can support both people and outcomes.
@@ -110,7 +112,7 @@
           More recently, working alongside clinical teams has reinforced something I have long believed: good work is rarely dramatic. It is careful, attentive, and grounded in respect for others' expertise. The best systems are those that enable people to do their work well without drawing attention to themselves.
         </p>
         <p>
-          My career has not followed a straight line, but it has been consistent in one regard — a commitment to order, reliability, and thoughtful practice. I work best where clarity matters, where trust must be earned, and where systems quietly support the people who depend on them.
+          My career has not followed a straight line, but it has been consistent in one regard ? a commitment to order, reliability, and thoughtful practice. I work best where clarity matters, where trust must be earned, and where systems quietly support the people who depend on them.
         </p>
       </div>
     </section>
@@ -174,7 +176,7 @@
         It is not a diary, nor a record of daily activity. Instead, it is a place to reflect on how work is evolving: what has been learned, what has shifted, and what patterns are emerging over time.
       </p>
       <p>
-        Entries are added monthly, usually during the first week, and are intended as a form of quiet stock-taking rather than commentary. The purpose is not performance or analysis for its own sake, but continuity — a way of ensuring that experience is noticed, understood, and carried forward.
+        Entries are added monthly, usually during the first week, and are intended as a form of quiet stock-taking rather than commentary. The purpose is not performance or analysis for its own sake, but continuity ? a way of ensuring that experience is noticed, understood, and carried forward.
       </p>
       <p>
         In that sense, the journal serves the same purpose as much of my work: to bring a little order, clarity, and perspective to things that might otherwise pass unnoticed.
@@ -191,22 +193,7 @@
     </div>
   </div>
 
-  <footer class="footer">
-    <div class="wrap footer__grid">
-      <div class="footer__left">
-        <p class="small">&copy; <span id="year"></span> Bristol, UK / Letterkenny, Donegal, Ireland &middot; <a href="index-ga.html">Gaeilge</a> &middot; <a href="privacy.html">Privacy</a></p>
-      </div>
-      <div class="footer__center">
-        <p class="motto"><em>Ora et labora.</em></p>
-      </div>
-      <div class="footer__right">
-        <div class="footer__actions">
-          <button class="share" type="button" data-share>Share</button>
-          <span class="share__hint" data-share-hint aria-live="polite"></span>
-        </div>
-      </div>
-    </div>
-  </footer>
+  
 
   <div class="hora-fixed" aria-live="polite">
     <strong>Hora</strong>: <span data-hora></span>
@@ -239,8 +226,38 @@
   </nav>
 
   <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/enhancements.js" defer></script></body>
+  <script src="assets/js/enhancements.js" defer></script>
+<footer class="wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <div class="wl-footer__line">
+        <span><strong>Dies</strong>: <span data-date></span></span>
+        <a class="wl-footer__info" href="https://alanwpgallagher.com/information.html" aria-label="About Dies">i</a>
+      </div>
+      <div class="wl-footer__meta">
+        <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+        <span>&middot;</span>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
+    </div>
+    <div class="wl-footer__right">
+      <div class="wl-footer__line">
+        <span><strong>Hora</strong>: <span data-hora></span></span>
+        <a class="wl-footer__info" href="https://alanwpgallagher.com/information.html" aria-label="About Hora">i</a>
+      </div>
+      <div class="wl-footer__actions">
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
 </html>
+
 
 
 

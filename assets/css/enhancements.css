@@ -1,14 +1,6 @@
 ﻿/* Enhancements: motion, typography, accents, interactions */
 
-:root{
-  --accent: #2b4a8a;
-  --accent-soft: rgba(43,74,138,0.14);
-  --text: #1a1a1a;
-  --bg: #ffffff;
-
-  --radius: 14px;
-  --shadow: 0 8px 24px rgba(0,0,0,0.10);
-
+ :root{
   --fade-ms: 420ms;
 }
 
@@ -17,25 +9,16 @@ body.theme-vocation { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
 body.theme-formation{ --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
 body.theme-rest     { --accent: #2b4a8a; --accent-soft: rgba(43,74,138,0.14); }
 
-/* Typography */
-h1,h2,h3,h4,h5,h6{
-  letter-spacing: 0.02em;
-}
-
-body{
-  line-height: 1.7;
-}
-
 /* Slow underline on links */
-a{
-  text-decoration: none;
+a:not(.info-link):not(.button){
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0% 2px;
   background-position: 0 100%;
   background-repeat: no-repeat;
   transition: background-size 320ms ease;
 }
-a:hover, a:focus-visible{
+a:not(.info-link):not(.button):hover,
+a:not(.info-link):not(.button):focus-visible{
   background-size: 100% 2px;
 }
 
@@ -90,20 +73,6 @@ main{
   }
 }
 
-/* Buttons invert on hover */
-button, .btn, input[type="submit"], a.button{
-  border-radius: 10px;
-  border: 1px solid var(--accent);
-  background: var(--accent);
-  color: #fff;
-  padding: 0.6rem 1rem;
-  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease, transform 200ms ease;
-}
-button:hover, .btn:hover, input[type="submit"]:hover, a.button:hover,
-button:focus-visible, .btn:focus-visible, input[type="submit"]:focus-visible, a.button:focus-visible{
-  background: transparent;
-  color: var(--accent);
-}
 
 /* Divider draw from centre */
 .divider{
