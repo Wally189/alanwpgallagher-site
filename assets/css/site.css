@@ -363,6 +363,7 @@ html::before{
   line-height: 1.7;
 }
 
+
 .prose p:first-of-type::first-letter {
   float: left;
   font-size: 3.5em;
@@ -441,13 +442,13 @@ html::before{
   border-radius: 4px;
 }
 .panel__summary::after{
-  content: "?";
+  content: "v";
   color: var(--wine);
   font-size: 14px;
-  transition: transform var(--transition-medium);
+  transition: color var(--transition-medium);
 }
 details[open] > .panel__summary::after{
-  transform: rotate(180deg);
+  content: "^";
 }
 .panel__body{
   padding: 6px 0 10px;
