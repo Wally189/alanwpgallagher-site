@@ -1,11 +1,11 @@
 :root {
-  --wl-accent: #4f565e;
-  --wl-accent-soft: rgba(79, 86, 94, 0.12);
+  --wl-accent: #5a1f2e;
+  --wl-accent-soft: rgba(90, 31, 46, 0.12);
   --accent: var(--wl-primary);
   --accent-soft: var(--wl-primary-soft);
   --wine: var(--wl-accent);
   --wine-soft: var(--wl-accent-soft);
-  --sidebar-rail: rgba(31, 31, 31, 0.06);
+  --sidebar-rail: rgba(90, 31, 46, 0.08);
   --sidebar-rail-gap: 14px;
   --max: 980px;
   --pad: 20px;
