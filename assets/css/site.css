@@ -299,6 +299,38 @@ html::before{
 .quiet{
   color: var(--muted);
 }
+.welcome-card p{
+  margin-bottom: 10px;
+}
+.welcome-card p:last-child{
+  margin-bottom: 0;
+}
+.welcome-details{
+  margin: 10px 0 12px;
+  border-left: 3px solid var(--wine);
+  background: linear-gradient(180deg, rgba(90,31,46,0.08), rgba(255,242,204,0.75));
+}
+@media (prefers-color-scheme: dark) {
+  .welcome-details{
+    background: linear-gradient(180deg, rgba(90,31,46,0.18), rgba(30,42,68,0.7));
+  }
+}
+.welcome-details > summary{
+  font-weight: 600;
+  color: var(--wine);
+}
+.welcome-details__body{
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--rule);
+  line-height: 1.7;
+}
+.welcome-details__body p{
+  margin-bottom: 12px;
+}
+.welcome-details__body p:last-child{
+  margin-bottom: 0;
+}
 .rule{
   color: var(--muted);
   font-size: 14px;
