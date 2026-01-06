@@ -1,0 +1,244 @@
+<a class="skip" href="#main-content">{% if lang == "ga" %}L?im go dt? an t-?bhar{% else %}Skip to content{% endif %}</a>
+
+{% if show_landing_modal and lang == "en" %}
+<div class="modal is-hidden" data-landing-modal aria-hidden="true" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__card modal__card--accent">
+    <button class="modal__close" type="button" data-modal-close aria-label="Close notice">Close</button>
+    <h2 id="modalTitle">Failte,</h2>
+    <p><em>You are most welcome to my digital home!</em></p>
+    <h3 class="modal__heading">News &amp; Updates</h3>
+    <ul class="links">
+      <li>I am in the process of building my online digital home; please accept my humble apologies for any skeleton pages or broken links. Work should be completed by February 2026. Thank you for your patience.</li>
+      <li>I currently have availability to assist with small digital projects such as website builds or digital organisation tasks - please use the Actions menu to discover more.</li>
+    </ul>
+    <p class="small"><em>Le Meas,</em><br>Alan</p>
+  </div>
+</div>
+{% endif %}
+
+{% if show_landing_modal and lang == "ga" %}
+<div class="modal is-hidden" data-landing-modal aria-hidden="true" hidden role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+  <div class="modal__backdrop" data-modal-close></div>
+  <div class="modal__card modal__card--accent">
+    <button class="modal__close" type="button" data-modal-close aria-label="D?n an f?gra">D?n</button>
+    <h2 id="modalTitle">F?ilte,</h2>
+    <p><em>Is m?r an f?ilte romhat chuig mo bhaile digiteach!</em></p>
+    <h3 class="modal__heading">Nuacht &amp; Nuashonruithe</h3>
+    <ul class="links">
+      <li>T?im i mbun mo bhaile digiteach ar l?ne a th?g?il; glac mo leithsc?al um aon leathanaigh chn?mharlaigh n? naisc bhriste. Ba ch?ir go mbeidh an obair cr?ochnaithe faoi Feabhra 2026. Go raibh maith agat as do fhoighne.</li>
+      <li>T? infhaighteacht agam faoi l?thair chun cabhr? le tionscadail bheaga dhigiteacha ar n?s t?g?il su?omhanna gr?as?in n? tascanna eagra?ochta digiteacha - bain ?s?id as an roghchl?r Gn?omhartha le tuilleadh eolais a fh?il.</li>
+    </ul>
+    <p class="small"><em>Le meas,</em><br>Alan</p>
+  </div>
+</div>
+{% endif %}
+
+<!-- Mobile navigation - top (menus) - hidden on desktop -->
+{% if lang == "ga" %}
+<div class="mobile-nav-top" aria-label="Nasclean?int soghluaiste">
+  <div class="mobile-nav__row">
+    <div class="mobile-nav__title">Col?in</div>
+    <a href="index-ga.html#vocation">Gairm</a>
+    <a href="index-ga.html#formation">Foirmi?</a>
+    <a href="index-ga.html#household">Teaghlach</a>
+    <a href="index-ga.html#community">Pobal</a>
+    <a href="index-ga.html#rest">Sos</a>
+  </div>
+  <div class="mobile-nav__row" style="margin-top: 8px;">
+    <div class="mobile-nav__title">Gn?omhartha</div>
+    <a href="index-ga.html#contact">Teagmh?il</a>
+    <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    <a href="availability-ga.html">Infhaighteacht</a>
+    <a href="life-ga.html">Saol</a>
+    <a href="principles-ga.html">Prionsabail</a>
+  </div>
+</div>
+{% else %}
+<div class="mobile-nav-top" aria-label="Mobile navigation">
+  <div class="mobile-nav__row">
+    <div class="mobile-nav__title">Pillars</div>
+    <a href="index.html#vocation">Vocation</a>
+    <a href="index.html#formation">Formation</a>
+    <a href="index.html#household">Household</a>
+    <a href="index.html#community">Community</a>
+    <a href="index.html#rest">Rest</a>
+  </div>
+  <div class="mobile-nav__row" style="margin-top: 8px;">
+    <div class="mobile-nav__title">Actions</div>
+    <a href="index.html#contact">Contact</a>
+    <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    <a href="availability.html">Availability</a>
+    <a href="life.html">Life</a>
+    <a href="principles.html">Principles</a>
+  </div>
+</div>
+{% endif %}
+
+{% if header_variant == "home" and lang == "en" %}
+<header class="masthead" role="banner">
+  <div class="wrap">
+    <div class="masthead__top">
+      <div class="identity">
+        <div class="kicker">My Digital Home</div>
+        <h1 class="title">Alan WP Gallagher</h1>
+        <p class="subtitle">Bristol, UK &middot; Administration & Operations Expert &middot; Business Analysis (BA) &middot; Custodianship & Order</p>
+      </div>
+
+      <div class="masthead__actions">
+        <button class="back" type="button" data-back="index.html">Home</button>
+        <nav class="lang" aria-label="Language selection">
+          <button class="lang__toggle" type="button" data-lang-target="index-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
+        </nav>
+        <span class="devotion" aria-hidden="true">JMJ</span>
+      </div>
+    </div>
+
+    <div class="frontis">
+      <div class="frontis__left">
+        <figure class="portrait">
+          <img src="assets/img/alan-oxford-don.png" alt="Alan Gallagher" loading="lazy" />
+        </figure>
+
+      <div class="rule">
+        Over time I've been guided by a personal rule of life - a disciplined, values-based approach that keeps my work
+        thoughtful, reliable, and human-centred. It's rooted in my Catholic faith, but expressed in a practical way
+        that's open and welcoming to all.
+        <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+      </div>
+      </div>
+
+      <div class="opening doorway" id="main">
+        <p class="lede"><strong>Failte.</strong><br>I'm Alan, and this is my digital home.</p>
+
+        <p>
+          You are most welcome. <br><br>Some things here are practical: professional material, my CV, and a simple way to get in touch.
+          There are other layers too — ideas, projects, and the strands of my life that shape how I work.
+        </p>
+
+        <p>
+          With experience, I have found that I am drawn to order, method, and work done carefully and well.
+          These instincts are often dressed up in different ways — Kaizen, Lean, Agile — or repackaged in self-help language.
+          I've used some of these approaches, and still do. Today, my work is grounded in ways of thinking that are much older, and in my view, more proven.
+        </p>
+
+        <p>
+          I'm interested in <em>slow technology</em>: tools and systems that protect time, dignity, and clarity.
+
+          <br><br>Le meas<br><br>Alan 
+        </p>
+
+        <p class="quiet">
+          You don't need to open every door. Just take what's useful...
+        </p>
+
+
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
+
+{% if header_variant == "home" and lang == "ga" %}
+<header class="masthead" role="banner">
+  <div class="wrap">
+    <div class="masthead__top">
+      <div class="identity">
+        <div class="kicker">Mo Bhaile Digiteach</div>
+        <h1 class="title">Ail?in WP ? Gallchobhair</h1>
+        <p class="subtitle">Bristol, UK &middot; Saineola? Riarach?in &amp; Oibr?ochta? &middot; Anail?s Gn? (BA) &middot; Coime?d &amp; Ord</p>
+      </div>
+
+      <div class="masthead__actions">
+        <button class="back" type="button" data-back="index-ga.html">Baile</button>
+        <nav class="lang" aria-label="Rogha teanga">
+          <button class="lang__toggle" type="button" data-lang-target="index.html" aria-label="Athraigh go B?arla">B?arla</button>
+        </nav>
+        <span class="devotion" aria-hidden="true">?MI</span>
+      </div>
+    </div>
+
+    <div class="frontis">
+      <div class="frontis__left">
+        <figure class="portrait">
+          <img src="assets/img/alan-oxford-don.png" alt="Ail?in ? Gallchobhair" loading="lazy" />
+        </figure>
+
+        <div class="rule">
+          Le himeacht ama, bh? m? treoraithe ag riail saoil phearsanta - cur chuige discipl?nithe bunaithe ar luachanna a choinn?onn mo chuid oibre
+          cr?onna, iontaofa agus d?rithe ar an duine. T? s? fr?amhaithe i mo chreideamh Caitliceach, ach cuirtear i l?thair ? ar bhealach praitici?il
+          at? oscailte agus f?ilteach do ch?ch.
+          <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus an riail saoil">i</a>
+        </div>
+      </div>
+
+      <div class="opening doorway" id="main">
+        <p class="lede"><strong>F?ilte.</strong><br>Is mise Ail?in, agus seo mo bhaile digiteach.</p>
+
+        <p>
+          T? f?ilte mh?r romhat. T? cuid anseo praitici?il: ?bhar gairmi?il, mo CV, agus bealach simpl? le teagmh?il a dh?anamh.
+          T? sraitheanna eile ann fosta - smaointe, tionscadail, agus na sn?itheanna i mo shaol a mh?nla?onn an d?igh a n-oibr?m.
+        </p>
+
+        <p>
+          Le taith?, fuair m? amach go mb?m meallta ag ord, modh, agus obair a dh?antar go c?ramach agus go maith.
+          Cuirtear na hinstinct? seo i l?thair ar dh?igheanna ?ags?la - Kaizen, Lean, Agile - n? cuirtear i bpac?iste f?in-chabhrach iad.
+          D'?s?id m? cuid de na cur chuige seo, agus ?s?idim f?s. Inniu, t? mo chuid oibre bunaithe ar bheala? smaointeoireachta i bhfad n?os sine agus, dar liom, n?os cruthaithe.
+        </p>
+
+        <p>
+          T? suim agam i <em>teicneola?ocht mhall</em>: uirlis? agus c?rais a chosna?onn am, d?nit, agus soil?ireacht.
+
+          <br><br>Le meas<br><br>Ail?in
+        </p>
+
+        <p class="quiet">
+          N? g? gach doras a oscailt. T?g an m?id at? ?s?ideach.
+        </p>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
+
+{% if header_variant == "inner" and lang == "en" %}
+<header class="masthead masthead--inner" role="banner">
+  <div class="wrap">
+    <div class="masthead__top">
+      <div class="identity">
+        <div class="kicker">Availability</div>
+        <h1 class="title">Alan Gallagher</h1>
+        <p class="subtitle">Current commitments and limited windows.</p>
+      </div>
+      <div class="masthead__actions">
+        <button class="back" type="button" data-back="index.html">Home</button>
+        <nav class="lang" aria-label="Language selection">
+          <button class="lang__toggle" type="button" data-lang-target="availability-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
+        </nav>
+        <span class="devotion" aria-hidden="true">JMJ</span>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}
+
+{% if header_variant == "inner" and lang == "ga" %}
+<header class="masthead masthead--inner" role="banner">
+  <div class="wrap">
+    <div class="masthead__top">
+      <div class="identity">
+        <div class="kicker">Infhaighteacht</div>
+        <h1 class="title">Ail?in ? Gallchobhair</h1>
+        <p class="subtitle">Tiomantais reatha agus fuinneoga teoranta.</p>
+      </div>
+      <div class="masthead__actions">
+        <button class="back" type="button" data-back="index-ga.html">Baile</button>
+        <nav class="lang" aria-label="Rogha teanga">
+          <button class="lang__toggle" type="button" data-lang-target="availability.html" aria-label="Athraigh go B?arla">B?arla</button>
+        </nav>
+        <span class="devotion" aria-hidden="true">?MI</span>
+      </div>
+    </div>
+  </div>
+</header>
+{% endif %}

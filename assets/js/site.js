@@ -23,6 +23,52 @@
     }
   });
 
+  let lastFocusedElement = null;
+
+  function getFocusable(container) {
+    return [...container.querySelectorAll(
+      "a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex=\"-1\"])",
+    )].filter((el) => !el.hasAttribute("disabled") && !el.getAttribute("aria-hidden"));
+  }
+
+  function openModal(modal) {
+    lastFocusedElement = document.activeElement;
+    modal.hidden = false;
+
+    const focusables = getFocusable(modal);
+    const first = focusables[0];
+    const last = focusables[focusables.length - 1];
+
+    (first || modal).focus();
+
+    function onKeyDown(e) {
+      if (e.key === "Escape") {
+        closeModal(modal);
+      }
+      if (e.key !== "Tab") return;
+
+      const active = document.activeElement;
+
+      if (e.shiftKey && active === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && active === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+
+    modal.addEventListener("keydown", onKeyDown);
+    modal._trapHandler = onKeyDown;
+  }
+
+  function closeModal(modal) {
+    modal.hidden = true;
+    if (modal._trapHandler) modal.removeEventListener("keydown", modal._trapHandler);
+    if (modal._onClose) modal._onClose();
+    if (lastFocusedElement && lastFocusedElement.focus) lastFocusedElement.focus();
+  }
+
   const yearEl = document.getElementById("year");
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
@@ -108,27 +154,23 @@
   const landingModal = document.querySelector("[data-landing-modal]");
   if (landingModal) {
     const modalKey = "landingNoticeDismissed";
-    const closeModal = () => {
+    landingModal._onClose = () => {
       landingModal.classList.add("is-hidden");
       landingModal.setAttribute("aria-hidden", "true");
       document.body.classList.remove("modal-open");
       sessionStorage.setItem(modalKey, "1");
     };
-    const openModal = () => {
+    const openLandingModal = () => {
       landingModal.classList.remove("is-hidden");
       landingModal.setAttribute("aria-hidden", "false");
       document.body.classList.add("modal-open");
+      openModal(landingModal);
     };
     if (!sessionStorage.getItem(modalKey)) {
-      openModal();
+      openLandingModal();
     }
     landingModal.querySelectorAll("[data-modal-close]").forEach((el) => {
-      el.addEventListener("click", closeModal);
-    });
-    document.addEventListener("keydown", (event) => {
-      if (event.key === "Escape" && !landingModal.classList.contains("is-hidden")) {
-        closeModal();
-      }
+      el.addEventListener("click", () => closeModal(landingModal));
     });
   }
 

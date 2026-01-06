@@ -1,6 +1,26 @@
 ﻿(function () {
   const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  function createPausableInterval(fn, ms) {
+    let id = null;
+    function start() {
+      if (id == null) id = setInterval(fn, ms);
+    }
+    function stop() {
+      if (id != null) {
+        clearInterval(id);
+        id = null;
+      }
+    }
+    function onVisibility() {
+      if (document.hidden) stop();
+      else start();
+    }
+    document.addEventListener("visibilitychange", onVisibility);
+    if (!document.hidden) start();
+    return { start, stop };
+  }
+
   // Scroll reveal (quotes etc.)
   const revealEls = document.querySelectorAll('.reveal-on-scroll');
   if (revealEls.length) {
@@ -68,7 +88,7 @@
 
     if (!reducedMotion) {
       let showingTheme = false;
-      setInterval(() => {
+      createPausableInterval(() => {
         showingTheme = !showingTheme;
         text.textContent = showingTheme ? labelTheme : labelMonth;
       }, 6000);

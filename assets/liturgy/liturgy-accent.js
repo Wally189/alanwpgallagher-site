@@ -58,6 +58,26 @@
 
   let lastKey = null;
 
+  function createPausableInterval(fn, ms) {
+    let id = null;
+    function start() {
+      if (id == null) id = setInterval(fn, ms);
+    }
+    function stop() {
+      if (id != null) {
+        clearInterval(id);
+        id = null;
+      }
+    }
+    function onVisibility() {
+      if (document.hidden) stop();
+      else start();
+    }
+    document.addEventListener("visibilitychange", onVisibility);
+    if (!document.hidden) start();
+    return { start, stop };
+  }
+
   const updateAccent = async () => {
     const { year, month, day } = getLondonDateParts();
     const key = `${year}-${month}-${day}`;
@@ -82,5 +102,5 @@
   };
 
   updateAccent();
-  setInterval(updateAccent, 5 * 60 * 1000);
+  createPausableInterval(updateAccent, 5 * 60 * 1000);
 })();

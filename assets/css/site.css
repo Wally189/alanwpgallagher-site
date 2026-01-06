@@ -59,6 +59,9 @@ html::before{
   padding: 24px;
   z-index: 999;
 }
+.modal[hidden]{
+  display: none;
+}
 .modal.is-hidden{
   display: none;
 }

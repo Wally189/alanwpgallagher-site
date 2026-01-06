@@ -1,0 +1,13 @@
+{
+  "name": "alanwpgallagher-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve",
+    "build:assets": "node scripts/build-assets.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

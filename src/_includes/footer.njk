@@ -1,0 +1,136 @@
+<!-- Mobile navigation - bottom (time) - hidden on desktop -->
+{% if lang == "ga" %}
+<div class="mobile-nav-bottom" aria-label="Am reatha">
+  <div class="mobile-nav__time">
+    <span><strong>Hora</strong>: <span data-hora></span></span>
+    <span><strong>Dies</strong>: <span data-date></span></span>
+    <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
+  </div>
+</div>
+{% else %}
+<div class="mobile-nav-bottom" aria-label="Current time">
+  <div class="mobile-nav__time">
+    <span><strong>Hora</strong>: <span data-hora></span></span>
+    <span><strong>Dies</strong>: <span data-date></span></span>
+    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+  </div>
+</div>
+{% endif %}
+
+
+
+<div class="hora-fixed" aria-live="polite">
+  <strong>Hora</strong>: <span data-hora></span>
+  {% if lang == "ga" %}
+  <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
+  {% else %}
+  <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+  {% endif %}
+</div>
+
+<div class="date-fixed" aria-live="polite">
+  <strong>Dies</strong>: <span data-date></span>
+  {% if lang == "ga" %}
+  <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
+  {% else %}
+  <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+  {% endif %}
+</div>
+
+{% if lang == "ga" %}
+<nav class="pillar-fixed" aria-label="Col?in agus st?l bheatha">
+  <div class="pillar-fixed__title" role="heading" aria-level="2">Col?in</div>
+  <a href="index-ga.html#vocation">Gairm &amp; Obair</a>
+  <a href="index-ga.html#formation">Foirmi?</a>
+  <a href="index-ga.html#household">Teaghlach &amp; Sti?radh</a>
+  <a href="index-ga.html#community">Pobal &amp; Caidreamh</a>
+  <a href="index-ga.html#rest">Sos &amp; Athnuachan</a>
+  <div class="pillar-fixed__title" role="heading" aria-level="2">St?l Bheatha</div>
+  <a href="life-ga.html">Saol go hAchomair</a>
+  <a href="principles-ga.html">Prionsabail &amp; Luachanna</a>
+</nav>
+
+<nav class="top-menu-fixed" aria-label="Gn?omhartha">
+  <div class="top-menu-fixed__title" role="heading" aria-level="2">Gn?omhartha</div>
+  <a href="index-ga.html#contact">Teagmh?il</a>
+  <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+  <a href="availability-ga.html">Infhaighteacht</a>
+  <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</nav>
+{% else %}
+<nav class="pillar-fixed" aria-label="Pillars and lifestyle">
+  <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
+  <a href="index.html#vocation">Vocation & Work</a>
+  <a href="index.html#formation">Formation</a>
+  <a href="index.html#household">Household & Stewardship</a>
+  <a href="index.html#community">Community & Relationship</a>
+  <a href="index.html#rest">Rest & Renewal</a>
+  <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
+  <a href="life.html">Life in Brief</a>
+  <a href="principles.html">Principles & Values</a>
+</nav>
+
+<nav class="top-menu-fixed" aria-label="Actions">
+  <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
+  <a href="index.html#contact">Contact</a>
+  <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+  <a href="availability.html">Availability</a>
+  <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+</nav>
+{% endif %}
+
+<script src="assets/dist/site.bundle.js" defer></script>
+
+{% if footer_variant == "home" %}
+<footer class="wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <span>&copy; 2026, Bristol UK / Letterkenny, Ireland.</span>
+    </div>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
+    </div>
+    <div class="wl-footer__right">
+      <div class="wl-footer__actions">
+        <a href="privacy.html">Privacy</a>
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+  <div class="wl-footer__family">
+    <a href="https://www.alanwpgallagher.info">Waylight Family</a>
+  </div>
+</footer>
+{% endif %}
+
+{% if footer_variant == "inner" %}
+<footer class="wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <div class="wl-footer__line">
+        <span><strong>Dies</strong>: <span data-date></span></span>
+        <a class="wl-footer__info" href="https://alanwpgallagher.com/information.html" aria-label="About Dies">i</a>
+      </div>
+      <div class="wl-footer__meta">
+        <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+        <span>&middot;</span>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </div>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
+    </div>
+    <div class="wl-footer__right">
+      <div class="wl-footer__line">
+        <span><strong>Hora</strong>: <span data-hora></span></span>
+        <a class="wl-footer__info" href="https://alanwpgallagher.com/information.html" aria-label="About Hora">i</a>
+      </div>
+      <div class="wl-footer__actions">
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+{% endif %}
