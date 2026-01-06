@@ -1,8 +1,8 @@
 :root {
-  --wl-paper: #f4f1ea;
+  --wl-paper: #f1f3f6;
   --wl-ink: #1e2a44;
-  --wl-muted: #5b4632;
-  --wl-rule: rgba(90, 31, 46, 0.16);
+  --wl-muted: #4a5568;
+  --wl-rule: rgba(46, 54, 68, 0.18);
   --wl-primary: #2f4a7d;
   --wl-primary-hover: #1e2a44;
   --wl-primary-soft: rgba(47, 74, 125, 0.12);
