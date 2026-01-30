@@ -110,6 +110,10 @@ html::before{
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 var(--pad);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200' viewBox='0 0 1200 1200'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.05' stroke-width='24'%3E%3Ccircle cx='600' cy='600' r='360'/%3E%3Cpath d='M600 140v920M140 600h920'/%3E%3Cpath d='M600 260v680M260 600h680' stroke-width='10' stroke-opacity='0.04'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center 120px;
+  background-size: 1100px 1100px;
 }
 
 .skip{
@@ -676,6 +680,7 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
+  min-height: var(--sidebar-min-height);
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
@@ -724,6 +729,7 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
+  min-height: var(--sidebar-min-height);
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
