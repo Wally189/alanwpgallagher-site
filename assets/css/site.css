@@ -240,6 +240,7 @@ html::before{
 }
 .lang__toggle{
   font: inherit;
+  font-size: 2em;
   color: var(--accent);
   background: var(--paper);
 
@@ -247,7 +248,7 @@ html::before{
   border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
 
   border-radius: 999px;
-  padding: 6px 10px;
+  padding: 12px 20px;
   font-weight: 600;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
@@ -269,6 +270,7 @@ html::before{
 }
 .back{
   font: inherit;
+  font-size: 2em;
   color: var(--accent);
   background: var(--paper);
 
@@ -276,7 +278,7 @@ html::before{
   border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
 
   border-radius: 999px;
-  padding: 6px 10px;
+  padding: 12px 20px;
   font-weight: 600;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
