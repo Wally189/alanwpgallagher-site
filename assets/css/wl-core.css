@@ -72,6 +72,19 @@ html::before {
   z-index: -1;
 }
 
+html::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("../img/irish-cross.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: min(70vw, 760px);
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: -2;
+}
+
 body {
   min-height: 100%;
   margin: 0;
