@@ -60,17 +60,31 @@ html {
   background: var(--wl-paper);
 }
 
-html::before {
-  content: "";
-  position: fixed;
-  inset: 0;
+html::before{
+  content:"";
+  position:fixed;
+  inset:0;
   background:
     radial-gradient(900px 380px at 12% 12%, var(--wl-accent-soft), transparent 60%),
-    radial-gradient(900px 380px at 88% 18%, color-mix(in srgb, var(--text) 3%, transparent), transparent 65%),
+    radial-gradient(900px 380px at 88% 18%, color-mix(in srgb, var(--wl-accent) 3%, transparent), transparent 65%),
     linear-gradient(180deg, color-mix(in srgb, var(--text) 2%, transparent), transparent 70%);
-  pointer-events: none;
-  z-index: -1;
+  pointer-events:none;
+  z-index:-1;
 }
+
+html::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  background-image:url("../img/irish-cross.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:min(70vw, 760px);
+  opacity:0.04;
+  pointer-events:none;
+  z-index:-1;
+}
+
 
 html::after {
   content: "";
@@ -82,7 +96,7 @@ html::after {
   background-size: min(70vw, 760px);
   opacity: 0.04;
   pointer-events: none;
-  z-index: -1;
+  z-index: -2;
 }
 
 body {
