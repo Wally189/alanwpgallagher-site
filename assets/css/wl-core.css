@@ -1,10 +1,13 @@
 :root {
-  --bg: #F6F4F1;
-  --surface: #FFFFFF;
-  --text: #111827;
-  --muted: #4B5563;
-  --accent: #6B1F2A;
-  --stroke: rgba(17, 24, 39, 0.08);
+  --bg: #f3f2f1;
+  --surface: #ffffff;
+  --text: #0b0c0c;
+  --muted: #505a5f;
+  --border: #b1b4b6;
+  --accent: #1d70b8;
+  --accent-dark: #003078;
+  --warm: #fbf6e9;
+  --stroke: var(--border);
 
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
   --surface-soft: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -15,10 +18,11 @@
   --wl-muted: var(--muted);
   --wl-rule: var(--stroke);
   --wl-primary: var(--accent);
-  --wl-primary-hover: color-mix(in srgb, var(--accent) 85%, var(--text));
+  --wl-primary-hover: var(--accent-dark);
   --wl-primary-soft: var(--accent-soft);
   --wl-accent: var(--accent);
   --wl-accent-soft: var(--accent-soft);
+  --wl-link-visited: #4c2c92;
   --wl-radius: 12px;
   --wl-shadow: var(--shadow-soft);
 
@@ -49,6 +53,7 @@
   --rule: var(--wl-rule);
   --link: var(--wl-primary);
   --link-hover: var(--wl-primary-hover);
+  --link-visited: var(--wl-link-visited);
   --radius: var(--wl-radius);
 }
 
@@ -76,7 +81,7 @@ html::after{
   content:"";
   position:fixed;
   inset:0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%236B1F2A' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='58'/%3E%3Cpath d='M100 20v160'/%3E%3Cpath d='M20 100h160'/%3E%3Cpath d='M60 60c20 20 60 20 80 0'/%3E%3Cpath d='M60 140c20-20 60-20 80 0'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%231d70b8' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='58'/%3E%3Cpath d='M100 20v160'/%3E%3Cpath d='M20 100h160'/%3E%3Cpath d='M60 60c20 20 60 20 80 0'/%3E%3Cpath d='M60 140c20-20 60-20 80 0'/%3E%3C/svg%3E");
   background-repeat:no-repeat;
   background-position:calc(50% - 420px) 140px;
   background-size:min(55vw, 520px);
@@ -121,7 +126,12 @@ a {
   text-underline-offset: 3px;
 }
 
-a:hover { color: var(--wl-primary-hover); }
+a:hover {
+  color: var(--wl-primary-hover);
+  text-decoration-thickness: 2px;
+}
+
+a:visited { color: var(--wl-link-visited); }
 
 a:focus-visible {
   outline: 2px solid var(--wl-primary);
