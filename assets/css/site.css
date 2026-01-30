@@ -10,14 +10,14 @@ html::before{
   left: 50%;
   width: calc(var(--max) + (var(--pad) * 2));
   transform: translateX(-50%);
-  background: rgba(240,242,246,0.88);
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
   pointer-events: none;
   z-index: 0;
 }
 
 @media (prefers-color-scheme: dark) {
   html::before{
-    background: rgba(30,42,68,0.35);
+    background: color-mix(in srgb, var(--text) 35%, transparent);
   }
 }
 
@@ -65,7 +65,7 @@ html::before{
 .modal__backdrop{
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  background: color-mix(in srgb, var(--text) 35%, transparent);
   backdrop-filter: blur(2px);
 }
 .modal__card{
@@ -77,11 +77,11 @@ html::before{
   border: 1px solid var(--rule);
   background: var(--paper);
   color: var(--ink);
-  box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--text) 20%, transparent);
 }
 .modal__card--accent{
-  border: 2px solid var(--accent);
-  box-shadow: 0 24px 60px rgba(47,74,125,0.22);
+  border: 1px solid var(--stroke);
+  box-shadow: 0 24px 60px color-mix(in srgb, var(--text) 20%, transparent);
 }
 .modal__card h2{
   margin-top: 0;
@@ -129,23 +129,23 @@ html::before{
 .masthead{
   padding: 34px 0 18px;
   border-bottom: 1px solid var(--rule);
-  background: linear-gradient(180deg, rgba(47,74,125,0.08), transparent 55%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), transparent 55%);
   transition: background var(--transition-medium);
 }
 @media (prefers-color-scheme: dark) {
   .masthead {
-    background: linear-gradient(180deg, rgba(58,95,158,0.1), transparent 55%);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), transparent 55%);
   }
 }
 
 /* Inner page hero enhancement */
 .masthead--inner{
   padding: 48px 0 28px;
-  background: linear-gradient(180deg, rgba(107,31,42,0.08), transparent 65%);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), transparent 65%);
 }
 @media (prefers-color-scheme: dark) {
   .masthead--inner {
-    background: linear-gradient(180deg, rgba(140,29,24,0.12), transparent 65%);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), transparent 65%);
   }
 }
 .masthead--inner .kicker{
@@ -263,7 +263,7 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   overflow: hidden;
-  background: #ede7d9;
+  background: var(--surface);
 }
 .portrait img{
   width: 100%;
@@ -275,16 +275,16 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px 16px 14px;
-  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(240,242,246,0.7));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
   max-width: 72ch;
 }
 @media (prefers-color-scheme: dark) {
   .opening {
-    background: linear-gradient(180deg, rgba(58,95,158,0.12), rgba(30,42,68,0.7));
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--text) 10%, transparent));
   }
 }
 .opening.doorway{
-  border-left: 4px solid var(--wine);
+  border-left: 1px solid var(--stroke);
   padding-left: 14px;
 }
 .doorway__indent{
@@ -307,12 +307,12 @@ html::before{
 }
 .welcome-details{
   margin: 10px 0 12px;
-  border-left: 3px solid var(--wine);
-  background: linear-gradient(180deg, rgba(90,31,46,0.08), rgba(240,242,246,0.75));
+  border-left: 1px solid var(--stroke);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), color-mix(in srgb, var(--bg) 75%, transparent));
 }
 @media (prefers-color-scheme: dark) {
   .welcome-details{
-    background: linear-gradient(180deg, rgba(90,31,46,0.18), rgba(30,42,68,0.7));
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 18%, transparent), color-mix(in srgb, var(--text) 10%, transparent));
   }
 }
 .welcome-details > summary{
@@ -362,13 +362,13 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: 999px;
   text-decoration: none;
-  background: rgba(240,242,246,0.75);
+  background: color-mix(in srgb, var(--bg) 75%, transparent);
   text-align: center;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
 @media (prefers-color-scheme: dark) {
   .door {
-    background: rgba(40,40,45,0.75);
+    background: color-mix(in srgb, var(--text) 8%, transparent);
   }
 }
 .door:hover{
@@ -507,7 +507,7 @@ details[open] > .panel__summary::after{
     top: 0;
     bottom: 0;
     width: 1px;
-    background: rgba(31,31,31,0.06);
+    background: var(--stroke);
     pointer-events: none;
     z-index: 1;
   }
@@ -522,7 +522,7 @@ details[open] > .panel__summary::after{
 @media (prefers-color-scheme: dark) and (min-width: 900px) {
   body::before,
   body::after{
-    background: rgba(232,230,225,0.08);
+    background: var(--stroke);
   }
 }@keyframes fadeIn {
   from { opacity: 0; transform: translateY(-4px); }
@@ -548,11 +548,11 @@ details[open] > .panel__summary::after{
   font-style: italic;
 }
 .divider{
-  border-top: 1px solid var(--wine-soft);
+  border-top: 1px solid var(--stroke);
   margin: 18px 0;
 }
 .panel.doorway{
-  border-left: 4px solid var(--wine);
+  border-left: 1px solid var(--stroke);
   padding-left: 14px;
 }
 .panel.doorway h2{
@@ -622,17 +622,17 @@ h2{
   z-index: 50;
   font-size: 14px;
   color: var(--muted);
-  background: rgba(240,242,246,0.92);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--rule);
   border-radius: 12px;
   padding: 6px 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 6%, transparent);
   transition: opacity var(--transition-fast);
 }
 @media (prefers-color-scheme: dark) {
   .hora-fixed {
-    background: rgba(30,42,68,0.92);
-    border-color: rgba(240,242,246,0.12);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-color: var(--stroke);
   }
 }
 .hora-fixed strong{
@@ -646,17 +646,17 @@ h2{
   z-index: 50;
   font-size: 14px;
   color: var(--muted);
-  background: rgba(240,242,246,0.92);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--rule);
   border-radius: 12px;
   padding: 6px 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 6%, transparent);
   transition: opacity var(--transition-fast);
 }
 @media (prefers-color-scheme: dark) {
   .date-fixed {
-    background: rgba(30,42,68,0.92);
-    border-color: rgba(240,242,246,0.12);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-color: var(--stroke);
   }
 }
 .date-fixed strong{
@@ -670,13 +670,13 @@ h2{
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
-  background: rgba(240,242,246,0.92);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--rule);
   border-radius: 16px;
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
   transition: opacity var(--transition-fast);
@@ -684,8 +684,8 @@ h2{
 
 @media (prefers-color-scheme: dark) {
   .pillar-fixed {
-    background: rgba(30,42,68,0.92);
-    border-color: rgba(240,242,246,0.12);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-color: var(--stroke);
   }
 }
 .pillar-fixed__title{
@@ -718,13 +718,13 @@ h2{
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
-  background: rgba(240,242,246,0.92);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
   border: 1px solid var(--rule);
   border-radius: 16px;
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.14);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
   transition: opacity var(--transition-fast);
@@ -732,8 +732,8 @@ h2{
 
 @media (prefers-color-scheme: dark) {
   .top-menu-fixed {
-    background: rgba(30,42,68,0.92);
-    border-color: rgba(240,242,246,0.12);
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-color: var(--stroke);
   }
 }
 .top-menu-fixed__title{
@@ -764,7 +764,7 @@ h2{
     font-size: 14px;
     padding: 14px 16px;
     gap: 8px;
-    box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+    box-shadow: 0 6px 14px color-mix(in srgb, var(--text) 12%, transparent);
   }
   .pillar-fixed__title,
   .top-menu-fixed__title{
@@ -826,11 +826,11 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 10px 12px;
-  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(240,242,246,0.7));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
 }
 @media (prefers-color-scheme: dark) {
   .details {
-    background: linear-gradient(180deg, rgba(58,95,158,0.12), rgba(30,42,68,0.7));
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--text) 10%, transparent));
   }
 }
 .table{
@@ -856,7 +856,7 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 12px;
-  background: linear-gradient(180deg, rgba(47,74,125,0.1), rgba(240,242,246,0.7));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
   display: grid;
   gap: 10px;
   max-width: 560px;
@@ -1074,4 +1074,3 @@ button:active{
     width: min(var(--max), calc(100% - 6rem));
   }
 }
-
