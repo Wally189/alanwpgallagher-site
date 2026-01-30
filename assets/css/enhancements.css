@@ -7,6 +7,8 @@
 /* Thematic accents */
 body.theme-vocation { --accent: var(--accent); --accent-soft: var(--accent-soft); }
 body.theme-formation{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
+body.theme-household{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
+body.theme-community{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
 body.theme-rest     { --accent: var(--accent); --accent-soft: var(--accent-soft); }
 
 /* Slow underline on links */
