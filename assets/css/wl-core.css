@@ -1,15 +1,26 @@
 :root {
-  --wl-paper: #f1f3f6;
-  --wl-ink: #1e2a44;
-  --wl-muted: #4a5568;
-  --wl-rule: rgba(46, 54, 68, 0.18);
-  --wl-primary: #2f4a7d;
-  --wl-primary-hover: #1e2a44;
-  --wl-primary-soft: rgba(47, 74, 125, 0.12);
-  --wl-accent: #b08d3a;
-  --wl-accent-soft: rgba(176, 141, 58, 0.14);
+  --bg: #F6F4F1;
+  --surface: #FFFFFF;
+  --text: #111827;
+  --muted: #4B5563;
+  --accent: #6B1F2A;
+  --stroke: rgba(17, 24, 39, 0.08);
+
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
+  --surface-soft: color-mix(in srgb, var(--surface) 92%, transparent);
+  --shadow-soft: 0 10px 30px color-mix(in srgb, var(--text) 10%, transparent);
+
+  --wl-paper: var(--bg);
+  --wl-ink: var(--text);
+  --wl-muted: var(--muted);
+  --wl-rule: var(--stroke);
+  --wl-primary: var(--accent);
+  --wl-primary-hover: color-mix(in srgb, var(--accent) 85%, var(--text));
+  --wl-primary-soft: var(--accent-soft);
+  --wl-accent: var(--accent);
+  --wl-accent-soft: var(--accent-soft);
   --wl-radius: 12px;
-  --wl-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --wl-shadow: var(--shadow-soft);
 
   --wl-space-1: 0.25rem;
   --wl-space-2: 0.5rem;
@@ -55,8 +66,8 @@ html::before {
   inset: 0;
   background:
     radial-gradient(900px 380px at 12% 12%, var(--wl-accent-soft), transparent 60%),
-    radial-gradient(900px 380px at 88% 18%, rgba(0, 0, 0, 0.03), transparent 65%),
-    linear-gradient(180deg, rgba(0, 0, 0, 0.02), transparent 70%);
+    radial-gradient(900px 380px at 88% 18%, color-mix(in srgb, var(--text) 3%, transparent), transparent 65%),
+    linear-gradient(180deg, color-mix(in srgb, var(--text) 2%, transparent), transparent 70%);
   pointer-events: none;
   z-index: -1;
 }
@@ -123,7 +134,7 @@ a.button {
   border-radius: 999px;
   border: 1px solid var(--wl-primary);
   background: var(--wl-primary);
-  color: #ffffff;
+  color: var(--surface);
   font: inherit;
   font-weight: 600;
   letter-spacing: 0.02em;
@@ -180,13 +191,13 @@ a.button:focus-visible {
 }
 
 .wl-stack > * + * { margin-top: var(--wl-space-4); }
-.wl-surface { background: #fff2cc; border: 1px solid var(--wl-rule); border-radius: var(--wl-radius); }
+.wl-surface { background: var(--surface); border: 1px solid var(--wl-rule); border-radius: var(--wl-radius); }
 
 .wl-footer {
   margin-top: var(--wl-space-7);
   padding: var(--wl-space-5) 0;
   border-top: 1px solid var(--wl-rule);
-  background: rgba(237, 231, 217, 0.88);
+  background: var(--surface-soft);
 }
 
 .wl-footer__grid {
