@@ -200,7 +200,10 @@ html::before{
   font: inherit;
   color: var(--accent);
   background: var(--paper);
-  border: 2px solid var(--accent);
+
+  border: 2px solid var(--accent); /* fallback */
+  border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
+
   border-radius: 999px;
   padding: 6px 10px;
   font-weight: 600;
@@ -226,7 +229,10 @@ html::before{
   font: inherit;
   color: var(--accent);
   background: var(--paper);
-  border: 2px solid var(--accent);
+
+  border: 2px solid var(--accent); /* fallback */
+  border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
+
   border-radius: 999px;
   padding: 6px 10px;
   font-weight: 600;
@@ -413,7 +419,6 @@ html::before{
   line-height: 1.7;
 }
 
-
 .prose p:first-of-type::first-letter {
   float: left;
   font-size: 3.5em;
@@ -478,8 +483,8 @@ html::before{
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 12px;
+  justify-content: flex-start;
+  gap: 8px;
   padding: 6px 0;
   transition: color var(--transition-fast);
 }
@@ -491,13 +496,13 @@ html::before{
   outline-offset: 4px;
   border-radius: 4px;
 }
-.panel__summary::after{
+.panel__summary::before{
   content: "v";
   color: var(--wine);
   font-size: 14px;
   transition: color var(--transition-medium);
 }
-details[open] > .panel__summary::after{
+details[open] > .panel__summary::before{
   content: "^";
 }
 .panel__body{
@@ -530,10 +535,13 @@ details[open] > .panel__summary::after{
   body::after{
     background: var(--stroke);
   }
-}@keyframes fadeIn {
+}
+
+@keyframes fadeIn {
   from { opacity: 0; transform: translateY(-4px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 .panel__summary--button h2{
   display: inline-block;
   padding: 6px 12px;
@@ -669,11 +677,12 @@ h2{
   color: var(--wine);
   font-weight: 600;
 }
+
 .pillar-fixed{
   position: fixed;
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
-  top: 90vh;
-  transform: translateY(-100%);
+  top: 16px;
+  bottom: 10vh;
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
@@ -719,11 +728,12 @@ h2{
   outline-offset: 2px;
   border-radius: 2px;
 }
+
 .top-menu-fixed{
   position: fixed;
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
-  top: 90vh;
-  transform: translateY(-100%);
+  top: 16px;
+  bottom: 10vh;
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
@@ -822,6 +832,7 @@ h2{
     display: block;
   }
 }
+
 .top-menu-fixed a:hover{
   color: var(--accent);
 }
@@ -836,11 +847,11 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 10px 12px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 14%, transparent), color-mix(in srgb, var(--bg) 65%, transparent));
 }
 @media (prefers-color-scheme: dark) {
   .details {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--text) 10%, transparent));
+    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 16%, transparent), color-mix(in srgb, var(--text) 12%, transparent));
   }
 }
 .table{
@@ -1070,14 +1081,6 @@ button:active{
     font-weight: 600;
   }
 }
-
-
-
-
-
-
-
-
 
 @media (min-width: 900px) {
   .wl-footer__grid {
