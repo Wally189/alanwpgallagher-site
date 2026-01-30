@@ -231,7 +231,17 @@ html::before{
 .subtitle{
   margin: 6px 0 0;
   color: var(--muted);
-  max-width: 68ch;
+  max-width: var(--measure);
+}
+.orientation,
+.threshold{
+  margin: 10px 0 0;
+  color: var(--muted);
+  max-width: var(--measure);
+  line-height: var(--leading);
+}
+.threshold{
+  font-style: italic;
 }
 
 .lang{
@@ -240,7 +250,7 @@ html::before{
 }
 .lang__toggle{
   font: inherit;
-  font-size: 2em;
+  font-size: 2.2em;
   color: var(--accent);
   background: var(--paper);
 
@@ -249,7 +259,7 @@ html::before{
 
   border-radius: 999px;
   padding: 12px 20px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
@@ -270,7 +280,7 @@ html::before{
 }
 .back{
   font: inherit;
-  font-size: 2em;
+  font-size: 2.2em;
   color: var(--accent);
   background: var(--paper);
 
@@ -279,7 +289,7 @@ html::before{
 
   border-radius: 999px;
   padding: 12px 20px;
-  font-weight: 600;
+  font-weight: 700;
   cursor: pointer;
   transition: background var(--transition-fast), transform var(--transition-fast);
 }
@@ -332,7 +342,7 @@ html::before{
   border-radius: var(--radius);
   padding: 16px 16px 14px;
   background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
-  max-width: 72ch;
+  max-width: var(--measure);
 }
 @media (prefers-color-scheme: dark) {
   .opening {
@@ -356,7 +366,8 @@ html::before{
   color: var(--muted);
 }
 .welcome-card p{
-  margin-bottom: 10px;
+  margin-block: 0 var(--para-space);
+  line-height: var(--leading);
 }
 .welcome-card p:last-child{
   margin-bottom: 0;
@@ -392,10 +403,10 @@ html::before{
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid var(--rule);
-  line-height: 1.7;
+  line-height: var(--leading);
 }
 .welcome-details__body p{
-  margin-bottom: 12px;
+  margin-block: 0 var(--para-space);
 }
 .welcome-details__body p:last-child{
   margin-bottom: 0;
@@ -443,7 +454,19 @@ html::before{
 .panel{
   padding: 18px 0;
   border-bottom: 1px solid var(--rule);
-  max-width: 72ch;
+  max-width: var(--measure);
+}
+
+main p{
+  margin-block: 0 var(--para-space);
+  line-height: var(--leading);
+  max-width: var(--measure);
+}
+
+.contact-frame{
+  margin-block: 0 var(--para-space);
+  line-height: var(--leading);
+  max-width: var(--measure);
 }
 
 /* Multi-column layouts */
@@ -579,6 +602,14 @@ details[open] > .panel__summary::before{
   body::before,
   body::after{
     background: var(--stroke);
+  }
+}
+
+@media (max-width: 900px) {
+  html::after{
+    background-position: center 80px;
+    background-size: min(80vw, 420px);
+    opacity: 0.03;
   }
 }
 
