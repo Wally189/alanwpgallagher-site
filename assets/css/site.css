@@ -194,8 +194,9 @@ html::before{
   flex-wrap: wrap;
 }
 .masthead__actions a{
-  font-size: 16px;
-  font-weight: 650;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   color: var(--ink);
   text-decoration: none;
   padding: 6px 10px;
@@ -375,11 +376,12 @@ html::before{
   align-items: center;
   gap: 8px;
   padding: 6px 12px;
-  border: 1px solid var(--wine);
+  border: 1px solid var(--rule);
   border-radius: 999px;
-  background: var(--wine-soft);
+  background: var(--paper);
+  font-size: 14px;
   font-weight: 600;
-  color: var(--wine);
+  color: var(--muted);
 }
 .welcome-details > summary::-webkit-details-marker{
   display: none;
