@@ -127,14 +127,14 @@ html::before{
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 var(--pad);
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200' viewBox='0 0 1200 1200'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.010' stroke-width='18'%3E%3Ccircle cx='600' cy='600' r='360'/%3E%3Cpath d='M600 140v920M140 600h920'/%3E%3Cpath d='M600 260v680M260 600h680' stroke-width='8' stroke-opacity='0.008'/%3E%3C/g%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200' viewBox='0 0 1200 1200'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='0.04' stroke-width='18'%3E%3Ccircle cx='600' cy='600' r='360'/%3E%3Cpath d='M600 140v920M140 600h920'/%3E%3Cpath d='M600 260v680M260 600h680' stroke-width='8' stroke-opacity='0.03'/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center 220px;
   background-size: 1400px 1400px;
 }
 @media (prefers-color-scheme: dark) {
   .wrap{
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200' viewBox='0 0 1200 1200'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.010' stroke-width='18'%3E%3Ccircle cx='600' cy='600' r='360'/%3E%3Cpath d='M600 140v920M140 600h920'/%3E%3Cpath d='M600 260v680M260 600h680' stroke-width='8' stroke-opacity='0.008'/%3E%3C/g%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='1200' viewBox='0 0 1200 1200'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.04' stroke-width='18'%3E%3Ccircle cx='600' cy='600' r='360'/%3E%3Cpath d='M600 140v920M140 600h920'/%3E%3Cpath d='M600 260v680M260 600h680' stroke-width='8' stroke-opacity='0.03'/%3E%3C/g%3E%3C/svg%3E");
   }
 }
 
@@ -251,20 +251,21 @@ html::before{
 .lang__toggle{
   font: inherit;
   font-size: 2.2em;
-  color: var(--accent);
-  background: var(--paper);
-
-  border: 2px solid var(--accent); /* fallback */
-  border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
-
+  color: var(--accent-dark);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 12px 20px;
   font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
   cursor: pointer;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 .lang__toggle:hover{
-  background: var(--accent-soft);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
 }
 .lang__toggle:focus-visible{
   outline: 2px solid var(--accent);
@@ -281,20 +282,21 @@ html::before{
 .back{
   font: inherit;
   font-size: 2.2em;
-  color: var(--accent);
-  background: var(--paper);
-
-  border: 2px solid var(--accent); /* fallback */
-  border: 2px solid color-mix(in srgb, var(--accent) 75%, var(--bg));
-
+  color: var(--accent-dark);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 999px;
   padding: 12px 20px;
   font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
   cursor: pointer;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
 .back:hover{
-  background: var(--accent-soft);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
 }
 .back:focus-visible{
   outline: 2px solid var(--accent);
@@ -341,7 +343,7 @@ html::before{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px 16px 14px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--warm) 85%, transparent));
   max-width: var(--measure);
 }
 @media (prefers-color-scheme: dark) {
@@ -455,6 +457,14 @@ html::before{
   padding: 18px 0;
   border-bottom: 1px solid var(--rule);
   max-width: var(--measure);
+}
+
+.panel--accent{
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-top: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 18px 16px;
 }
 
 main p{
@@ -849,7 +859,7 @@ h2{
 }
 .pillar-fixed a,
 .top-menu-fixed a{
-  padding: 8px 6px;
+  padding: 8px 6px 8px 12px;
   border-radius: 10px;
   position: relative;
 }
@@ -867,7 +877,16 @@ h2{
 }
 .pillar-fixed a:hover,
 .top-menu-fixed a:hover{
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+}
+
+.pillar-fixed a.is-active,
+.pillar-fixed a[aria-current="page"],
+.top-menu-fixed a.is-active,
+.top-menu-fixed a[aria-current="page"]{
+  border-left: 4px solid var(--accent);
+  background: color-mix(in srgb, var(--accent) 6%, transparent);
+  padding-left: 8px;
 }
 
 @media (max-width: 1500px) {
@@ -975,7 +994,7 @@ h2{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 12px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--bg) 70%, transparent));
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--warm) 88%, transparent));
   display: grid;
   gap: 10px;
   max-width: 560px;

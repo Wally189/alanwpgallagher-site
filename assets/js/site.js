@@ -83,6 +83,20 @@
     }
   }
 
+  const currentPath = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  document.querySelectorAll(".pillar-fixed a, .top-menu-fixed a").forEach((link) => {
+    const href = link.getAttribute("href") || "";
+    if (!href || href.startsWith("http") || href.startsWith("mailto:")) {
+      return;
+    }
+    const resolved = new URL(href, location.href);
+    const linkPath = (resolved.pathname.split("/").pop() || "index.html").toLowerCase();
+    if (linkPath === currentPath) {
+      link.classList.add("is-active");
+      link.setAttribute("aria-current", "page");
+    }
+  });
+
   const shareBtn = document.querySelector("[data-share]");
   if (shareBtn) {
     const hint = document.querySelector("[data-share-hint]");
