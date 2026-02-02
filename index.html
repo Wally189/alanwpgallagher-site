@@ -51,7 +51,7 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation">
+<body class="theme-vocation home-page">
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="modal is-hidden" data-landing-modal aria-hidden="true">
@@ -107,7 +107,7 @@
         </div>
       </div>
 
-      <div class="frontis">
+      <div class="frontis" data-parallax>
         <div class="frontis__left">
           <figure class="portrait">
             <img src="assets/img/alan-oxford-don.png" alt="Alan Gallagher" loading="lazy" />
@@ -158,7 +158,7 @@
   </header>
 
   <main class="wrap" role="main">
-    <div class="home-contact">
+    <div class="home-contact" data-parallax>
       <section class="panel panel--accent doorway">
         <h2>How this home is organised</h2>
         <p class="small">
@@ -213,35 +213,36 @@
   </div>
 
   
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
   <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
-    <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
-    <a href="vocation.html">Vocation & Work</a>
-    <a href="formation.html">Formation</a>
-    <a href="household.html">Household & Stewardship</a>
-    <a href="community.html">Community & Relationships</a>
-    <a href="rest.html">Rest & Renewal</a>
-    <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
-    <a href="life.html">Life in Brief</a>
-    <a href="principles.html">Principles & Values</a>
+    <div class="menu-fixed__content">
+      <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
+      <a href="vocation.html">Vocation & Work</a>
+      <a href="formation.html">Formation</a>
+      <a href="household.html">Household & Stewardship</a>
+      <a href="community.html">Community & Relationships</a>
+      <a href="rest.html">Rest & Renewal</a>
+      <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
+      <a href="life.html">Life in Brief</a>
+      <a href="principles.html">Principles & Values</a>
+    </div>
+    <div class="menu-fixed__bottom" aria-live="polite">
+      <span><strong>Dies</strong>: <span data-date></span></span>
+      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <nav class="top-menu-fixed" aria-label="Actions">
-    <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
-    <a href="index.html#contact">Contact</a>
-    <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
-    <a href="availability.html">Availability</a>
-    <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="menu-fixed__content">
+      <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
+      <a href="index.html#contact">Contact</a>
+      <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
+      <a href="availability.html">Availability</a>
+      <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+    <div class="menu-fixed__bottom" aria-live="polite">
+      <span><strong>Hora</strong>: <span data-hora></span></span>
+      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <script src="assets/js/site.js" defer></script>
@@ -268,7 +269,6 @@
 </footer>
 </body>
 </html>
-
 
 
 

@@ -97,6 +97,34 @@
     }
   });
 
+  const ensureMenuStructure = (menu) => {
+    if (!menu || menu.querySelector(".menu-fixed__content")) {
+      return;
+    }
+    const content = document.createElement("div");
+    content.className = "menu-fixed__content";
+    Array.from(menu.children).forEach((child) => {
+      if (child.classList.contains("menu-fixed__bottom")) {
+        return;
+      }
+      content.appendChild(child);
+    });
+    menu.appendChild(content);
+  };
+
+  const moveFixedPill = (el, menu) => {
+    if (!el || !menu || menu.querySelector(".menu-fixed__bottom")) {
+      return;
+    }
+    ensureMenuStructure(menu);
+    el.classList.remove("hora-fixed", "date-fixed");
+    el.classList.add("menu-fixed__bottom");
+    menu.appendChild(el);
+  };
+
+  moveFixedPill(document.querySelector(".date-fixed"), document.querySelector(".pillar-fixed"));
+  moveFixedPill(document.querySelector(".hora-fixed"), document.querySelector(".top-menu-fixed"));
+
   const shareBtn = document.querySelector("[data-share]");
   if (shareBtn) {
     const hint = document.querySelector("[data-share-hint]");
@@ -306,6 +334,58 @@
 
     updateDate();
     createPausableInterval(updateDate, 60000);
+  }
+
+  const parallaxEls = document.querySelectorAll("[data-parallax]");
+  if (parallaxEls.length) {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const speed = 0.6;
+    let ticking = false;
+
+    const applyParallax = () => {
+      ticking = false;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const offset = scrollY * (1 - speed);
+      parallaxEls.forEach((el) => {
+        el.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+    };
+
+    const resetParallax = () => {
+      parallaxEls.forEach((el) => {
+        el.style.transform = "";
+      });
+    };
+
+    const onScroll = () => {
+      if (prefersReduced.matches) {
+        return;
+      }
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(applyParallax);
+      }
+    };
+
+    const onPreferenceChange = () => {
+      if (prefersReduced.matches) {
+        resetParallax();
+      } else {
+        applyParallax();
+      }
+    };
+
+    if (!prefersReduced.matches) {
+      applyParallax();
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    if (prefersReduced.addEventListener) {
+      prefersReduced.addEventListener("change", onPreferenceChange);
+    } else {
+      prefersReduced.addListener(onPreferenceChange);
+    }
   }
 
   const hash = location.hash;
