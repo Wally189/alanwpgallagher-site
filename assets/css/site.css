@@ -623,10 +623,18 @@ a:visited{
   gap: 18px;
 }
 .home-page .frontis__left{
+  grid-template-columns: minmax(0, 1fr) var(--portrait);
+  align-items: start;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px;
   background: var(--surface);
+}
+.home-page .frontis__left .rule{
+  grid-column: 1;
+}
+.home-page .frontis__left .portrait{
+  grid-column: 2;
 }
 .home-page .opening{
   max-width: none;
@@ -640,11 +648,15 @@ a:visited{
   margin-left: 0;
 }
 @media (max-width: 900px){
-  .home-page .frontis__left{
-    border: 1px solid var(--rule);
-  }
   .home-page .frontis{
     grid-template-columns: minmax(0, 1fr);
+  }
+  .home-page .frontis__left{
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-page .frontis__left .rule,
+  .home-page .frontis__left .portrait{
+    grid-column: auto;
   }
 }
 
