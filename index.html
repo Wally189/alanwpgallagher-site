@@ -158,48 +158,49 @@
   </header>
 
   <main class="wrap" role="main">
-    <section class="panel panel--accent doorway">
-      <h2>How this home is organised</h2>
-      <p class="small">
-        The site is arranged around five pillars that gather notes, projects, and resources by the way they shape my
-        life: vocation and work, formation, household stewardship, community, and rest.
-      </p>
-      <p class="small">
-        Use the Pillars menu on the left to browse by theme, and the Actions menu on the right for practical items such
-        as contact and availability.
-      </p>
-    </section>
+    <div class="home-contact">
+      <section class="panel panel--accent doorway">
+        <h2>How this home is organised</h2>
+        <p class="small">
+          The site is arranged around five pillars that gather notes, projects, and resources by the way they shape my
+          life: vocation and work, formation, household stewardship, community, and rest.
+        </p>
+        <p class="small">
+          Use the Pillars menu on the left to browse by theme, and the Actions menu on the right for practical items such
+          as contact and availability.
+        </p>
+      </section>
 
-    <div class="divider" aria-hidden="true"></div>
+      <details id="contact" class="panel panel--accent doorway doorway__indent" open>
+        <summary class="panel__summary panel__summary--button">
+          <h2>Contact</h2>
+        </summary>
+        <div class="panel__body">
+          <ul class="links">
+            <li><a href="privacy.html">Privacy</a></li>
+          </ul>
 
-    <details id="contact" class="panel panel--accent doorway doorway__indent">
-      <summary class="panel__summary panel__summary--button">
-        <h2>Contact</h2>
-      </summary>
-      <div class="panel__body">
-        <ul class="links">          <li><a href="privacy.html">Privacy</a></li>
-        </ul>
-
-        <!-- Optional: Netlify form (works only on Netlify) -->
-        <p class="contact-frame">If something here resonates — or challenges you — you’re welcome to make contact. I can’t reply to everything, but I do read carefully.</p>
-        <form class="form" name="contact" method="POST" action="https://formspree.io/f/mgvgrgvb" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <label>
-            Name
-            <input name="name" type="text" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </details>
+          <!-- Optional: Netlify form (works only on Netlify) -->
+          <p class="contact-frame">If something here resonates — or challenges you — you’re welcome to make contact. I can’t reply to everything, but I do read carefully.</p>
+          <form class="form" name="contact" method="POST" action="https://formspree.io/f/mgvgrgvb" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </details>
+    </div>
   </main>
 
   <!-- Mobile navigation - bottom (time) - hidden on desktop -->
@@ -267,7 +268,6 @@
 </footer>
 </body>
 </html>
-
 
 
 
