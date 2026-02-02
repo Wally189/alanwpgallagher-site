@@ -21,6 +21,7 @@ body{
   background: var(--wl-paper);
   overflow-y: auto;
   overflow-x: hidden;
+  margin: 0;
 }
 
 main{
@@ -748,7 +749,7 @@ h2{
 
 /* Fixed position elements - desktop only */
 .hora-fixed{
-  position: absolute;
+  position: fixed;
   right: 16px;
   bottom: calc(var(--footer-h) + 16px);
   z-index: 50;
@@ -771,8 +772,9 @@ h2{
   color: var(--wine);
   font-weight: 600;
 }
+
 .date-fixed{
-  position: absolute;
+  position: fixed;
   left: 16px;
   bottom: calc(var(--footer-h) + 16px);
   z-index: 50;
@@ -1084,7 +1086,7 @@ button:active{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 .footer a,
