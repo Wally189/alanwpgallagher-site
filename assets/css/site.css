@@ -847,7 +847,7 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow: hidden;
+  overflow: hidden; /* keep outer container stable */
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
@@ -870,13 +870,15 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow: hidden;
+  overflow: hidden; /* keep outer container stable */
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
   gap: 12px;
   transition: opacity var(--transition-fast);
 }
+
+/* Scrollable menu area (links) */
 .menu-fixed__content{
   display: flex;
   flex-direction: column;
@@ -903,6 +905,8 @@ h2{
   padding: 8px 10px;
   margin-top: auto;
   flex-shrink: 0;
+  width: 100%;
+  box-sizing: border-box;
 }
 .menu-fixed__bottom span,
 .menu__footer span{
