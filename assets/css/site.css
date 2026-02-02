@@ -21,6 +21,7 @@ body{
   background: var(--wl-paper);
   overflow-y: auto;
   overflow-x: hidden;
+  margin: 0;
 }
 
 main{
@@ -750,8 +751,8 @@ h2{
 .hora-fixed{
   position: fixed;
   right: 16px;
-  bottom: 16px;
-  z-index: 3;
+  bottom: calc(var(--footer-h) + 16px);
+  z-index: 50;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -771,11 +772,12 @@ h2{
   color: var(--wine);
   font-weight: 600;
 }
+
 .date-fixed{
   position: fixed;
   left: 16px;
-  bottom: 16px;
-  z-index: 3;
+  bottom: calc(var(--footer-h) + 16px);
+  z-index: 50;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -1084,7 +1086,7 @@ button:active{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 100;
 }
 
 .footer a,
