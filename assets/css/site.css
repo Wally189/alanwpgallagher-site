@@ -3,6 +3,7 @@
   --cross-opacity:0.06;
   --footer-h:120px;
   --footer-gap:24px;
+  --masthead-h:120px;
 }
 
 body.modal-open{
@@ -28,6 +29,7 @@ main{
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
+  padding-top: 16px;
   padding-bottom: calc(var(--footer-h) + var(--footer-gap)); /* keep content above fixed footer */
 }
 
@@ -1054,10 +1056,10 @@ h2{
 .pillar-fixed{
   position: fixed;
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
-  top: 16px;
+  top: calc(var(--masthead-h) + 16px);
   bottom: calc(var(--footer-h) + var(--footer-gap));
-  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
-  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
+  max-height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -1077,10 +1079,10 @@ h2{
 .top-menu-fixed{
   position: fixed;
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
-  top: 16px;
+  top: calc(var(--masthead-h) + 16px);
   bottom: calc(var(--footer-h) + var(--footer-gap));
-  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
-  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
+  max-height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
