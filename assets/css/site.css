@@ -383,6 +383,21 @@ a:visited{
   margin-left: calc(var(--portrait) + var(--frontis-gap));
 }
 
+.home-contact{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 18px;
+  align-items: start;
+}
+.home-contact .doorway__indent{
+  margin-left: 0;
+}
+@media (max-width: 900px){
+  .home-contact{
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .lede{
   margin-top: 0;
   font-size: 18px;
