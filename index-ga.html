@@ -51,7 +51,7 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation">
+<body class="theme-vocation home-page">
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="modal is-hidden" data-landing-modal aria-hidden="true">
@@ -158,7 +158,8 @@
   </header>
 
   <main class="wrap" role="main">
-    <section class="panel panel--accent doorway">
+    <div class="home-contact">
+      <section class="panel panel--accent doorway card" data-parallax>
       <h2>How this home is organised</h2>
       <p class="small">
         The site is arranged around five pillars that gather notes, projects, and resources by the way they shape my
@@ -168,38 +169,37 @@
         Use the Pillars menu on the left to browse by theme, and the Actions menu on the right for practical items such
         as contact and availability.
       </p>
-    </section>
+      </section>
 
-    <div class="divider" aria-hidden="true"></div>
+      <details id="contact" class="panel panel--accent doorway doorway__indent card" data-parallax>
+        <summary class="panel__summary panel__summary--button">
+          <h2>Contact</h2>
+        </summary>
+        <div class="panel__body">
+          <ul class="links">          <li><a href="privacy-ga.html">Privacy</a></li>
+          </ul>
 
-    <details id="contact" class="panel panel--accent doorway doorway__indent">
-      <summary class="panel__summary panel__summary--button">
-        <h2>Contact</h2>
-      </summary>
-      <div class="panel__body">
-        <ul class="links">          <li><a href="privacy-ga.html">Privacy</a></li>
-        </ul>
-
-        <!-- Optional: Netlify form (works only on Netlify) -->
-        <p class="contact-frame">If something here resonates — or challenges you — you’re welcome to make contact. I can’t reply to everything, but I do read carefully.</p>
-        <form class="form" name="contact" method="POST" action="https://formspree.io/f/mgvgrgvb" data-netlify="true">
-          <input type="hidden" name="form-name" value="contact" />
-          <label>
-            Name
-            <input name="name" type="text" autocomplete="name" required />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" autocomplete="email" required />
-          </label>
-          <label>
-            Message
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button type="submit">Send</button>
-        </form>
-      </div>
-    </details>
+          <!-- Optional: Netlify form (works only on Netlify) -->
+          <p class="contact-frame">If something here resonates — or challenges you — you’re welcome to make contact. I can’t reply to everything, but I do read carefully.</p>
+          <form class="form" name="contact" method="POST" action="https://formspree.io/f/mgvgrgvb" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact" />
+            <label>
+              Name
+              <input name="name" type="text" autocomplete="name" required />
+            </label>
+            <label>
+              Email
+              <input name="email" type="email" autocomplete="email" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <button type="submit">Send</button>
+          </form>
+        </div>
+      </details>
+    </div>
   </main>
 
   <!-- Mobile navigation - bottom (time) - hidden on desktop -->
@@ -212,17 +212,6 @@
   </div>
 
   
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
   <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
     <a href="vocation-ga.html">Vocation & Work</a>
@@ -233,6 +222,10 @@
     <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
     <a href="life-ga.html">Life in Brief</a>
     <a href="principles-ga.html">Principles & Values</a>
+    <div class="menu__footer" aria-live="polite">
+      <span><strong>Dies</strong>: <span data-date></span></span>
+      <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <nav class="top-menu-fixed" aria-label="Actions">
@@ -241,6 +234,10 @@
     <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
     <a href="availability-ga.html">Availability</a>
     <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="menu__footer" aria-live="polite">
+      <span><strong>Hora</strong>: <span data-hora></span></span>
+      <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <script src="assets/js/site.js" defer></script>
@@ -267,9 +264,6 @@
 </footer>
 </body>
 </html>
-
-
-
 
 
 

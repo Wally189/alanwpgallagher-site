@@ -308,6 +308,58 @@
     createPausableInterval(updateDate, 60000);
   }
 
+  const parallaxEls = document.querySelectorAll(".card[data-parallax]");
+  if (parallaxEls.length) {
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const speed = 0.22;
+    let ticking = false;
+
+    const applyParallax = () => {
+      ticking = false;
+      const scrollY = window.scrollY || window.pageYOffset;
+      const offset = scrollY * speed;
+      parallaxEls.forEach((el) => {
+        el.style.transform = `translate3d(0, ${offset}px, 0)`;
+      });
+    };
+
+    const resetParallax = () => {
+      parallaxEls.forEach((el) => {
+        el.style.transform = "";
+      });
+    };
+
+    const onScroll = () => {
+      if (prefersReduced.matches) {
+        return;
+      }
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(applyParallax);
+      }
+    };
+
+    const onPreferenceChange = () => {
+      if (prefersReduced.matches) {
+        resetParallax();
+      } else {
+        applyParallax();
+      }
+    };
+
+    if (!prefersReduced.matches) {
+      applyParallax();
+    }
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    if (prefersReduced.addEventListener) {
+      prefersReduced.addEventListener("change", onPreferenceChange);
+    } else {
+      prefersReduced.addListener(onPreferenceChange);
+    }
+  }
+
   const hash = location.hash;
   if (hash) {
     const target = document.querySelector(hash);

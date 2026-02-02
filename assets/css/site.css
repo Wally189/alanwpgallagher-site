@@ -239,10 +239,12 @@ a:visited{
   margin-bottom: 18px;
 }
 .masthead__actions{
-  display: flex;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) auto;
+  gap: 8px 10px;
   align-items: center;
-  flex-wrap: wrap;
+  justify-items: stretch;
+  width: min(360px, 100%);
 }
 .masthead__actions a{
   font-size: 18px;
@@ -302,12 +304,12 @@ a:visited{
 .lang__toggle,
 .back{
   font: inherit;
-  font-size: 2.2em;
+  font-size: 1.45em;
   color: var(--accent-dark);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 12px 20px;
+  padding: 8px 14px;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--accent);
@@ -328,6 +330,24 @@ a:visited{
 .lang__toggle:active,
 .back:active{
   transform: scale(0.97);
+}
+.masthead__actions .back,
+.masthead__actions .lang__toggle{
+  width: 100%;
+  text-align: center;
+}
+.masthead__actions .devotion{
+  justify-self: end;
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.6;
+}
+@media (max-width: 720px){
+  .masthead__actions{
+    width: 100%;
+  }
 }
 .lang__item{
   text-decoration: none;
@@ -395,6 +415,50 @@ a:visited{
 @media (max-width: 900px){
   .home-contact{
     grid-template-columns: minmax(0, 1fr);
+  }
+}
+.home-page .frontis{
+  grid-template-columns: minmax(0, 1fr);
+  max-width: var(--measure);
+  margin: 0 auto;
+  gap: 18px;
+}
+.home-page .frontis__left{
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--surface);
+}
+.home-page .opening{
+  max-width: none;
+}
+.home-page .home-contact{
+  grid-template-columns: minmax(0, 1fr);
+  max-width: var(--measure);
+  margin: 18px auto 0;
+}
+.home-page .doorway__indent{
+  margin-left: 0;
+}
+.card{
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  background: var(--surface);
+  margin-bottom: 18px;
+}
+.card:last-child{
+  margin-bottom: 0;
+}
+.card.panel--accent{
+  border-top: 2px solid var(--accent);
+}
+.card[data-parallax]{
+  will-change: transform;
+}
+@media (prefers-reduced-motion: reduce){
+  .card[data-parallax]{
+    transform: none !important;
   }
 }
 
@@ -769,6 +833,7 @@ h2{
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -780,7 +845,8 @@ h2{
   max-width: var(--sidebar-width);
   overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   transition: opacity var(--transition-fast);
 }
@@ -789,6 +855,7 @@ h2{
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -800,9 +867,29 @@ h2{
   max-width: var(--sidebar-width);
   overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   transition: opacity var(--transition-fast);
+}
+.menu__footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  background: color-mix(in srgb, var(--surface) 92%, transparent);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 8px 10px;
+  position: sticky;
+  bottom: 0;
+  margin-top: 8px;
+}
+.menu__footer strong{
+  color: var(--wine);
+  font-weight: 600;
 }
 @media (prefers-color-scheme: dark) {
   .pillar-fixed,
@@ -881,6 +968,9 @@ h2{
     font-size: 14px;
     line-height: 1.4;
   }
+  .menu__footer{
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 1300px) {
@@ -903,6 +993,9 @@ h2{
   .pillar-fixed a,
   .top-menu-fixed a{
     font-size: 13px;
+  }
+  .menu__footer{
+    font-size: 11px;
   }
 }
 

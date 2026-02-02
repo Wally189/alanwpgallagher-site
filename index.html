@@ -51,7 +51,7 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation">
+<body class="theme-vocation home-page">
   <a class="skip" href="#main">Skip to content</a>
 
   <div class="modal is-hidden" data-landing-modal aria-hidden="true">
@@ -159,7 +159,7 @@
 
   <main class="wrap" role="main">
     <div class="home-contact">
-      <section class="panel panel--accent doorway">
+      <section class="panel panel--accent doorway card" data-parallax>
         <h2>How this home is organised</h2>
         <p class="small">
           The site is arranged around five pillars that gather notes, projects, and resources by the way they shape my
@@ -171,7 +171,7 @@
         </p>
       </section>
 
-      <details id="contact" class="panel panel--accent doorway doorway__indent" open>
+      <details id="contact" class="panel panel--accent doorway doorway__indent card" data-parallax open>
         <summary class="panel__summary panel__summary--button">
           <h2>Contact</h2>
         </summary>
@@ -213,17 +213,6 @@
   </div>
 
   
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
   <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
     <a href="vocation.html">Vocation & Work</a>
@@ -234,6 +223,10 @@
     <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
     <a href="life.html">Life in Brief</a>
     <a href="principles.html">Principles & Values</a>
+    <div class="menu__footer" aria-live="polite">
+      <span><strong>Dies</strong>: <span data-date></span></span>
+      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <nav class="top-menu-fixed" aria-label="Actions">
@@ -242,6 +235,10 @@
     <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
     <a href="availability.html">Availability</a>
     <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    <div class="menu__footer" aria-live="polite">
+      <span><strong>Hora</strong>: <span data-hora></span></span>
+      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
+    </div>
   </nav>
 
   <script src="assets/js/site.js" defer></script>
@@ -268,8 +265,6 @@
 </footer>
 </body>
 </html>
-
-
 
 
 
