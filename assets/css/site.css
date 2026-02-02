@@ -433,9 +433,9 @@ a:visited{
   max-width: none;
 }
 .home-page .home-contact{
-  grid-template-columns: minmax(0, 1fr);
-  max-width: var(--measure);
-  margin: 18px auto 0;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  max-width: none;
+  margin: 18px 0 0;
 }
 .home-page .doorway__indent{
   margin-left: 0;
@@ -878,6 +878,7 @@ h2{
   display: grid;
   gap: 10px;
   overflow: auto;
+  flex: 1 1 auto;
   min-height: 0;
   padding-right: 4px;
 }
@@ -895,6 +896,7 @@ h2{
   border: 1px solid var(--rule);
   border-radius: 999px;
   padding: 8px 10px;
+  margin-top: auto;
   flex-shrink: 0;
 }
 .menu__footer{
