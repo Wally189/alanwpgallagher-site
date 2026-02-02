@@ -836,6 +836,8 @@ h2{
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + var(--footer-gap));
+  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -845,7 +847,7 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow-y: auto;
+  overflow: hidden; /* keep outer container stable */
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
@@ -857,6 +859,8 @@ h2{
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + var(--footer-gap));
+  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -866,18 +870,23 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow-y: auto;
+  overflow: hidden; /* keep outer container stable */
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
   gap: 12px;
   transition: opacity var(--transition-fast);
 }
+
+/* Scrollable menu area (links) */
 .menu-fixed__content{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  flex: 0 0 auto;
+  overflow-y: auto;
+  overscroll-behavior: auto;
+  flex: 1 1 auto;
+  min-height: 0;
   padding-right: 4px;
 }
 
