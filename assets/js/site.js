@@ -1,11 +1,16 @@
-﻿(() => {
+(() => {
   // Track interval IDs for visibility-based pausing
   const intervals = [];
-  
+
   // Helper to create pausable intervals that stop when tab is hidden
   const createPausableInterval = (callback, delay) => {
     let intervalId = setInterval(callback, delay);
-    intervals.push({ callback, delay, get id() { return intervalId; }, set id(v) { intervalId = v; } });
+    intervals.push({
+      callback,
+      delay,
+      get id() { return intervalId; },
+      set id(v) { intervalId = v; },
+    });
     return intervalId;
   };
 
@@ -266,20 +271,15 @@
 
   const dateEls = document.querySelectorAll("[data-date]");
   if (dateEls.length) {
-    const pad2 = (value) => String(value).padStart(2, "0");
     const ordinal = (day) => {
       if (day % 100 >= 11 && day % 100 <= 13) {
         return `${day}th`;
       }
       switch (day % 10) {
-        case 1:
-          return `${day}st`;
-        case 2:
-          return `${day}nd`;
-        case 3:
-          return `${day}rd`;
-        default:
-          return `${day}th`;
+        case 1: return `${day}st`;
+        case 2: return `${day}nd`;
+        case 3: return `${day}rd`;
+        default: return `${day}th`;
       }
     };
 
@@ -290,6 +290,7 @@
       const isIrish = lang.startsWith("ga") || path.includes("-ga");
       const locale = isIrish ? "ga-IE" : "en-GB";
       const year = now.getFullYear();
+
       if (isIrish) {
         const gaWeekdays = [
           "Domhnach",
@@ -319,6 +320,7 @@
         const day = now.getDate();
         return `${weekday} ${day} ${month} ${year} AD`;
       }
+
       const weekday = new Intl.DateTimeFormat(locale, { weekday: "long" }).format(now);
       const month = new Intl.DateTimeFormat(locale, { month: "long" }).format(now);
       const day = ordinal(now.getDate());
@@ -336,16 +338,18 @@
     createPausableInterval(updateDate, 60000);
   }
 
+  /* Parallax — conflict resolved */
   const parallaxEls = document.querySelectorAll("[data-parallax]");
   if (parallaxEls.length) {
     const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const speed = 0.6;
+    const speed = 0.22; // subtle, readable parallax
+
     let ticking = false;
 
     const applyParallax = () => {
       ticking = false;
-      const scrollY = window.scrollY || window.pageYOffset;
-      const offset = scrollY * (1 - speed);
+      const scrollY = window.scrollY || window.pageYOffset || 0;
+      const offset = scrollY * speed;
       parallaxEls.forEach((el) => {
         el.style.transform = `translate3d(0, ${offset}px, 0)`;
       });
@@ -381,6 +385,7 @@
 
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("resize", onScroll);
+
     if (prefersReduced.addEventListener) {
       prefersReduced.addEventListener("change", onPreferenceChange);
     } else {

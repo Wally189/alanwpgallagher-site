@@ -440,6 +440,21 @@ a:visited{
 .home-page .doorway__indent{
   margin-left: 0;
 }
+
+/* Cards + optional parallax */
+.card{
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  background: var(--surface);
+  margin-bottom: 18px;
+}
+.card:last-child{
+  margin-bottom: 0;
+}
+.card.panel--accent{
+  border-top: 2px solid var(--accent);
+}
 [data-parallax]{
   will-change: transform;
 }
@@ -820,6 +835,7 @@ h2{
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -841,6 +857,7 @@ h2{
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -864,7 +881,10 @@ h2{
   min-height: 0;
   padding-right: 4px;
 }
-.menu-fixed__bottom{
+
+/* Support either class name for the bottom/status row */
+.menu-fixed__bottom,
+.menu__footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -877,10 +897,17 @@ h2{
   padding: 8px 10px;
   flex-shrink: 0;
 }
-.menu-fixed__bottom strong{
+.menu__footer{
+  position: sticky;
+  bottom: 0;
+  margin-top: 8px;
+}
+.menu-fixed__bottom strong,
+.menu__footer strong{
   color: var(--wine);
   font-weight: 600;
 }
+
 @media (prefers-color-scheme: dark) {
   .pillar-fixed,
   .top-menu-fixed{
@@ -958,7 +985,8 @@ h2{
     font-size: 14px;
     line-height: 1.4;
   }
-  .menu-fixed__bottom{
+  .menu-fixed__bottom,
+  .menu__footer{
     font-size: 12px;
   }
 }
@@ -984,7 +1012,8 @@ h2{
   .top-menu-fixed a{
     font-size: 13px;
   }
-  .menu-fixed__bottom{
+  .menu-fixed__bottom,
+  .menu__footer{
     font-size: 11px;
   }
 }
