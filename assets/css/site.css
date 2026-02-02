@@ -12,6 +12,7 @@ html,
 body{
   height: 100%;
 }
+
 body{
   min-height: 100vh;
   display: flex;
@@ -20,15 +21,18 @@ body{
   background: var(--wl-paper);
   padding-bottom: var(--footer-h); /* reserve space for fixed footer */
 }
+
 main{
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
 }
+
 .footer,
 .wl-footer{
   margin-top: auto;
 }
+
 header,
 footer{
   position: relative;
@@ -632,31 +636,13 @@ details[open] > .panel__summary::before{
   animation: fadeIn var(--transition-medium);
 }
 
-@media (min-width: 900px) {
-  body::before,
-  body::after{
-    content: "";
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    width: 1px;
-    background: var(--stroke);
-    pointer-events: none;
-    z-index: 1;
-  }
-  body::before{
-    left: calc(50% - (var(--max) / 2) - 28px);
-  }
-  body::after{
-    right: calc(50% - (var(--max) / 2) - 28px);
-  }
-}
+/* NOTE:
+   Removed the old @media(min-width:900px) block that redefined body::before/body::after
+   as 1px rules with z-index:1, because body::before is already used for the cross background.
+*/
 
 @media (prefers-color-scheme: dark) and (min-width: 900px) {
-  body::before,
-  body::after{
-    background: var(--stroke);
-  }
+  /* Keep any dark-mode adjustments that are NOT reusing body::before/body::after */
 }
 
 @media (max-width: 900px) {
@@ -1094,6 +1080,7 @@ button:active{
   bottom: 0;
   z-index: 2;
 }
+
 .footer a,
 .wl-footer a,
 .site-footer a{
@@ -1106,6 +1093,7 @@ button:active{
 .site-footer a:hover{
   color: #fff;
 }
+
 .wl-footer__meta,
 .wl-footer__hint,
 .wl-footer__family,
@@ -1128,6 +1116,7 @@ button:active{
   outline: 3px solid var(--marian-blue);
   outline-offset: 3px;
 }
+
 .footer__grid{
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
@@ -1147,6 +1136,7 @@ button:active{
   gap: 8px;
   margin-top: 8px;
 }
+
 .share{
   font: inherit;
   color: #fff;
@@ -1167,6 +1157,7 @@ button:active{
 .share:active{
   transform: scale(0.97);
 }
+
 .share__hint{
   font-size: 14px;
   color: color-mix(in srgb, #fff 82%, transparent);
