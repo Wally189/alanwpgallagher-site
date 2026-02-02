@@ -19,16 +19,15 @@ body{
   flex-direction: column;
   position: relative;
   background: var(--wl-paper);
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin: 0;
+  overflow-y: auto;   /* body scrolls */
+  overflow-x: hidden; /* prevent horizontal creep */
 }
 
 main{
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
-  padding-bottom: calc(var(--footer-h) + 24px);
+  padding-bottom: calc(var(--footer-h) + 24px); /* keep content above fixed footer */
 }
 
 .footer,
@@ -42,6 +41,7 @@ footer{
   z-index: 1;
 }
 
+/* page “paper” overlay */
 html::before{
   content: "";
   position: fixed;
@@ -59,6 +59,7 @@ html::after{
   content: none;
 }
 
+/* faint celtic cross background */
 body::before{
   content: "";
   position: fixed;
@@ -215,7 +216,6 @@ a:visited{
   }
 }
 
-/* Inner page hero enhancement */
 .masthead--inner{
   padding: 48px 0 28px;
   background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), transparent 65%);
@@ -299,37 +299,7 @@ a:visited{
   font-size: 14px;
   color: var(--muted);
 }
-.lang__toggle{
-  font: inherit;
-  font-size: 2.2em;
-  color: var(--accent-dark);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 12px 20px;
-  font-weight: 700;
-  text-decoration: underline;
-  text-decoration-color: var(--accent);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
-  cursor: pointer;
-  transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
-}
-.lang__toggle:hover{
-  background: color-mix(in srgb, var(--accent) 6%, transparent);
-}
-.lang__toggle:focus-visible{
-  outline: 3px solid var(--marian-blue);
-  outline-offset: 3px;
-}
-.lang__toggle:active{
-  transform: scale(0.97);
-}
-.devotion{
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  color: var(--wine);
-}
+.lang__toggle,
 .back{
   font: inherit;
   font-size: 2.2em;
@@ -346,13 +316,16 @@ a:visited{
   cursor: pointer;
   transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
 }
+.lang__toggle:hover,
 .back:hover{
   background: color-mix(in srgb, var(--accent) 6%, transparent);
 }
+.lang__toggle:focus-visible,
 .back:focus-visible{
   outline: 3px solid var(--marian-blue);
   outline-offset: 3px;
 }
+.lang__toggle:active,
 .back:active{
   transform: scale(0.97);
 }
@@ -418,6 +391,7 @@ a:visited{
 .quiet{
   color: var(--muted);
 }
+
 .welcome-card p{
   margin-block: 0 var(--para-space);
   line-height: var(--leading);
@@ -425,6 +399,7 @@ a:visited{
 .welcome-card p:last-child{
   margin-bottom: 0;
 }
+
 .welcome-details{
   margin: 10px 0 12px;
   border-left: 1px solid var(--stroke);
@@ -464,6 +439,7 @@ a:visited{
 .welcome-details__body p:last-child{
   margin-bottom: 0;
 }
+
 .rule{
   color: var(--muted);
   font-size: 14px;
@@ -518,12 +494,7 @@ a:visited{
   padding: 18px 16px;
 }
 
-main p{
-  margin-block: 0 var(--para-space);
-  line-height: var(--leading);
-  max-width: var(--measure);
-}
-
+main p,
 .contact-frame{
   margin-block: 0 var(--para-space);
   line-height: var(--leading);
@@ -537,7 +508,6 @@ main p{
   gap: 2rem;
 }
 
-/* Prose layout - elegant single column for long-form content */
 .prose {
   max-width: 65ch;
   margin: 0 auto;
@@ -639,15 +609,6 @@ details[open] > .panel__summary::before{
   animation: fadeIn var(--transition-medium);
 }
 
-/* NOTE:
-   Removed the old @media(min-width:900px) block that redefined body::before/body::after
-   as 1px rules with z-index:1, because body::before is already used for the cross background.
-*/
-
-@media (prefers-color-scheme: dark) and (min-width: 900px) {
-  /* Keep any dark-mode adjustments that are NOT reusing body::before/body::after */
-}
-
 @media (max-width: 900px) {
   html::after{
     background-position: center 80px;
@@ -708,21 +669,19 @@ h2{
 }
 .links li{ margin: 6px 0; }
 
-.hint{
-  color: var(--muted);
-  font-size: 14px;
-}
-
+.hint,
 .small{
   color: var(--muted);
   font-size: 14px;
 }
+
 .devotion-line{
   margin: 6px 0 0;
   color: var(--muted);
   font-size: 14px;
   letter-spacing: 0.04em;
 }
+
 .info-link{
   display: inline-flex;
   align-items: center;
@@ -747,12 +706,12 @@ h2{
   outline-offset: 3px;
 }
 
-/* Fixed position elements - desktop only */
+/* Dies / Hora — fixed, but kept ABOVE the footer */
 .hora-fixed{
   position: fixed;
   right: 16px;
-  bottom: 16px;
-  z-index: 1;
+  bottom: calc(var(--footer-h) + 16px);
+  z-index: 90;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -762,22 +721,11 @@ h2{
   box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 6%, transparent);
   transition: opacity var(--transition-fast);
 }
-@media (prefers-color-scheme: dark) {
-  .hora-fixed {
-    background: color-mix(in srgb, var(--surface) 92%, transparent);
-    border-color: var(--stroke);
-  }
-}
-.hora-fixed strong{
-  color: var(--wine);
-  font-weight: 600;
-}
-
 .date-fixed{
   position: fixed;
   left: 16px;
-  bottom: 16px;
-  z-index: 1;
+  bottom: calc(var(--footer-h) + 16px);
+  z-index: 90;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -788,22 +736,25 @@ h2{
   transition: opacity var(--transition-fast);
 }
 @media (prefers-color-scheme: dark) {
-  .date-fixed {
+  .hora-fixed,
+  .date-fixed{
     background: color-mix(in srgb, var(--surface) 92%, transparent);
     border-color: var(--stroke);
   }
 }
+.hora-fixed strong,
 .date-fixed strong{
   color: var(--wine);
   font-weight: 600;
 }
 
+/* Left / Right menus — fixed, but stop above footer and can scroll internally if needed */
 .pillar-fixed{
   position: fixed;
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
-  z-index: 50;
+  z-index: 80;
   font-size: 15px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -812,51 +763,18 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  max-height: calc(100vh - var(--footer-h) - 32px);
-  min-height: var(--sidebar-min-height);
   overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
   transition: opacity var(--transition-fast);
 }
-
-@media (prefers-color-scheme: dark) {
-  .pillar-fixed {
-    background: color-mix(in srgb, var(--surface) 92%, transparent);
-    border-color: var(--stroke);
-  }
-}
-.pillar-fixed__title{
-  color: var(--wine);
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  font-size: 14px;
-}
-.pillar-fixed a{
-  color: var(--ink);
-  text-decoration: none;
-  font-size: 15px;
-  line-height: 1.45;
-  display: block;
-  transition: color var(--transition-fast);
-}
-.pillar-fixed a:hover{
-  color: var(--accent);
-}
-.pillar-fixed a:focus-visible{
-  outline: 3px solid var(--marian-blue);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
 .top-menu-fixed{
   position: fixed;
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
   bottom: calc(var(--footer-h) + 16px);
-  z-index: 50;
+  z-index: 80;
   font-size: 15px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -865,21 +783,20 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  max-height: calc(100vh - var(--footer-h) - 32px);
-  min-height: var(--sidebar-min-height);
   overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
   transition: opacity var(--transition-fast);
 }
-
 @media (prefers-color-scheme: dark) {
-  .top-menu-fixed {
+  .pillar-fixed,
+  .top-menu-fixed{
     background: color-mix(in srgb, var(--surface) 92%, transparent);
     border-color: var(--stroke);
   }
 }
+.pillar-fixed__title,
 .top-menu-fixed__title{
   color: var(--wine);
   font-weight: 600;
@@ -887,6 +804,8 @@ h2{
   text-transform: uppercase;
   font-size: 14px;
 }
+
+.pillar-fixed a,
 .top-menu-fixed a{
   color: var(--ink);
   text-decoration: none;
@@ -894,9 +813,6 @@ h2{
   line-height: 1.45;
   display: block;
   transition: color var(--transition-fast);
-}
-.pillar-fixed a,
-.top-menu-fixed a{
   padding: 8px 6px 8px 12px;
   border-radius: 10px;
   position: relative;
@@ -916,8 +832,8 @@ h2{
 .pillar-fixed a:hover,
 .top-menu-fixed a:hover{
   background: color-mix(in srgb, var(--accent) 6%, transparent);
+  color: var(--accent);
 }
-
 .pillar-fixed a.is-active,
 .pillar-fixed a[aria-current="page"],
 .top-menu-fixed a.is-active,
@@ -975,6 +891,7 @@ h2{
   }
 }
 
+/* Hide fixed UI on small screens */
 @media (max-width: 1100px) {
   .pillar-fixed,
   .top-menu-fixed,
@@ -988,15 +905,7 @@ h2{
   }
 }
 
-.top-menu-fixed a:hover{
-  color: var(--accent);
-}
-.top-menu-fixed a:focus-visible{
-  outline: 3px solid var(--marian-blue);
-  outline-offset: 3px;
-  border-radius: 2px;
-}
-
+/* Tables / forms */
 .details{
   margin-top: 10px;
   border: 1px solid var(--rule);
@@ -1037,7 +946,6 @@ h2{
   gap: 10px;
   max-width: 560px;
 }
-
 label{ display: grid; gap: 6px; }
 input, textarea{
   font: inherit;
@@ -1053,7 +961,6 @@ input:focus, textarea:focus{
   border-color: var(--accent);
   box-shadow: 0 0 0 3px var(--accent-soft);
 }
-
 button{
   font: inherit;
   padding: 10px 12px;
@@ -1074,6 +981,7 @@ button:active{
   transform: scale(0.97);
 }
 
+/* Footer — always on top */
 .footer,
 .wl-footer,
 .site-footer{
@@ -1086,9 +994,8 @@ button:active{
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 100;
+  z-index: 100; /* wins */
 }
-
 .footer a,
 .wl-footer a,
 .site-footer a{
@@ -1101,7 +1008,6 @@ button:active{
 .site-footer a:hover{
   color: #fff;
 }
-
 .wl-footer__meta,
 .wl-footer__hint,
 .wl-footer__family,
@@ -1124,19 +1030,14 @@ button:active{
   outline: 3px solid var(--marian-blue);
   outline-offset: 3px;
 }
-
 .footer__grid{
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
   gap: 12px;
   align-items: center;
 }
-.footer__center{
-  text-align: center;
-}
-.footer__right{
-  text-align: right;
-}
+.footer__center{ text-align: center; }
+.footer__right{ text-align: right; }
 .footer__actions{
   display: flex;
   align-items: center;
@@ -1144,7 +1045,6 @@ button:active{
   gap: 8px;
   margin-top: 8px;
 }
-
 .share{
   font: inherit;
   color: #fff;
@@ -1158,14 +1058,9 @@ button:active{
 .share:hover{
   background: color-mix(in srgb, #fff 12%, transparent);
 }
-.share:focus-visible{
-  outline: 3px solid var(--marian-blue);
-  outline-offset: 3px;
-}
 .share:active{
   transform: scale(0.97);
 }
-
 .share__hint{
   font-size: 14px;
   color: color-mix(in srgb, #fff 82%, transparent);
@@ -1183,7 +1078,7 @@ button:active{
   cursor: default;
 }
 
-/* Mobile nav sections - inline flow versions for small screens */
+/* Mobile nav sections */
 .mobile-nav-top,
 .mobile-nav-bottom{
   display: none;
@@ -1201,9 +1096,7 @@ button:active{
   .footer__grid{
     grid-template-columns: 1fr;
   }
-  .footer__center{
-    text-align: left;
-  }
+  .footer__center,
   .footer__right{
     text-align: left;
   }
@@ -1217,7 +1110,6 @@ button:active{
     max-width: none;
   }
 
-  /* Hide fixed nav on mobile */
   .pillar-fixed,
   .top-menu-fixed,
   .hora-fixed,
@@ -1225,7 +1117,6 @@ button:active{
     display: none;
   }
 
-  /* Show inline mobile nav sections */
   .mobile-nav-top,
   .mobile-nav-bottom{
     display: block;
