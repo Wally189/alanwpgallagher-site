@@ -2,6 +2,7 @@
   --marian-blue:#1d70b8;
   --cross-opacity:0.06;
   --footer-h:120px;
+  --footer-gap:24px;
 }
 
 body.modal-open{
@@ -27,7 +28,7 @@ main{
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
-  padding-bottom: calc(var(--footer-h) + 24px); /* keep content above fixed footer */
+  padding-bottom: calc(var(--footer-h) + var(--footer-gap)); /* keep content above fixed footer */
 }
 
 .footer,
@@ -791,7 +792,7 @@ h2{
 .hora-fixed{
   position: fixed;
   right: 16px;
-  bottom: calc(var(--footer-h) + 16px);
+  bottom: calc(var(--footer-h) + var(--footer-gap));
   z-index: 90;
   font-size: 14px;
   color: var(--muted);
@@ -805,7 +806,7 @@ h2{
 .date-fixed{
   position: fixed;
   left: 16px;
-  bottom: calc(var(--footer-h) + 16px);
+  bottom: calc(var(--footer-h) + var(--footer-gap));
   z-index: 90;
   font-size: 14px;
   color: var(--muted);
@@ -834,8 +835,9 @@ h2{
   position: fixed;
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
-  bottom: calc(var(--footer-h) + 16px);
-  max-height: calc(100vh - var(--footer-h) - 32px);
+  bottom: calc(var(--footer-h) + var(--footer-gap));
+  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -856,8 +858,9 @@ h2{
   position: fixed;
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
-  bottom: calc(var(--footer-h) + 16px);
-  max-height: calc(100vh - var(--footer-h) - 32px);
+  bottom: calc(var(--footer-h) + var(--footer-gap));
+  height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
+  max-height: calc(100vh - var(--footer-h) - (var(--footer-gap) * 2));
   z-index: 80;
   font-size: 15px;
   color: var(--muted);
@@ -875,9 +878,11 @@ h2{
   transition: opacity var(--transition-fast);
 }
 .menu-fixed__content{
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
-  overflow: auto;
+  overflow-y: auto;
+  overscroll-behavior: auto;
   flex: 1 1 auto;
   min-height: 0;
   padding-right: 4px;
@@ -886,10 +891,10 @@ h2{
 /* Support either class name for the bottom/status row */
 .menu-fixed__bottom,
 .menu__footer{
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  column-gap: 10px;
   font-size: 13px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -898,6 +903,16 @@ h2{
   padding: 8px 10px;
   margin-top: auto;
   flex-shrink: 0;
+}
+.menu-fixed__bottom span,
+.menu__footer span{
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.menu-fixed__bottom .info-link,
+.menu__footer .info-link{
+  margin-left: 0;
+  justify-self: end;
 }
 .menu__footer{
   position: sticky;
