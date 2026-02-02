@@ -152,6 +152,20 @@
     });
   }
 
+  const footerEl = document.querySelector(".wl-footer, .site-footer, .footer");
+  if (footerEl) {
+    const updateFooterHeight = () => {
+      document.documentElement.style.setProperty("--footer-h", `${footerEl.offsetHeight}px`);
+    };
+    updateFooterHeight();
+    window.addEventListener("load", updateFooterHeight);
+    window.addEventListener("resize", updateFooterHeight);
+    if (window.ResizeObserver) {
+      const footerObserver = new ResizeObserver(updateFooterHeight);
+      footerObserver.observe(footerEl);
+    }
+  }
+
   const landingModal = document.querySelector("[data-landing-modal]");
   if (landingModal) {
     const modalKey = "landingNoticeDismissed";
