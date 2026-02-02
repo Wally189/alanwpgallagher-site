@@ -53,10 +53,33 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation">
-  <a class="skip" href="#main">Skip to content</a>
+<body class="theme-vocation">  <div class="app">
+    <header class="site-header">
+      <div class="masthead masthead--inner" role="banner">
+  <div class="masthead__bar">
+    <div class="wrap masthead__bar-inner">
+      <div class="masthead__top">
+        <div class="identity">
+          <div class="kicker">Vocation &amp; Work</div>
+          <h1 class="title">Alan Gallagher</h1>
+          <p class="subtitle">Professional practice and the personal vocation that shapes it.</p>
+        </div>
+        <div class="masthead__actions">
+          <button class="back" type="button" data-back="index.html">Home</button>
+          <nav class="lang" aria-label="Language switch">
+            <button class="lang__toggle" type="button" data-lang-target="vocation-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
+          </nav>
+          <span class="devotion" aria-hidden="true">JMJ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </header>
+    <div class="app__scroll">
+      <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Mobile navigation - top (menus) - hidden on desktop -->
+<!-- Mobile navigation - top (menus) - hidden on desktop -->
   <div class="mobile-nav-top" aria-label="Mobile navigation">
     <div class="mobile-nav__row">
       <div class="mobile-nav__title">Pillars</div>
@@ -75,26 +98,7 @@
     </div>
   </div>
 
-  <header class="masthead masthead--inner" role="banner">
-    <div class="wrap">
-      <div class="masthead__top">
-        <div class="identity">
-          <div class="kicker">Vocation &amp; Work</div>
-          <h1 class="title">Alan Gallagher</h1>
-          <p class="subtitle">Professional practice and the personal vocation that shapes it.</p>
-        </div>
-        <div class="masthead__actions">
-          <button class="back" type="button" data-back="index.html">Home</button>
-          <nav class="lang" aria-label="Language switch">
-            <button class="lang__toggle" type="button" data-lang-target="vocation-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
-          </nav>
-          <span class="devotion" aria-hidden="true">JMJ</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap" id="main" role="main">
+<main class="wrap" id="main" role="main">
     <section class="panel doorway">
       <h2>Professional Vocation &amp; Work</h2>
       <p class="small">
@@ -151,26 +155,7 @@
     </section>
   </main>
 
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Current time">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </div>
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
+<nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
     <a href="vocation.html">Vocation &amp; Work</a>
     <a href="formation.html">Formation</a>
@@ -182,7 +167,7 @@
     <a href="principles.html">Principles &amp; Values</a>
   </nav>
 
-  <nav class="top-menu-fixed" aria-label="Actions">
+<nav class="top-menu-fixed" aria-label="Actions">
     <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
     <a href="index.html#contact">Contact</a>
     <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
@@ -190,35 +175,38 @@
     <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </nav>
 
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/enhancements.js" defer></script>
-  <footer class="wl-footer">
-    <div class="wl-footer__grid">
-      <div class="wl-footer__left">
-        <div class="wl-footer__line">
-          <span><strong>Dies</strong>: <span data-date></span></span>
-          <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Dies">i</a>
-        </div>
-        <div class="wl-footer__meta">
-          <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
-          <span>&middot;</span>
-          <span>Digital home of Alan Gallagher</span>
-        </div>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/enhancements.js" defer></script>
+
+</div>
+</div>
+    <footer class="site-footer wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <div class="wl-footer__line">
+        <span><strong>Dies</strong>: <span data-date></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Dies">i</a>
       </div>
-      <div class="wl-footer__center">
-        <em>Ora et labora.</em>
-      </div>
-      <div class="wl-footer__right">
-        <div class="wl-footer__actions">
-          <a href="privacy.html">Privacy</a>
-          <button class="wl-footer__share" type="button" data-share>Share</button>
-          <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
-        </div>
+      <div class="wl-footer__meta">
+        <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+        <span>&middot;</span>
+        <a href="privacy.html">Privacy</a>
       </div>
     </div>
-    <div class="wl-footer__family">
-      <a href="https://www.alanwpgallagher.info">Waylight Family</a>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
     </div>
-  </footer>
-</body>
+    <div class="wl-footer__right">
+      <div class="wl-footer__line">
+        <span><strong>Hora</strong>: <span data-hora></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Hora">i</a>
+      </div>
+      <div class="wl-footer__actions">
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div></body>
 </html>

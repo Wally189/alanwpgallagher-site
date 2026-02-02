@@ -51,10 +51,32 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation">
-  <a class="skip" href="#main">Skip to content</a>
+<body class="theme-vocation">  <div class="app">
+    <header class="site-header">
+      <div class="masthead masthead--inner" role="banner">
+  <div class="masthead__bar">
+    <div class="wrap masthead__bar-inner">
+      <div class="masthead__top">
+        <div class="identity">
+          <div class="kicker">Parish Life</div>
+          <h1 class="title">St Mary on the Quay</h1>
+          <p class="subtitle">Bristol parish notes and reflections.</p>
+        </div>
+        <div class="masthead__actions">
+          <button class="back" type="button" data-back="index.html">Home</button>
+                    <nav class="lang" aria-label="Language selection">
+            <button class="lang__toggle" type="button" data-lang-target="stmaryonthequay-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
+          </nav><span class="devotion" aria-hidden="true">JMJ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </header>
+    <div class="app__scroll">
+      <a class="skip" href="#main">Skip to content</a>
 
-  <!-- Mobile navigation - top (menus) - hidden on desktop -->
+<!-- Mobile navigation - top (menus) - hidden on desktop -->
   <div class="mobile-nav-top" aria-label="Mobile navigation">
     <div class="mobile-nav__row">
       <div class="mobile-nav__title">Pillars</div>
@@ -73,25 +95,7 @@
     </div>
   </div>
 
-  <header class="masthead masthead--inner" role="banner">
-    <div class="wrap">
-      <div class="masthead__top">
-        <div class="identity">
-          <div class="kicker">Parish Life</div>
-          <h1 class="title">St Mary on the Quay</h1>
-          <p class="subtitle">Bristol parish notes and reflections.</p>
-        </div>
-        <div class="masthead__actions">
-          <button class="back" type="button" data-back="index.html">Home</button>
-                    <nav class="lang" aria-label="Language selection">
-            <button class="lang__toggle" type="button" data-lang-target="stmaryonthequay-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
-          </nav><span class="devotion" aria-hidden="true">JMJ</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap" id="main" role="main">
+<main class="wrap" id="main" role="main">
     <section class="panel doorway">
       <h2>Parish Notes</h2>
       <p class="small">
@@ -103,28 +107,7 @@
     </section>
   </main>
 
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Current time">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </div>
-
-  
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
+<nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
     <a href="vocation.html">Vocation & Work</a>
     <a href="formation.html">Formation</a>
@@ -136,16 +119,20 @@
     <a href="principles.html">Principles & Values</a>
   </nav>
 
-  <nav class="top-menu-fixed" aria-label="Actions">
+<nav class="top-menu-fixed" aria-label="Actions">
     <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
     <a href="index.html#contact">Contact</a>
     <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
     <a href="availability.html">Availability</a>
     <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </nav>
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/enhancements.js" defer></script>
-<footer class="wl-footer">
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/enhancements.js" defer></script>
+
+</div>
+</div>
+    <footer class="site-footer wl-footer">
   <div class="wl-footer__grid">
     <div class="wl-footer__left">
       <div class="wl-footer__line">
@@ -173,7 +160,7 @@
     </div>
   </div>
 </footer>
-</body>
+  </div></body>
 </html>
 
 

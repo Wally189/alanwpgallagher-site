@@ -56,10 +56,33 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-formation">
-  <a class="skip" href="#main">Léim go dtí an t-ábhar</a>
+<body class="theme-formation">  <div class="app">
+    <header class="site-header">
+      <div class="masthead masthead--inner" role="banner">
+  <div class="masthead__bar">
+    <div class="wrap masthead__bar-inner">
+      <div class="masthead__top">
+        <div class="identity">
+          <div class="kicker">Foirmiú</div>
+          <h1 class="title">Alan Gallagher</h1>
+          <p class="subtitle">Foirmiú gairmiúil, morálta, intleachtúil agus spioradálta.</p>
+        </div>
+        <div class="masthead__actions">
+          <button class="back" type="button" data-back="index-ga.html">Baile</button>
+          <nav class="lang" aria-label="Rogha teanga">
+            <button class="lang__toggle" type="button" data-lang-target="formation.html" aria-label="Switch to English">English</button>
+          </nav>
+          <span class="devotion" aria-hidden="true">JMJ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </header>
+    <div class="app__scroll">
+      <a class="skip" href="#main">Léim go dtí an t-ábhar</a>
 
-  <!-- Mobile navigation - top (menus) - hidden on desktop -->
+<!-- Mobile navigation - top (menus) - hidden on desktop -->
   <div class="mobile-nav-top" aria-label="Nascleanúint soghluaiste">
     <div class="mobile-nav__row">
       <div class="mobile-nav__title">Colúin</div>
@@ -78,26 +101,7 @@
     </div>
   </div>
 
-  <header class="masthead masthead--inner" role="banner">
-    <div class="wrap">
-      <div class="masthead__top">
-        <div class="identity">
-          <div class="kicker">Foirmiú</div>
-          <h1 class="title">Alan Gallagher</h1>
-          <p class="subtitle">Foirmiú gairmiúil, morálta, intleachtúil agus spioradálta.</p>
-        </div>
-        <div class="masthead__actions">
-          <button class="back" type="button" data-back="index-ga.html">Baile</button>
-          <nav class="lang" aria-label="Rogha teanga">
-            <button class="lang__toggle" type="button" data-lang-target="formation.html" aria-label="Switch to English">English</button>
-          </nav>
-          <span class="devotion" aria-hidden="true">JMJ</span>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <main class="wrap" id="main" role="main">
+<main class="wrap" id="main" role="main">
     <section class="panel doorway">
       <h2>Príomhnascanna</h2>
       <p class="small"><em>Tá an t-ábhar seo á aistriú go Gaeilge de réir a chéile.</em></p>
@@ -155,26 +159,7 @@
     </section>
   </main>
 
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Am reatha">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
-    </div>
-  </div>
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information-ga.html" aria-label="Eolas faoi na cloig agus riail saoil">i</a>
-  </div>
-
-  <nav class="pillar-fixed" aria-label="Colúin agus stíl bheatha">
+<nav class="pillar-fixed" aria-label="Colúin agus stíl bheatha">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Colúin</div>
     <a href="vocation-ga.html">Gairm &amp; Obair</a>
     <a href="formation-ga.html">Foirmiú</a>
@@ -186,7 +171,7 @@
     <a href="principles-ga.html">Prionsabail &amp; Luachanna</a>
   </nav>
 
-  <nav class="top-menu-fixed" aria-label="Gníomhartha">
+<nav class="top-menu-fixed" aria-label="Gníomhartha">
     <div class="top-menu-fixed__title" role="heading" aria-level="2">Gníomhartha</div>
     <a href="index-ga.html#contact">Teagmháil</a>
     <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
@@ -194,36 +179,38 @@
     <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </nav>
 
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/enhancements.js" defer></script>
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/enhancements.js" defer></script>
 
-  <footer class="wl-footer">
-    <div class="wl-footer__grid">
-      <div class="wl-footer__left">
-        <div class="wl-footer__line">
-          <span><strong>Dies</strong>: <span data-date></span></span>
-          <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information-ga.html" aria-label="Eolas faoi Dies">i</a>
-        </div>
-        <div class="wl-footer__meta">
-          <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
-          <span>&middot;</span>
-          <span>Baile digiteach Alan Gallagher</span>
-        </div>
+</div>
+</div>
+    <footer class="site-footer wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <div class="wl-footer__line">
+        <span><strong>Dies</strong>: <span data-date></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information-ga.html" aria-label="About Dies">i</a>
       </div>
-      <div class="wl-footer__center">
-        <em>Ora et labora.</em>
-      </div>
-      <div class="wl-footer__right">
-        <div class="wl-footer__actions">
-          <a href="privacy-ga.html">Príobháideachas</a>
-          <button class="wl-footer__share" type="button" data-share>Roinn</button>
-          <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
-        </div>
+      <div class="wl-footer__meta">
+        <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+        <span>&middot;</span>
+        <a href="privacy-ga.html">Privacy</a>
       </div>
     </div>
-    <div class="wl-footer__family">
-      <a href="https://www.alanwpgallagher.info">Waylight Family</a>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
     </div>
-  </footer>
-</body>
+    <div class="wl-footer__right">
+      <div class="wl-footer__line">
+        <span><strong>Hora</strong>: <span data-hora></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information-ga.html" aria-label="About Hora">i</a>
+      </div>
+      <div class="wl-footer__actions">
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div></body>
 </html>

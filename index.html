@@ -61,10 +61,30 @@
   <script defer src="assets/liturgy/liturgy-accent.js"></script>
 </head>
 
-<body class="theme-vocation home-page">
-  <a class="skip" href="#main">Skip to content</a>
+<body class="theme-vocation home-page">  <div class="app">
+    <header class="site-header">
+      <div class="masthead masthead--home" role="banner">
+  <div class="masthead__bar">
+      <div class="wrap masthead__bar-inner">
+        <div class="masthead__grid">
+          <div class="masthead__label">My digital home</div>
+          <h1 class="masthead__title">Alan WP Gallagher</h1>
+          <div class="masthead__devotion" aria-hidden="true">JMJ</div>
+          <div class="masthead__controls">
+            <button class="back" type="button" data-back="index.html">Home</button>
+            <nav class="lang" aria-label="Language selection">
+              <button class="lang__toggle" type="button" data-lang-target="index-ga.html" aria-label="Switch to Gaeilge"><span lang="ga">Gaeilge</span></button>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    </header>
+    <div class="app__scroll">
+      <a class="skip" href="#main">Skip to content</a>
 
-  <div class="modal is-hidden" data-landing-modal aria-hidden="true">
+<div class="modal is-hidden" data-landing-modal aria-hidden="true">
     <div class="modal__backdrop" data-modal-close></div>
     <div class="modal__card modal__card--accent" role="dialog" aria-modal="true" aria-labelledby="landing-title">
       <button class="modal__close" type="button" data-modal-close aria-label="Close notice">Close</button>
@@ -79,7 +99,7 @@
     </div>
   </div>
 
-  <!-- Mobile navigation - top (menus) - hidden on desktop -->
+<!-- Mobile navigation - top (menus) - hidden on desktop -->
   <div class="mobile-nav-top" aria-label="Mobile navigation">
     <div class="mobile-nav__row">
       <div class="mobile-nav__title">Pillars</div>
@@ -98,23 +118,10 @@
     </div>
   </div>
 
-  <header class="masthead" role="banner">
-    <div class="wrap">
-      <div class="masthead__top">
-        <div class="identity">
-          <div class="kicker">My Digital Home</div>
-          <h1 class="title">Alan WP Gallagher</h1>
-          <p class="subtitle">Bristol, UK &middot; Administration & Operations Expert &middot; Business Analysis (BA) &middot; Custodianship &amp; Order</p>
-          <p class="threshold">You are welcome here. Take what is useful, leave what is not, and rest a while.</p>
-        </div>
-
-        <div class="masthead__actions">
-          <button class="back" type="button" data-back="index.html">Home</button>
-          <nav class="lang" aria-label="Language selection">
-            <button class="lang__toggle" type="button" data-lang-target="index-ga.html" aria-label="Switch to Gaeilge">Gaeilge</button>
-          </nav>
-          <span class="devotion" aria-hidden="true">JMJ</span>
-        </div>
+<div class="wrap">
+      <div class="masthead__intro">
+        <p class="subtitle">Bristol, UK &middot; Administration & Operations Expert &middot; Business Analysis (BA) &middot; Custodianship &amp; Order</p>
+        <p class="threshold">You are welcome here. Take what is useful, leave what is not, and rest a while.</p>
       </div>
 
       <div class="frontis" data-parallax>
@@ -165,9 +172,8 @@
         </div>
       </div>
     </div>
-  </header>
 
-  <main class="wrap" role="main">
+<main class="wrap" role="main">
     <div class="home-contact">
       <section class="panel panel--accent doorway card" data-parallax>
         <h2>How this home is organised</h2>
@@ -213,16 +219,7 @@
     </div>
   </main>
 
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Current time">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </div>
-
-  <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
+<nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="menu-fixed__content">
       <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
       <a href="vocation.html">Vocation &amp; Work</a>
@@ -234,52 +231,57 @@
       <div class="pillar-fixed__title" role="heading" aria-level="2">Lifestyle</div>
       <a href="life.html">Life in Brief</a>
       <a href="principles.html">Principles &amp; Values</a>
-    </div>
+    </div></nav>
 
-    <div class="menu-fixed__bottom" aria-live="polite">
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </nav>
-
-  <nav class="top-menu-fixed" aria-label="Actions">
+<nav class="top-menu-fixed" aria-label="Actions">
     <div class="menu-fixed__content">
       <div class="top-menu-fixed__title" role="heading" aria-level="2">Actions</div>
       <a href="index.html#contact">Contact</a>
       <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
       <a href="availability.html">Availability</a>
       <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div></nav>
+
+<script src="assets/js/site.js" defer></script>
+<script src="assets/js/enhancements.js" defer></script>
+
+</div>
+
+  
+
+  
+
+  
+  
+
     </div>
-
-    <div class="menu-fixed__bottom" aria-live="polite">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </nav>
-
-  <script src="assets/js/site.js" defer></script>
-  <script src="assets/js/enhancements.js" defer></script>
-
-  <footer class="wl-footer">
-    <div class="wl-footer__grid">
-      <div class="wl-footer__left">
-        <span>&copy; 2026, Bristol UK / Letterkenny, Ireland.</span>
+    <footer class="site-footer wl-footer">
+  <div class="wl-footer__grid">
+    <div class="wl-footer__left">
+      <div class="wl-footer__line">
+        <span><strong>Dies</strong>: <span data-date></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Dies">i</a>
       </div>
-      <div class="wl-footer__center">
-        <em>Ora et labora.</em>
-      </div>
-      <div class="wl-footer__right">
-        <div class="wl-footer__actions">
-          <a href="privacy.html">Privacy</a>
-          <button class="wl-footer__share" type="button" data-share>Share</button>
-          <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
-        </div>
+      <div class="wl-footer__meta">
+        <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+        <span>&middot;</span>
+        <a href="privacy.html">Privacy</a>
       </div>
     </div>
-
-    <div class="wl-footer__family">
-      <a href="https://www.alanwpgallagher.info">Waylight Family</a>
+    <div class="wl-footer__center">
+      <em>Ora et labora.</em>
     </div>
-  </footer>
-</body>
+    <div class="wl-footer__right">
+      <div class="wl-footer__line">
+        <span><strong>Hora</strong>: <span data-hora></span></span>
+        <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Hora">i</a>
+      </div>
+      <div class="wl-footer__actions">
+        <button class="wl-footer__share" type="button" data-share>Share</button>
+        <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div></body>
 </html>
