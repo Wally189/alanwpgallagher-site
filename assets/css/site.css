@@ -19,13 +19,15 @@ body{
   flex-direction: column;
   position: relative;
   background: var(--wl-paper);
-  padding-bottom: var(--footer-h); /* reserve space for fixed footer */
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 main{
   flex: 1 0 auto;
   position: relative;
   z-index: 1;
+  padding-bottom: calc(var(--footer-h) + 24px);
 }
 
 .footer,
@@ -749,7 +751,7 @@ h2{
   position: fixed;
   right: 16px;
   bottom: 16px;
-  z-index: 50;
+  z-index: 3;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -773,7 +775,7 @@ h2{
   position: fixed;
   left: 16px;
   bottom: 16px;
-  z-index: 50;
+  z-index: 3;
   font-size: 14px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
@@ -798,7 +800,7 @@ h2{
   position: fixed;
   left: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
-  bottom: 10vh;
+  bottom: calc(var(--footer-h) + 16px);
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
@@ -808,7 +810,9 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   min-height: var(--sidebar-min-height);
+  overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
@@ -849,7 +853,7 @@ h2{
   position: fixed;
   right: max(16px, calc(50% - (var(--max) / 2) - var(--sidebar-width) - var(--sidebar-gap)));
   top: 16px;
-  bottom: 10vh;
+  bottom: calc(var(--footer-h) + 16px);
   z-index: 50;
   font-size: 15px;
   color: var(--muted);
@@ -859,7 +863,9 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
+  max-height: calc(100vh - var(--footer-h) - 32px);
   min-height: var(--sidebar-min-height);
+  overflow: auto;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: grid;
   gap: 10px;
