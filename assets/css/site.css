@@ -1,6 +1,7 @@
 :root{
   --marian-blue:#1d70b8;
   --cross-opacity:0.06;
+  --footer-h:120px;
 }
 
 body.modal-open{
@@ -17,13 +18,24 @@ body{
   flex-direction: column;
   position: relative;
   background: var(--wl-paper);
+  overflow: hidden;
 }
 main{
-  flex: 1 0 auto;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+  padding-bottom: var(--footer-h);
+  position: relative;
+  z-index: 1;
 }
 .footer,
 .wl-footer{
   margin-top: auto;
+}
+header,
+footer{
+  position: relative;
+  z-index: 1;
 }
 
 html::before{
@@ -36,7 +48,7 @@ html::before{
   transform: translateX(-50%);
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   pointer-events: none;
-  z-index: 0;
+  z-index: -2;
 }
 
 html::after{
@@ -71,7 +83,7 @@ body::before{
     left: 0;
     right: 0;
     pointer-events: none;
-    z-index: 1;
+    z-index: 0;
     background-repeat: no-repeat;
     background-size: 1px 100%;
     background-image:
@@ -1074,10 +1086,16 @@ button:active{
 .footer,
 .wl-footer,
 .site-footer{
+  min-height: var(--footer-h);
   padding: 18px 0 34px;
   background: var(--marian-blue);
   color: #fff;
   border-top: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
 }
 .footer a,
 .wl-footer a,
