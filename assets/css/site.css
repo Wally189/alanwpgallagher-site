@@ -220,16 +220,11 @@ a:visited{
 .masthead__bar{
   background: var(--marian-blue);
   color: #fff;
-  position: relative;
-  left: 50%;
   width: 100vw;
-  transform: translateX(-50%);
+  margin-left: calc(50% - 50vw);
 }
 .masthead__bar-inner{
   padding: 12px 0;
-  min-height: var(--masthead-h);
-  display: flex;
-  align-items: center;
 }
 .masthead__grid{
   display: grid;
@@ -335,6 +330,17 @@ a:visited{
     background: none;
   }
 }
+.masthead--inner::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  height: 88px;
+  background: var(--marian-blue);
+  z-index: 0;
+}
 .masthead--inner .wrap{
   position: relative;
   z-index: 1;
@@ -349,8 +355,8 @@ a:visited{
   align-items: center;
   column-gap: 16px;
   row-gap: 8px;
-  min-height: var(--masthead-h);
-  padding: 0;
+  min-height: 72px;
+  padding: 12px 0 0;
   margin-bottom: 0;
 }
 .masthead--inner .identity{
@@ -399,6 +405,9 @@ a:visited{
   outline-offset: 3px;
 }
 @media (max-width: 640px){
+  .masthead--inner::before{
+    height: 104px;
+  }
   .masthead--inner .masthead__top{
     grid-template-columns: 1fr auto;
     grid-template-areas:
@@ -610,16 +619,24 @@ a:visited{
   }
 }
 .home-page .frontis{
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  max-width: none;
+  grid-template-columns: var(--portrait) minmax(0, 1fr);
+  max-width: var(--measure);
   margin: 0 auto;
   gap: 18px;
 }
 .home-page .frontis__left{
+  grid-template-columns: minmax(0, 1fr) var(--portrait);
+  align-items: start;
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px;
   background: var(--surface);
+}
+.home-page .frontis__left .rule{
+  grid-column: 1;
+}
+.home-page .frontis__left .portrait{
+  grid-column: 2;
 }
 .home-page .opening{
   max-width: none;
@@ -633,11 +650,15 @@ a:visited{
   margin-left: 0;
 }
 @media (max-width: 900px){
-  .home-page .frontis__left{
-    border: 1px solid var(--rule);
-  }
   .home-page .frontis{
     grid-template-columns: minmax(0, 1fr);
+  }
+  .home-page .frontis__left{
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .home-page .frontis__left .rule,
+  .home-page .frontis__left .portrait{
+    grid-column: auto;
   }
 }
 
