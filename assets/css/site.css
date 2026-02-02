@@ -304,12 +304,12 @@ a:visited{
 .lang__toggle,
 .back{
   font: inherit;
-  font-size: 1.45em;
+  font-size: 1.6em;
   color: var(--accent-dark);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 10px 16px;
   font-weight: 700;
   text-decoration: underline;
   text-decoration-color: var(--accent);
@@ -342,7 +342,7 @@ a:visited{
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
-  opacity: 0.6;
+  opacity: 0.7;
 }
 @media (max-width: 720px){
   .masthead__actions{
@@ -440,6 +440,8 @@ a:visited{
 .home-page .doorway__indent{
   margin-left: 0;
 }
+
+/* Cards + optional parallax */
 .card{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
@@ -453,11 +455,11 @@ a:visited{
 .card.panel--accent{
   border-top: 2px solid var(--accent);
 }
-.card[data-parallax]{
+[data-parallax]{
   will-change: transform;
 }
 @media (prefers-reduced-motion: reduce){
-  .card[data-parallax]{
+  [data-parallax]{
     transform: none !important;
   }
 }
@@ -843,11 +845,11 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow: auto;
+  overflow: hidden;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: opacity var(--transition-fast);
 }
 .top-menu-fixed{
@@ -865,13 +867,23 @@ h2{
   padding: 18px 20px;
   width: var(--sidebar-width);
   max-width: var(--sidebar-width);
-  overflow: auto;
+  overflow: hidden;
   box-shadow: 0 8px 18px color-mix(in srgb, var(--text) 14%, transparent);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: opacity var(--transition-fast);
 }
+.menu-fixed__content{
+  display: grid;
+  gap: 10px;
+  overflow: auto;
+  min-height: 0;
+  padding-right: 4px;
+}
+
+/* Support either class name for the bottom/status row */
+.menu-fixed__bottom,
 .menu__footer{
   display: flex;
   align-items: center;
@@ -883,14 +895,19 @@ h2{
   border: 1px solid var(--rule);
   border-radius: 999px;
   padding: 8px 10px;
+  flex-shrink: 0;
+}
+.menu__footer{
   position: sticky;
   bottom: 0;
   margin-top: 8px;
 }
+.menu-fixed__bottom strong,
 .menu__footer strong{
   color: var(--wine);
   font-weight: 600;
 }
+
 @media (prefers-color-scheme: dark) {
   .pillar-fixed,
   .top-menu-fixed{
@@ -968,6 +985,7 @@ h2{
     font-size: 14px;
     line-height: 1.4;
   }
+  .menu-fixed__bottom,
   .menu__footer{
     font-size: 12px;
   }
@@ -994,6 +1012,7 @@ h2{
   .top-menu-fixed a{
     font-size: 13px;
   }
+  .menu-fixed__bottom,
   .menu__footer{
     font-size: 11px;
   }
