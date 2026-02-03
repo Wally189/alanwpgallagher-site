@@ -649,18 +649,58 @@ a:visited{
   margin-left: calc(var(--portrait) + var(--frontis-gap));
 }
 
-.home-contact{
+body.home-page{
+  overflow: hidden;
+}
+
+.home-grid{
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-areas:
+    "hero intro"
+    "organise contact";
   gap: 18px;
-  align-items: start;
+  align-items: stretch;
+  height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
+  overflow: auto;
+  min-height: 0;
 }
-.home-contact .doorway__indent{
+.home-grid > *{
+  min-height: 0;
+  overflow: auto;
+}
+.home-grid__hero{
+  grid-area: hero;
+}
+.home-grid__intro{
+  grid-area: intro;
+}
+.home-grid__organise{
+  grid-area: organise;
+}
+.home-grid__contact{
+  grid-area: contact;
+}
+.home-grid .doorway__indent{
   margin-left: 0;
 }
+.home-grid__hero.frontis__left{
+  grid-template-areas: "rule portrait";
+  grid-template-rows: auto;
+}
+.home-grid__intro.opening{
+  max-width: none;
+}
 @media (max-width: 900px){
-  .home-contact{
+  .home-grid{
     grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, auto);
+    grid-template-areas:
+      "hero"
+      "intro"
+      "organise"
+      "contact";
   }
 }
 
@@ -672,13 +712,9 @@ a:visited{
   gap: 18px;
 }
 
-.home-page .home-contact{
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  max-width: none;
-  margin: 18px 0 0;
-}
-.home-page .doorway__indent{
-  margin-left: 0;
+.home-page main{
+  min-height: 0;
+  padding-bottom: calc(var(--footer-h) + var(--footer-gap));
 }
 
 /* Responsive: stack portrait above text and keep spacing consistent */
