@@ -13,6 +13,11 @@
   --max: 920px;
   --pad: 22px;
   --measure: 65ch;
+  --sidebar-gap: 14px;
+  --content-max: min(
+    var(--max),
+    calc(100vw - (2 * (var(--sidebar-width) + var(--sidebar-gap))) - 64px)
+  );
 }
 
 body.modal-open{
@@ -39,7 +44,7 @@ main{
   position: relative;
   z-index: 1;
   padding-top: 16px;
-  padding-bottom: calc(var(--footer-h) + var(--footer-gap)); /* keep content above fixed footer */
+  padding-bottom: calc(var(--footer-h) + var(--footer-gap) + 220px); /* keep content above fixed footer */
 }
 
 .footer,
@@ -191,7 +196,7 @@ a:visited{
 }
 
 .wrap{
-  max-width: var(--max);
+  max-width: var(--content-max);
   margin: 0 auto;
   padding: 0 var(--pad);
   background-image: none;
@@ -582,10 +587,31 @@ a:visited{
   align-items: start;
 }
 
-/* left side can remain a simple stack by default */
+/* left side uses explicit grid areas for deterministic placement */
 .frontis__left{
   display: grid;
-  gap: 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, var(--portrait));
+  grid-template-areas:
+    "rule portrait"
+    "opening portrait";
+  column-gap: var(--frontis-gap);
+  row-gap: 12px;
+  align-items: start;
+
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 16px;
+  background: var(--surface);
+}
+
+.frontis__left .rule{ grid-area: rule; }
+.frontis__left .opening{ grid-area: opening; max-width: none; }
+.frontis__left .portrait{
+  grid-area: portrait;
+  justify-self: end;
+  align-self: start;
+  width: 100%;
+  max-width: var(--portrait);
 }
 
 /* portrait block */
@@ -646,42 +672,6 @@ a:visited{
   gap: 18px;
 }
 
-/* The inside card becomes two columns: text left, portrait right */
-.home-page .frontis__left{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(180px, var(--portrait));
-  column-gap: var(--frontis-gap);
-  row-gap: 12px;
-  align-items: start;
-
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  padding: 16px;
-  background: var(--surface);
-}
-
-/* Put “rule” and opening content in left column */
-.home-page .frontis__left .rule{
-  grid-column: 1;
-}
-.home-page .frontis__left .opening{
-  grid-column: 1;
-}
-
-/* Put portrait in right column and keep it tidy */
-.home-page .frontis__left .portrait{
-  grid-column: 2;
-  width: 100%;
-  max-width: var(--portrait);
-  justify-self: end;
-  align-self: start;
-}
-
-/* Make opening fill the column (no artificial max-width on home) */
-.home-page .opening{
-  max-width: none;
-}
-
 .home-page .home-contact{
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   max-width: none;
@@ -696,17 +686,16 @@ a:visited{
   .home-page .frontis{
     grid-template-columns: minmax(0, 1fr);
   }
-  .home-page .frontis__left{
+  .frontis__left{
     grid-template-columns: 1fr;
+    grid-template-areas:
+      "portrait"
+      "rule"
+      "opening";
   }
-  .home-page .frontis__left .portrait{
-    grid-column: 1;
-    max-width: 320px;
+  .frontis__left .portrait{
     justify-self: center;
-  }
-  .home-page .frontis__left .rule,
-  .home-page .frontis__left .opening{
-    grid-column: 1;
+    max-width: 320px;
   }
 }
 
@@ -834,6 +823,10 @@ a:visited{
   padding: 18px 0;
   border-bottom: 1px solid var(--rule);
   max-width: var(--measure);
+}
+.panel,
+details[open]{
+  scroll-margin-bottom: calc(var(--footer-h) + var(--footer-gap) + 24px);
 }
 
 .panel--accent{
@@ -1058,46 +1051,10 @@ h2{
   outline-offset: 3px;
 }
 
-/* Dies / Hora — fixed, but kept ABOVE the footer */
-.hora-fixed{
-  position: fixed;
-  right: 16px;
-  bottom: calc(var(--footer-h) + var(--footer-gap));
-  z-index: 90;
-  font-size: 14px;
-  color: var(--muted);
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 6px 10px;
-  box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 6%, transparent);
-  transition: opacity var(--transition-fast);
-}
+/* Dies / Hora — moved into footer */
+.hora-fixed,
 .date-fixed{
-  position: fixed;
-  left: 16px;
-  bottom: calc(var(--footer-h) + var(--footer-gap));
-  z-index: 90;
-  font-size: 14px;
-  color: var(--muted);
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
-  border: 1px solid var(--rule);
-  border-radius: 12px;
-  padding: 6px 10px;
-  box-shadow: 0 2px 6px color-mix(in srgb, var(--text) 6%, transparent);
-  transition: opacity var(--transition-fast);
-}
-@media (prefers-color-scheme: dark) {
-  .hora-fixed,
-  .date-fixed{
-    background: color-mix(in srgb, var(--surface) 92%, transparent);
-    border-color: var(--stroke);
-  }
-}
-.hora-fixed strong,
-.date-fixed strong{
-  color: var(--wine);
-  font-weight: 600;
+  display: none !important;
 }
 
 /* Left / Right menus — fixed, but stop above footer and can scroll internally if needed */
@@ -1462,6 +1419,43 @@ button:active{
   justify-content: flex-end;
   gap: 8px;
   margin-top: 8px;
+}
+.footer__time{
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.time-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, #fff 45%, transparent);
+  background: color-mix(in srgb, #fff 10%, transparent);
+  color: color-mix(in srgb, #fff 88%, transparent);
+}
+
+.time-pill strong{
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer .info-link,
+.wl-footer .info-link,
+.site-footer .info-link{
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, #fff 55%, transparent);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  margin-left: 0;
+  text-decoration: none;
 }
 .share{
   font: inherit;
