@@ -112,45 +112,11 @@
         return;
       }
       const now = new Date();
-      const lang = (document.documentElement.lang || '').toLowerCase();
-      const path = (location.pathname || '').toLowerCase();
-      const isIrish = lang.startsWith('ga') || path.includes('-ga');
       const year = now.getFullYear();
-      let value = '';
-      if (isIrish) {
-        const gaWeekdays = [
-          'Domhnach',
-          'Luan',
-          'Máirt',
-          'Céadaoin',
-          'Déardaoin',
-          'Aoine',
-          'Satharn'
-        ];
-        const gaMonths = [
-          'Eanáir',
-          'Feabhra',
-          'Márta',
-          'Aibreán',
-          'Bealtaine',
-          'Meitheamh',
-          'Iúil',
-          'Lúnasa',
-          'Meán Fómhair',
-          'Deireadh Fómhair',
-          'Samhain',
-          'Nollaig'
-        ];
-        const weekday = gaWeekdays[now.getDay()];
-        const month = gaMonths[now.getMonth()];
-        const day = now.getDate();
-        value = `${weekday} ${day} ${month} ${year} AD`;
-      } else {
-        const weekday = new Intl.DateTimeFormat('en-GB', { weekday: 'long' }).format(now);
-        const month = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(now);
-        const day = ordinal(now.getDate());
-        value = `${weekday} ${day} ${month} ${year} AD`;
-      }
+      const weekday = new Intl.DateTimeFormat('en-GB', { weekday: 'long' }).format(now);
+      const month = new Intl.DateTimeFormat('en-GB', { month: 'long' }).format(now);
+      const day = ordinal(now.getDate());
+      const value = `${weekday} ${day} ${month} ${year} AD`;
       dateEls.forEach((el) => {
         el.textContent = value;
       });

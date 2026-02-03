@@ -299,41 +299,8 @@
 
     const formatDate = () => {
       const now = new Date();
-      const lang = (document.documentElement.lang || "").toLowerCase();
-      const path = (location.pathname || "").toLowerCase();
-      const isIrish = lang.startsWith("ga") || path.includes("-ga");
-      const locale = isIrish ? "ga-IE" : "en-GB";
+      const locale = "en-GB";
       const year = now.getFullYear();
-
-      if (isIrish) {
-        const gaWeekdays = [
-          "Domhnach",
-          "Luan",
-          "Máirt",
-          "Céadaoin",
-          "Déardaoin",
-          "Aoine",
-          "Satharn",
-        ];
-        const gaMonths = [
-          "Eanáir",
-          "Feabhra",
-          "Márta",
-          "Aibreán",
-          "Bealtaine",
-          "Meitheamh",
-          "Iúil",
-          "Lúnasa",
-          "Meán Fómhair",
-          "Deireadh Fómhair",
-          "Samhain",
-          "Nollaig",
-        ];
-        const weekday = gaWeekdays[now.getDay()];
-        const month = gaMonths[now.getMonth()];
-        const day = now.getDate();
-        return `${weekday} ${day} ${month} ${year} AD`;
-      }
 
       const weekday = new Intl.DateTimeFormat(locale, { weekday: "long" }).format(now);
       const month = new Intl.DateTimeFormat(locale, { month: "long" }).format(now);
