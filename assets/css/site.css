@@ -329,7 +329,7 @@ a:visited{
 .mast-brand{ font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 700; }
 
 .mast-actions{
-  margin-top: 10px;
+  margin-top: 2px;
   display: inline-flex;
   gap: 10px;
   justify-content: center;
@@ -1231,7 +1231,7 @@ h2{
   font-size: 13px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
-  border: 1px solid var(--rule);
+  border: none;
   border-radius: 999px;
   padding: 8px 10px;
   margin-top: auto;
