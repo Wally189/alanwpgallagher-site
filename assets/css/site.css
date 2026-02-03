@@ -4,6 +4,15 @@
   --footer-h:120px;
   --footer-gap:24px;
   --masthead-h:120px;
+
+  /* ✅ FIX: define the variables your home/frontis layout relies on */
+  --portrait: 220px;
+  --frontis-gap: 18px;
+
+  /* ✅ FIX: provide safe defaults so overlay widths never go invalid */
+  --max: 920px;
+  --pad: 22px;
+  --measure: 65ch;
 }
 
 body.modal-open{
@@ -560,17 +569,26 @@ a:visited{
 }
 .lang__sep{ padding: 0 6px; }
 
+/* =========================================================
+   ✅ FIXED FRONTIS / HOME HERO SPACING (image + text)
+   This ensures the layout never collapses if vars were missing,
+   and creates even, predictable spacing.
+   ========================================================= */
+
 .frontis{
   display: grid;
-  grid-template-columns: var(--portrait) 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, var(--portrait));
   gap: var(--frontis-gap);
   align-items: start;
 }
+
+/* left side can remain a simple stack by default */
 .frontis__left{
   display: grid;
   gap: 12px;
 }
 
+/* portrait block */
 .portrait{
   margin: 0;
   border: 1px solid var(--rule);
@@ -584,6 +602,7 @@ a:visited{
   display: block;
 }
 
+/* opening card */
 .opening{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
@@ -618,30 +637,51 @@ a:visited{
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* HOME PAGE: image + text within ONE bordered card, evenly spaced */
 .home-page .frontis{
-  grid-template-columns: var(--portrait) minmax(0, 1fr);
+  grid-template-columns: 1fr;      /* the “card” is one column */
   max-width: var(--measure);
   margin: 0 auto;
   gap: 18px;
 }
+
+/* The inside card becomes two columns: text left, portrait right */
 .home-page .frontis__left{
-  grid-template-columns: minmax(0, 1fr) var(--portrait);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, var(--portrait));
+  column-gap: var(--frontis-gap);
+  row-gap: 12px;
   align-items: start;
+
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px;
   background: var(--surface);
-  gap: var(--frontis-gap);
 }
+
+/* Put “rule” and opening content in left column */
 .home-page .frontis__left .rule{
   grid-column: 1;
 }
+.home-page .frontis__left .opening{
+  grid-column: 1;
+}
+
+/* Put portrait in right column and keep it tidy */
 .home-page .frontis__left .portrait{
   grid-column: 2;
+  width: 100%;
+  max-width: var(--portrait);
+  justify-self: end;
+  align-self: start;
 }
+
+/* Make opening fill the column (no artificial max-width on home) */
 .home-page .opening{
   max-width: none;
 }
+
 .home-page .home-contact{
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   max-width: none;
@@ -650,16 +690,23 @@ a:visited{
 .home-page .doorway__indent{
   margin-left: 0;
 }
+
+/* Responsive: stack portrait above text and keep spacing consistent */
 @media (max-width: 900px){
   .home-page .frontis{
     grid-template-columns: minmax(0, 1fr);
   }
   .home-page .frontis__left{
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .home-page .frontis__left .portrait{
+    grid-column: 1;
+    max-width: 320px;
+    justify-self: center;
   }
   .home-page .frontis__left .rule,
-  .home-page .frontis__left .portrait{
-    grid-column: auto;
+  .home-page .frontis__left .opening{
+    grid-column: 1;
   }
 }
 
