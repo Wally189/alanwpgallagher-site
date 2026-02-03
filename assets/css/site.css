@@ -170,7 +170,7 @@ body::before{
 
 @media (min-width: 900px) {
   body::after{
-    content: "";
+    content: none;
     position: fixed;
     top: 0;
     bottom: 0;
