@@ -10,16 +10,11 @@ body.modal-open{
   overflow: hidden;
 }
 
-html,
-body{
-  height: 100%;
-}
-
 body{
   min-height: 100vh;
   position: relative;
   background: var(--wl-paper);
-  overflow: hidden;
+  overflow-x: hidden;
   margin: 0;
 }
 
@@ -36,24 +31,16 @@ footer{
 }
 
 .app{
-  min-height: 100svh;
-  display: grid;
-  grid-template-rows: var(--header-h) 1fr var(--footer-h);
+  min-height: 100vh;
+  display: block;
 }
 
 .site-header{
-  grid-row: 1;
-  height: var(--header-h);
+  min-height: var(--header-h);
 }
 
 .app__scroll{
-  grid-row: 2;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.site-footer{
-  grid-row: 3;
+  overflow: visible;
 }
 
 /* page “paper” overlay */
@@ -1300,8 +1287,8 @@ button:active{
 .footer,
 .wl-footer,
 .site-footer{
-  height: var(--footer-h);
-  padding: 0;
+  min-height: var(--footer-h);
+  padding: 16px 0;
   background: var(--marian-blue);
   color: #fff;
   border-top: none;
