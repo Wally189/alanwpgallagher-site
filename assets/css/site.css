@@ -95,11 +95,7 @@ footer{
 .home-cards{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(16px, 2vw, 28px);
-  grid-template-areas:
-    "intro text"
-    "organise contact";
   min-width: 0;
 }
 
@@ -107,17 +103,6 @@ footer{
 .card-text{ grid-area: text; }
 .card-organise{ grid-area: organise; }
 .card-contact{ grid-area: contact; }
-
-@media (max-width: 900px){
-  .home-cards{
-    grid-template-columns: minmax(0, 1fr);
-    grid-template-areas:
-      "intro"
-      "text"
-      "organise"
-      "contact";
-  }
-}
 
 .home-cards > .card,
 .home-cards > section,
