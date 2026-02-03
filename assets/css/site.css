@@ -84,6 +84,14 @@ footer{
   overflow: auto;
 }
 
+/* Hide Dies/Hora only inside the side menus */
+.left-rail .dies,
+.left-rail .hora,
+.right-rail .dies,
+.right-rail .hora{
+  display: none !important;
+}
+
 .home-cards{
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -197,6 +205,11 @@ body::before{
   }
 }
 
+/* Remove decorative guide/track lines only */
+body::after{
+  background-image: none !important;
+}
+
 a{
   color: var(--marian-blue);
 }
@@ -291,6 +304,35 @@ a:visited{
   padding: 10px 12px;
   border: 1px solid var(--rule);
   border-radius: 10px;
+}
+
+.site-header{
+  height: var(--masthead-h);
+}
+
+.site-header .masthead{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 24px;
+  padding: 14px 22px;
+}
+
+.mast-left{ justify-self: start; max-width: 52ch; }
+.mast-centre{ justify-self: center; text-align: center; }
+.mast-right{ justify-self: end; }
+
+.mast-meta{ font-size: 0.95rem; line-height: 1.2; }
+.mast-tagline{ margin-top: 6px; font-style: italic; font-size: 0.92rem; }
+
+.mast-brand{ font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 700; }
+
+.mast-actions{
+  margin-top: 10px;
+  display: inline-flex;
+  gap: 10px;
+  justify-content: center;
 }
 
 .masthead{
