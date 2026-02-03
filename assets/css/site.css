@@ -719,8 +719,9 @@ a:visited{
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(180px, var(--portrait));
   grid-template-areas:
-    "rule portrait"
-    "opening portrait";
+    "portrait portrait"
+    "rule rule"
+    "opening opening";
   column-gap: var(--frontis-gap);
   row-gap: 12px;
   align-items: start;
