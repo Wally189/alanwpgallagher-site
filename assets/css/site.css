@@ -83,25 +83,25 @@ main {
   display: none !important;
 }
 
-.home-cards{
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(16px, 2vw, 28px);
-  min-width: 0;
+/* Canonical vertical card stack */
+.cards,
+.card-stack,
+.main-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: stretch;
+  width: 100%;
 }
 
-.card-intro{ grid-area: intro; }
-.card-text{ grid-area: text; }
-.card-organise{ grid-area: organise; }
-.card-contact{ grid-area: contact; }
-
-.home-cards > .card,
-.home-cards > section,
-.home-cards > article{
-  min-height: 0;
-  min-width: 0;
+/* Each card */
+.cards > *,
+.card-stack > *,
+.main-cards > * {
+  position: relative;
   width: 100%;
-  margin: 0;
+  max-width: 100%;
+  flex: 0 0 auto;
 }
 
 .home-cards .doorway__indent{
