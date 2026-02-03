@@ -338,8 +338,21 @@ a:visited{
 .masthead{
   padding: 34px 0 18px;
   border-bottom: 1px solid var(--rule);
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 8%, transparent), transparent 55%);
+  background: var(--marian-blue);
   transition: background var(--transition-medium);
+}
+.site-header .masthead{
+  color: #fff;
+}
+.site-header a.button{
+  background: #fff;
+  border-color: #fff;
+  color: var(--marian-blue);
+}
+.site-header a.button:hover{
+  background: color-mix(in srgb, #fff 88%, transparent);
+  border-color: #fff;
+  color: var(--marian-blue);
 }
 .masthead--home{
   padding: 0 0 18px;
