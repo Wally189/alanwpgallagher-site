@@ -95,6 +95,7 @@ footer{
 .home-cards{
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--gap);
   grid-template-areas:
     "intro text"
@@ -785,12 +786,12 @@ a:visited{
   border: 1px solid var(--rule);
   border-radius: var(--radius);
   padding: 16px 16px 14px;
-  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, transparent), color-mix(in srgb, var(--warm) 85%, transparent));
+  background: var(--surface);
   max-width: var(--measure);
 }
 @media (prefers-color-scheme: dark) {
   .opening {
-    background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 12%, transparent), color-mix(in srgb, var(--text) 10%, transparent));
+    background: var(--surface);
   }
 }
 .opening.doorway{
