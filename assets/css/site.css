@@ -96,7 +96,7 @@ footer{
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-  gap: var(--gap);
+  gap: clamp(16px, 2vw, 28px);
   grid-template-areas:
     "intro text"
     "organise contact";
@@ -124,6 +124,8 @@ footer{
 .home-cards > article{
   min-height: 0;
   min-width: 0;
+  width: 100%;
+  margin: 0;
 }
 
 .home-cards .doorway__indent{
