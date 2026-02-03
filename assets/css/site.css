@@ -85,7 +85,7 @@ main {
 
 .home-cards{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: clamp(16px, 2vw, 28px);
   min-width: 0;
 }
