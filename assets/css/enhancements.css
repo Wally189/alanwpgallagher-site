@@ -1,18 +1,19 @@
-﻿/* Enhancements: motion, typography, accents, interactions */
+/* Enhancements: motion, typography, accents, interactions */
 
- :root{
+:root{
   --fade-ms: 420ms;
+  --shimmer-dur: 3.2s;
+  --glow-dur: 4.2s;
 }
 
-/* Thematic accents */
-body.theme-vocation { --accent: var(--accent); --accent-soft: var(--accent-soft); }
-body.theme-formation{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
-body.theme-household{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
-body.theme-community{ --accent: var(--accent); --accent-soft: var(--accent-soft); }
-body.theme-rest     { --accent: var(--accent); --accent-soft: var(--accent-soft); }
+/* Theme accents (EXAMPLE: replace values with your actual palette)
+body.theme-vocation  { --accent: #1d70b8; --accent-soft: color-mix(in srgb, #1d70b8 12%, transparent); }
+body.theme-formation { --accent: #0f766e; --accent-soft: color-mix(in srgb, #0f766e 12%, transparent); }
+... */
 
-/* Slow underline on links */
+/* Link underline + shimmer */
 a:not(.info-link):not(.button){
+  position: relative;
   background-image: linear-gradient(currentColor, currentColor);
   background-size: 0% 2px;
   background-position: 0 100%;
@@ -23,113 +24,107 @@ a:not(.info-link):not(.button):hover,
 a:not(.info-link):not(.button):focus-visible{
   background-size: 100% 2px;
 }
-
-/* Link shimmer (menus + inline links) */
-a:not(.info-link):not(.button){
-  position: relative;
-}
 a:not(.info-link):not(.button)::after{
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, color-mix(in srgb, var(--surface) 50%, transparent) 50%, transparent 100%);
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    color-mix(in srgb, var(--surface) 50%, transparent) 50%,
+    transparent 100%
+  );
   transform: translateX(-120%);
   transition: transform 500ms ease;
-  pointer-events: none;
 }
 a:not(.info-link):not(.button):hover::after,
 a:not(.info-link):not(.button):focus-visible::after{
   transform: translateX(120%);
 }
 
-/* Global shimmer for buttons and images */
+/* Shimmer (buttons, tables, optional images) */
 @keyframes shimmerSweep{
   0%{ background-position: -220% 0; }
   100%{ background-position: 220% 0; }
 }
 
 @keyframes shimmerGlow{
-  0%, 100%{ filter: brightness(1) drop-shadow(0 0 0 color-mix(in srgb, var(--accent) 0%, transparent)); }
+  0%,100%{ filter: brightness(1) drop-shadow(0 0 0 color-mix(in srgb, var(--accent) 0%, transparent)); }
   50%{ filter: brightness(1.08) drop-shadow(0 10px 18px color-mix(in srgb, var(--accent) 18%, transparent)); }
 }
 
-button,
-.btn,
-.btn-primary,
-.cta-primary,
-.wl-button,
-input[type="submit"],
-input[type="button"],
-a.button{
+/* Define shimmer targets once */
+:is(
+  button,
+  .btn,
+  .btn-primary,
+  .cta-primary,
+  .wl-button,
+  input[type="submit"],
+  input[type="button"],
+  a.button
+){
   position: relative;
   overflow: hidden;
 }
 
-button::after,
-.btn::after,
-.btn-primary::after,
-.cta-primary::after,
-.wl-button::after,
-input[type="submit"]::after,
-input[type="button"]::after,
-a.button::after{
+:is(
+  button,
+  .btn,
+  .btn-primary,
+  .cta-primary,
+  .wl-button,
+  input[type="submit"],
+  input[type="button"],
+  a.button
+)::after{
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, color-mix(in srgb, var(--surface) 40%, transparent) 50%, transparent 100%);
-  background-size: 220% 220%;
-  animation: shimmerSweep 3.2s ease-in-out infinite;
   pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    color-mix(in srgb, var(--surface) 40%, transparent) 50%,
+    transparent 100%
+  );
+  background-size: 220% 220%;
+  animation: shimmerSweep var(--shimmer-dur) ease-in-out infinite;
 }
 
-img{
-  animation: shimmerGlow 4.2s ease-in-out infinite;
+/* Make glow opt-in for performance */
+img.glow{
+  animation: shimmerGlow var(--glow-dur) ease-in-out infinite;
 }
 
 /* Page-load fade/slide */
 main{
   animation: mainFade var(--fade-ms) ease both;
 }
-
 @keyframes mainFade{
   from{ opacity: 0; transform: translateY(4px); }
   to{ opacity: 1; transform: translateY(0); }
 }
 
-/* Respect reduced motion */
+/* Reduced motion */
 @media (prefers-reduced-motion: reduce){
-  main{
-    animation: none !important;
-  }
+  main{ animation: none !important; }
+  a::after,
+  :is(button,.btn,.btn-primary,.cta-primary,.wl-button,input[type="submit"],input[type="button"],a.button)::after,
+  img.glow,
   .divider::before,
   .reveal-on-scroll,
-  a::after,
-  button::after,
-  .btn::after,
-  .btn-primary::after,
-  .cta-primary::after,
-  .wl-button::after,
-  input[type="submit"]::after,
-  input[type="button"]::after,
-  a.button::after,
-  img,
   .table--practical::after{
     transition: none !important;
     animation: none !important;
   }
-  .reveal-on-scroll{
-    opacity: 1;
-    transform: none;
-  }
+  .reveal-on-scroll{ opacity: 1; transform: none; }
   a::after,
-  .table--practical::after{
-    opacity: 0;
-    transform: none;
-  }
+  .table--practical::after{ opacity: 0; transform: none; }
 }
 
-
-/* Divider draw from centre */
+/* Divider draw (transform rather than width) */
 .divider{
   position: relative;
   height: 1px;
@@ -139,21 +134,20 @@ main{
 .divider::before{
   content:"";
   position:absolute;
-  left: 50%;
+  left: 0;
+  right: 0;
   top: 0;
   height: 1px;
-  width: 0;
   background: color-mix(in srgb, var(--accent) 30%, transparent);
-  transform: translateX(-50%);
+  transform: scaleX(0);
+  transform-origin: 50% 50%;
   animation: dividerDraw 520ms ease forwards;
 }
-
 @keyframes dividerDraw{
-  from{ width: 0; }
-  to{ width: 100%; }
+  to{ transform: scaleX(1); }
 }
 
-/* Scroll reveal for quotes (class only) */
+/* Scroll reveal */
 .reveal-on-scroll{
   opacity: 0;
   transform: translateY(4px);
@@ -164,7 +158,7 @@ main{
   transform: translateY(0);
 }
 
-/* Collapsibles styling */
+/* Collapsibles */
 details.collapse{
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
@@ -192,19 +186,29 @@ details.collapse[open]{ background: var(--accent-soft); }
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent 0%, color-mix(in srgb, var(--surface) 50%, transparent) 50%, transparent 100%);
+  pointer-events: none;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    color-mix(in srgb, var(--surface) 50%, transparent) 50%,
+    transparent 100%
+  );
   transform: translateX(-100%);
   transition: transform 600ms ease;
-  pointer-events: none;
 }
-.table--practical:hover::after{
-  transform: translateX(100%);
+.table--practical:hover::after{ transform: translateX(100%); }
+
+.table--practical th,
+.table--practical td{
+  padding: 8px 10px;
+  text-align: center;
+  border-bottom: 1px solid var(--stroke);
 }
+.table--practical tr:last-child th,
+.table--practical tr:last-child td{ border-bottom: 0; }
 
 /* Feature page structure */
-.page-header{
-  padding: 6px 0 10px;
-}
+.page-header{ padding: 6px 0 10px; }
 .section-kicker{
   font-size: 0.75rem;
   letter-spacing: 0.18em;
@@ -217,28 +221,24 @@ details.collapse[open]{ background: var(--accent-soft); }
   color: var(--muted);
   margin: 8px 0 0;
 }
-.callout{
+.callout,
+.support-note{
   border: 1px solid var(--stroke);
   border-radius: var(--radius);
   padding: 14px 16px;
   background: var(--surface-soft);
 }
-.callout__title{
-  margin: 0 0 6px;
-  font-size: 1rem;
+.support-note{
+  background: color-mix(in srgb, var(--text) 2%, transparent);
+  margin-bottom: 16px;
 }
-.callout__text{
-  margin: 0;
-}
-.article{
-  margin-top: 18px;
-}
-.article__section{
-  margin: 22px 0;
-}
-.lead{
-  font-size: 1.05rem;
-}
+.callout__title{ margin: 0 0 6px; font-size: 1rem; }
+.callout__text{ margin: 0; }
+
+.article{ margin-top: 18px; }
+.article__section{ margin: 22px 0; }
+.lead{ font-size: 1.05rem; }
+
 .quote{
   margin: 18px 0;
   padding: 12px 16px;
@@ -251,33 +251,12 @@ details.collapse[open]{ background: var(--accent-soft); }
   font-size: 0.9rem;
   color: var(--muted);
 }
+
 .note{
   background: color-mix(in srgb, var(--text) 3%, transparent);
   border: 1px dashed color-mix(in srgb, var(--text) 18%, transparent);
   padding: 10px 12px;
   border-radius: 10px;
 }
-.closing{
-  margin-top: 14px;
-}
-.fineprint{
-  font-size: 0.9rem;
-  color: var(--muted);
-}
-.support-note{
-  border: 1px solid var(--stroke);
-  border-radius: var(--radius);
-  padding: 14px 16px;
-  background: color-mix(in srgb, var(--text) 2%, transparent);
-  margin-bottom: 16px;
-}
-.table--practical th,
-.table--practical td{
-  padding: 8px 10px;
-  text-align: center;
-  border-bottom: 1px solid var(--stroke);
-}
-.table--practical tr:last-child th,
-.table--practical tr:last-child td{
-  border-bottom: 0;
-}
+.closing{ margin-top: 14px; }
+.fineprint{ font-size: 0.9rem; color: var(--muted); }
