@@ -217,7 +217,6 @@ a.button:focus-visible {
 .wl-surface { background: var(--surface); border: 1px solid var(--wl-rule); border-radius: var(--wl-radius); }
 
 .wl-footer {
-  margin-top: var(--wl-space-7);
   padding: var(--wl-space-5) 0;
   border-top: 1px solid var(--wl-rule);
   background: var(--surface-soft);
