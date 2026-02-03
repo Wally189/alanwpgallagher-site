@@ -288,7 +288,7 @@ a:visited{
 .masthead{
   padding: 26px 0 16px;
   border-bottom: 4px solid var(--focus);
-  background: var(--text);
+  background: var(--marian-blue);
   transition: background var(--transition-medium);
 }
 .site-header .masthead{
@@ -309,7 +309,7 @@ a:visited{
   background: none;
 }
 .masthead__bar{
-  background: var(--text);
+  background: var(--marian-blue);
   color: #fff;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -448,7 +448,7 @@ a:visited{
   width: 100vw;
   transform: translateX(-50%);
   height: 88px;
-  background: var(--text);
+  background: var(--marian-blue);
   z-index: 0;
 }
 .masthead--inner .wrap{
