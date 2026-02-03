@@ -321,7 +321,13 @@ a:visited{
 
 .mast-left{ justify-self: start; max-width: 52ch; }
 .mast-centre{ justify-self: center; text-align: center; }
-.mast-right{ justify-self: end; }
+.mast-right{
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
 
 .mast-meta{ font-size: 0.95rem; line-height: 1.2; }
 .mast-tagline{ margin-top: 6px; font-style: italic; font-size: 0.92rem; }
@@ -329,10 +335,10 @@ a:visited{
 .mast-brand{ font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 700; }
 
 .mast-actions{
-  margin-top: 10px;
+  margin-top: 0;
   display: inline-flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .masthead{
@@ -1231,7 +1237,7 @@ h2{
   font-size: 13px;
   color: var(--muted);
   background: color-mix(in srgb, var(--surface) 92%, transparent);
-  border: 1px solid var(--rule);
+  border: none;
   border-radius: 999px;
   padding: 8px 10px;
   margin-top: auto;
