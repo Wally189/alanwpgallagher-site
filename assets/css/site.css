@@ -1,9 +1,6 @@
 :root{
   --marian-blue:#1d70b8;
   --cross-opacity:0.06;
-  --footer-h:120px;
-  --footer-gap:24px;
-  --masthead-h:120px;
   --gap: 18px;
   --rail-w: 270px;
 
@@ -26,47 +23,42 @@ body.modal-open{
   overflow: hidden;
 }
 
-html,
-body{
+/* === GLOBAL VERTICAL LAYOUT: SINGLE SOURCE OF TRUTH === */
+
+html, body {
   height: 100%;
-}
-
-body{
   margin: 0;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: var(--masthead-h) 1fr var(--footer-h);
-  position: relative;
-  background: var(--wl-paper);
-  overflow: hidden;
 }
 
-main{
-  grid-row: 2;
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--wl-paper);
+  overflow: hidden; /* body NEVER scrolls */
+}
+
+/* Header: natural height only */
+header {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Footer: natural height only */
+footer,
+.wl-footer {
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Main content is the ONLY scrolling region */
+main {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   position: relative;
   z-index: 1;
-  overflow: auto;
-  min-height: 0;
-  padding: var(--gap);
-}
-
-.footer,
-.wl-footer{
-  margin-top: auto;
-}
-
-header,
-footer{
-  position: relative;
-  z-index: 50;
-}
-
-header{
-  grid-row: 1;
-}
-
-footer{
-  grid-row: 3;
 }
 
 .page-shell{
@@ -80,7 +72,6 @@ footer{
 .right-rail{
   position: sticky;
   top: 0;
-  max-height: calc(100vh - var(--masthead-h) - var(--footer-h) - (2 * var(--gap)));
   overflow: auto;
 }
 
@@ -123,7 +114,7 @@ footer{
 }
 
 main{
-  padding-bottom: var(--gap) !important;
+  padding: var(--gap);
 }
 
 /* page “paper” overlay */
@@ -292,10 +283,6 @@ a:visited{
   padding: 10px 12px;
   border: 1px solid var(--rule);
   border-radius: 10px;
-}
-
-.site-header{
-  height: var(--masthead-h);
 }
 
 .site-header .masthead{
@@ -942,7 +929,7 @@ a:visited{
 }
 .panel,
 details[open]{
-  scroll-margin-bottom: calc(var(--footer-h) + var(--footer-gap) + 24px);
+  scroll-margin-bottom: 24px;
 }
 
 .panel--accent{
@@ -1228,7 +1215,6 @@ h2{
   border: none;
   border-radius: 999px;
   padding: 8px 10px;
-  margin-top: auto;
   flex-shrink: 0;
   width: 100%;
   box-sizing: border-box;
@@ -1465,16 +1451,10 @@ button:active{
 .footer,
 .wl-footer,
 .site-footer{
-  min-height: var(--footer-h);
   padding: 18px 0 34px;
   background: var(--marian-blue);
   color: #fff;
   border-top: none;
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 100; /* wins */
 }
 .footer a,
 .wl-footer a,
