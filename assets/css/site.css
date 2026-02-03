@@ -653,24 +653,6 @@ body.home-page{
   overflow: hidden;
 }
 
-.home-page .masthead{
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 90;
-}
-
-.home-page main{
-  min-height: 0;
-  height: calc(100vh - var(--masthead-h) - var(--footer-h));
-  margin-top: var(--masthead-h);
-  padding-top: 16px;
-  padding-bottom: var(--footer-gap);
-  display: flex;
-  flex-direction: column;
-}
-
 .home-grid{
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -680,7 +662,7 @@ body.home-page{
     "organise contact";
   gap: 18px;
   align-items: stretch;
-  flex: 1 1 auto;
+  height: calc(100vh - var(--masthead-h) - var(--footer-h) - (var(--footer-gap) * 2) - 16px);
   overflow: auto;
   min-height: 0;
 }
@@ -730,6 +712,10 @@ body.home-page{
   gap: 18px;
 }
 
+.home-page main{
+  min-height: 0;
+  padding-bottom: calc(var(--footer-h) + var(--footer-gap));
+}
 
 /* Responsive: stack portrait above text and keep spacing consistent */
 @media (max-width: 900px){
