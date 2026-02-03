@@ -6,12 +6,16 @@
   --border: #b1b4b6;
   --accent: #1d70b8;
   --accent-dark: #003078;
+  --button: #00703c;
+  --button-hover: #005a30;
+  --button-text: #ffffff;
+  --focus: #ffdd00;
   --warm: #fbf6e9;
   --stroke: var(--border);
 
   --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
   --surface-soft: color-mix(in srgb, var(--surface) 92%, transparent);
-  --shadow-soft: 0 10px 30px color-mix(in srgb, var(--text) 10%, transparent);
+  --shadow-soft: 0 0 0 color-mix(in srgb, var(--text) 0%, transparent);
 
   --wl-paper: var(--bg);
   --wl-ink: var(--text);
@@ -23,7 +27,7 @@
   --wl-accent: var(--accent);
   --wl-accent-soft: var(--accent-soft);
   --wl-link-visited: #4c2c92;
-  --wl-radius: 12px;
+  --wl-radius: 2px;
   --wl-shadow: var(--shadow-soft);
 
   --wl-space-1: 0.25rem;
@@ -35,8 +39,8 @@
   --wl-space-7: 3rem;
   --wl-space-8: 4rem;
 
-  --wl-font-body: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --wl-font-heading: "Georgia", "Times New Roman", serif;
+  --wl-font-body: "Helvetica Neue", Arial, sans-serif;
+  --wl-font-heading: "Helvetica Neue", Arial, sans-serif;
 
   --wl-step--1: 0.875rem;
   --wl-step-0: 1rem;
@@ -65,29 +69,9 @@ html {
   background: var(--wl-paper);
 }
 
-html::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background:
-    radial-gradient(900px 380px at 12% 12%, var(--wl-accent-soft), transparent 60%),
-    radial-gradient(900px 380px at 88% 18%, color-mix(in srgb, var(--wl-accent) 3%, transparent), transparent 65%),
-    linear-gradient(180deg, color-mix(in srgb, var(--text) 2%, transparent), transparent 70%);
-  pointer-events:none;
-  z-index:-1;
-}
-
+html::before,
 html::after{
-  content:"";
-  position:fixed;
-  inset:0;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='%231d70b8' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='58'/%3E%3Cpath d='M100 20v160'/%3E%3Cpath d='M20 100h160'/%3E%3Cpath d='M60 60c20 20 60 20 80 0'/%3E%3Cpath d='M60 140c20-20 60-20 80 0'/%3E%3C/svg%3E");
-  background-repeat:no-repeat;
-  background-position:calc(50% - 420px) 140px;
-  background-size:min(55vw, 520px);
-  opacity:0.04;
-  pointer-events:none;
-  z-index:-2;
+  content: none;
 }
 
 body {
@@ -134,9 +118,9 @@ a:hover {
 a:visited { color: var(--wl-link-visited); }
 
 a:focus-visible {
-  outline: 2px solid var(--wl-primary);
-  outline-offset: 2px;
-  border-radius: 2px;
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px var(--focus);
 }
 
 a:active { opacity: 0.8; }
@@ -153,17 +137,18 @@ a.button {
   align-items: center;
   justify-content: center;
   gap: var(--wl-space-2);
-  padding: 0.65rem 1.4rem;
-  border-radius: 999px;
-  border: 1px solid var(--wl-primary);
-  background: var(--wl-primary);
-  color: var(--surface);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--wl-radius);
+  border: 2px solid var(--button);
+  border-bottom-width: 4px;
+  background: var(--button);
+  color: var(--button-text);
   font: inherit;
-  font-weight: 600;
-  letter-spacing: 0.02em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
   text-decoration: none;
   cursor: pointer;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 button:hover,
@@ -174,8 +159,8 @@ button:hover,
 input[type="submit"]:hover,
 input[type="button"]:hover,
 a.button:hover {
-  background: var(--wl-primary-hover);
-  border-color: var(--wl-primary-hover);
+  background: var(--button-hover);
+  border-color: var(--button-hover);
 }
 
 button:active,
@@ -197,8 +182,9 @@ button:focus-visible,
 input[type="submit"]:focus-visible,
 input[type="button"]:focus-visible,
 a.button:focus-visible {
-  outline: 2px solid var(--wl-primary);
-  outline-offset: 2px;
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px var(--focus);
 }
 
 .btn-ghost,
