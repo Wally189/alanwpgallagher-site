@@ -321,7 +321,13 @@ a:visited{
 
 .mast-left{ justify-self: start; max-width: 52ch; }
 .mast-centre{ justify-self: center; text-align: center; }
-.mast-right{ justify-self: end; }
+.mast-right{
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
 
 .mast-meta{ font-size: 0.95rem; line-height: 1.2; }
 .mast-tagline{ margin-top: 6px; font-style: italic; font-size: 0.92rem; }
@@ -332,7 +338,7 @@ a:visited{
   margin-top: 2px;
   display: inline-flex;
   gap: 10px;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .masthead{
