@@ -117,42 +117,10 @@ main{
   padding: var(--gap);
 }
 
-/* page “paper” overlay */
-html::before{
-  content: "";
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: calc(var(--max) + (var(--pad) * 2));
-  transform: translateX(-50%);
-  background: color-mix(in srgb, var(--bg) 88%, transparent);
-  pointer-events: none;
-  z-index: -2;
-}
-
-html::after{
-  content: none;
-}
-
-/* faint celtic cross background */
+html::before,
+html::after,
 body::before{
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image: url("/assets/img/irish-cross.svg");
-  background-repeat: no-repeat;
-  background-position: center 65%;
-  background-size: min(1000px, 88vw);
-  opacity: var(--cross-opacity);
-  pointer-events: none;
-  z-index: -1;
-}
-
-@media (prefers-color-scheme: dark) {
-  html::before{
-    background: color-mix(in srgb, var(--text) 35%, transparent);
-  }
+  content: none;
 }
 
 @media (min-width: 900px) {
@@ -199,8 +167,9 @@ a:visited{
 }
 
 :focus-visible{
-  outline: 3px solid var(--marian-blue);
-  outline-offset: 3px;
+  outline: 3px solid var(--focus);
+  outline-offset: 0;
+  box-shadow: 0 0 0 3px var(--focus);
 }
 
 .modal{
@@ -226,15 +195,15 @@ a:visited{
   z-index: 1;
   width: min(92vw, 560px);
   padding: 24px 26px;
-  border-radius: 18px;
+  border-radius: var(--radius);
   border: 1px solid var(--rule);
   background: var(--paper);
   color: var(--ink);
-  box-shadow: 0 24px 60px color-mix(in srgb, var(--text) 20%, transparent);
+  box-shadow: none;
 }
 .modal__card--accent{
   border: 1px solid var(--stroke);
-  box-shadow: 0 24px 60px color-mix(in srgb, var(--text) 20%, transparent);
+  box-shadow: none;
 }
 .modal__card h2{
   margin-top: 0;
@@ -251,7 +220,7 @@ a:visited{
   background: transparent;
   color: var(--muted);
   padding: 6px 12px;
-  border-radius: 999px;
+  border-radius: var(--radius);
   cursor: pointer;
 }
 .modal__close:hover{
@@ -291,7 +260,7 @@ a:visited{
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   column-gap: 24px;
-  padding: 14px 22px;
+  padding: 18px 22px;
 }
 
 .mast-left{ justify-self: start; max-width: 52ch; }
@@ -304,10 +273,10 @@ a:visited{
   gap: 8px;
 }
 
-.mast-meta{ font-size: 0.95rem; line-height: 1.2; }
-.mast-tagline{ margin-top: 6px; font-style: italic; font-size: 0.92rem; }
+.mast-meta{ font-size: 0.95rem; line-height: 1.3; }
+.mast-tagline{ margin-top: 6px; font-style: normal; font-size: 0.95rem; }
 
-.mast-brand{ font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 700; }
+.mast-brand{ font-size: clamp(1.7rem, 2.4vw, 2.3rem); font-weight: 800; letter-spacing: 0.02em; }
 
 .mast-actions{
   margin-top: 2px;
@@ -317,30 +286,30 @@ a:visited{
 }
 
 .masthead{
-  padding: 34px 0 18px;
-  border-bottom: 1px solid var(--rule);
-  background: var(--marian-blue);
+  padding: 26px 0 16px;
+  border-bottom: 4px solid var(--focus);
+  background: var(--text);
   transition: background var(--transition-medium);
 }
 .site-header .masthead{
   color: #fff;
 }
 .site-header a.button{
-  background: #fff;
+  background: transparent;
   border-color: #fff;
-  color: var(--marian-blue);
+  color: #fff;
 }
 .site-header a.button:hover{
-  background: color-mix(in srgb, #fff 88%, transparent);
+  background: #fff;
   border-color: #fff;
-  color: var(--marian-blue);
+  color: var(--text);
 }
 .masthead--home{
   padding: 0 0 18px;
   background: none;
 }
 .masthead__bar{
-  background: var(--marian-blue);
+  background: var(--text);
   color: #fff;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -371,7 +340,7 @@ a:visited{
   font-size: 12px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   color: color-mix(in srgb, #fff 85%, transparent);
 }
 .masthead__title{
@@ -414,9 +383,9 @@ a:visited{
 .masthead__bar .back,
 .masthead__bar .lang__toggle{
   font-size: 0.95rem;
-  background: color-mix(in srgb, #fff 12%, transparent);
+  background: transparent;
   color: #fff;
-  border-color: color-mix(in srgb, #fff 35%, transparent);
+  border-color: #fff;
   text-decoration: none;
 }
 .masthead__bar .back:hover,
@@ -479,7 +448,7 @@ a:visited{
   width: 100vw;
   transform: translateX(-50%);
   height: 88px;
-  background: var(--marian-blue);
+  background: var(--text);
   z-index: 0;
 }
 .masthead--inner .wrap{
@@ -531,9 +500,9 @@ a:visited{
 .masthead--inner .back,
 .masthead--inner .lang__toggle{
   font-size: 0.95rem;
-  background: color-mix(in srgb, #fff 12%, transparent);
+  background: transparent;
   color: #fff;
-  border-color: color-mix(in srgb, #fff 35%, transparent);
+  border-color: #fff;
   text-decoration: none;
 }
 .masthead--inner .back:hover,
