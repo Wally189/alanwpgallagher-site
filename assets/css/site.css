@@ -361,6 +361,8 @@ a:visited{
   padding: 6px 0 0;
   text-align: left;
   justify-self: start;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 .masthead__bar .back,
 .masthead__bar .lang__toggle{
