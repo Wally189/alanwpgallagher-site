@@ -153,25 +153,6 @@
     </section>
   </main>
 
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Current time">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </div>
-
-  <div class="hora-fixed" aria-live="polite">
-    <strong>Hora</strong>: <span data-hora></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
-  <div class="date-fixed" aria-live="polite">
-    <strong>Dies</strong>: <span data-date></span>
-    <a class="info-link" href="information.html" aria-label="About the bells and rule of life">i</a>
-  </div>
-
   <nav class="pillar-fixed" aria-label="Pillars and lifestyle">
     <div class="pillar-fixed__title" role="heading" aria-level="2">Pillars</div>
     <a href="vocation.html">Vocation &amp; Work</a>
@@ -197,14 +178,10 @@
   <footer class="wl-footer">
     <div class="wl-footer__grid">
       <div class="wl-footer__left">
-        <div class="wl-footer__line">
-          <span><strong>Dies</strong>: <span data-date></span></span>
-          <a class="wl-footer__info" href="https://www.alanwpgallagher.info/information.html" aria-label="About Dies">i</a>
-        </div>
         <div class="wl-footer__meta">
           <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
           <span>&middot;</span>
-          <span>Digital home of Alan Gallagher</span>
+          <a href="privacy.html">Privacy</a>
         </div>
       </div>
       <div class="wl-footer__center">
@@ -223,7 +200,6 @@
       </div>
       <div class="wl-footer__right">
         <div class="wl-footer__actions">
-          <a href="privacy.html">Privacy</a>
           <button class="wl-footer__share" type="button" data-share>Share</button>
           <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
         </div>

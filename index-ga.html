@@ -136,11 +136,6 @@
             <a href="life-ga.html">Life in Brief</a>
             <a href="principles-ga.html">Principles & Values</a>
           </div>
-
-          <div class="menu-fixed__bottom" aria-live="polite">
-            <span><strong>Dies</strong>: <span data-date></span></span>
-            <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
-          </div>
         </nav>
       </aside>
 
@@ -241,24 +236,10 @@
             <a href="availability-ga.html">Availability</a>
             <a href="https://www.linkedin.com/in/alan-gallagher-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a>
           </div>
-
-          <div class="menu-fixed__bottom" aria-live="polite">
-            <span><strong>Hora</strong>: <span data-hora></span></span>
-            <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
-          </div>
         </nav>
       </aside>
     </div>
   </main>
-
-  <!-- Mobile navigation - bottom (time) - hidden on desktop -->
-  <div class="mobile-nav-bottom" aria-label="Current time">
-    <div class="mobile-nav__time">
-      <span><strong>Hora</strong>: <span data-hora></span></span>
-      <span><strong>Dies</strong>: <span data-date></span></span>
-      <a class="info-link" href="information-ga.html" aria-label="About the bells and rule of life">i</a>
-    </div>
-  </div>
 
   <script src="assets/js/site.js" defer></script>
   <script src="assets/js/enhancements.js" defer></script>
@@ -266,7 +247,11 @@
   <footer class="wl-footer">
     <div class="wl-footer__grid">
       <div class="wl-footer__left">
-        <span>&copy; 2026, Bristol UK / Letterkenny, Ireland.</span>
+        <div class="wl-footer__meta">
+          <span>&copy; <span id="year" data-year></span> Bristol, UK &amp; Letterkenny, Ireland</span>
+          <span>&middot;</span>
+          <a href="privacy-ga.html">Privacy</a>
+        </div>
       </div>
       <div class="wl-footer__center">
         <em>Ora et labora.</em>
@@ -284,13 +269,11 @@
       </div>
       <div class="wl-footer__right">
         <div class="wl-footer__actions">
-          <a href="privacy-ga.html">Privacy</a>
           <button class="wl-footer__share" type="button" data-share>Share</button>
           <span class="wl-footer__hint" data-share-hint aria-live="polite"></span>
         </div>
       </div>
     </div>
-
     <div class="wl-footer__family">
       <a href="https://www.alanwpgallagher.info">Waylight Family</a>
     </div>

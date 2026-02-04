@@ -102,33 +102,45 @@
     }
   });
 
-  const ensureMenuStructure = (menu) => {
-    if (!menu || menu.querySelector(".menu-fixed__content")) {
+  const normalizeLayout = () => {
+    const main = document.querySelector("main");
+    if (!main || main.querySelector(".page-shell")) {
       return;
     }
-    const content = document.createElement("div");
-    content.className = "menu-fixed__content";
-    Array.from(menu.children).forEach((child) => {
-      if (child.classList.contains("menu-fixed__bottom")) {
-        return;
-      }
-      content.appendChild(child);
-    });
-    menu.appendChild(content);
-  };
 
-  const moveFixedPill = (el, menu) => {
-    if (!el || !menu || menu.querySelector(".menu-fixed__bottom")) {
-      return;
+    const pageShell = document.createElement("div");
+    pageShell.className = "page-shell";
+
+    const leftRail = document.createElement("aside");
+    leftRail.className = "left-rail";
+
+    const rightRail = document.createElement("aside");
+    rightRail.className = "right-rail";
+
+    const center = document.createElement("section");
+    center.className = "cards";
+
+    while (main.firstChild) {
+      center.appendChild(main.firstChild);
     }
-    ensureMenuStructure(menu);
-    el.classList.remove("hora-fixed", "date-fixed");
-    el.classList.add("menu-fixed__bottom");
-    menu.appendChild(el);
+
+    const pillarMenu = document.querySelector(".pillar-fixed");
+    if (pillarMenu) {
+      leftRail.appendChild(pillarMenu);
+    }
+
+    const actionsMenu = document.querySelector(".top-menu-fixed");
+    if (actionsMenu) {
+      rightRail.appendChild(actionsMenu);
+    }
+
+    pageShell.appendChild(leftRail);
+    pageShell.appendChild(center);
+    pageShell.appendChild(rightRail);
+    main.appendChild(pageShell);
   };
 
-  moveFixedPill(document.querySelector(".date-fixed"), document.querySelector(".pillar-fixed"));
-  moveFixedPill(document.querySelector(".hora-fixed"), document.querySelector(".top-menu-fixed"));
+  normalizeLayout();
 
   const shareBtn = document.querySelector("[data-share]");
   if (shareBtn) {
