@@ -515,6 +515,10 @@ a:visited{
 }
 .masthead--inner .threshold{
   margin-top: 6px;
+  grid-area: subtitle;
+  margin-top: 10px;
+  text-align: left;
+  justify-self: start;
 }
 .masthead--inner .masthead__actions .back,
 .masthead--inner .masthead__actions .lang__toggle{
