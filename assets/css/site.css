@@ -964,6 +964,14 @@ details[open]{
   padding: 18px 16px;
 }
 
+.panel.vocation-card{
+  max-width: none;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
 main p,
 .contact-frame{
   margin-block: 0 var(--para-space);
