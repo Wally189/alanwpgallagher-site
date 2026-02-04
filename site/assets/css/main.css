@@ -1,0 +1,231 @@
+:root {
+  --page-bg: #f8f8f4;
+  --page-surface: #ffffff;
+  --ink: #111111;
+  --muted: #4d4d4d;
+  --border: #b1b4b6;
+  --accent: #355e3b;
+  --accent-strong: #1f3d2b;
+  --accent-soft: color-mix(in srgb, var(--accent) 12%, transparent);
+  --link: #1d70b8;
+  --link-hover: #003078;
+  --focus: #ffdd00;
+  --max-width: 72ch;
+  --gutter: 1.5rem;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+body {
+  margin: 0;
+  background: var(--page-bg);
+}
+
+body[data-accent="green"] {
+  --accent: #355e3b;
+  --accent-strong: #1f3d2b;
+}
+
+body[data-accent="violet"] {
+  --accent: #5a1f2e;
+  --accent-strong: #4b2c3a;
+}
+
+body[data-accent="white"] {
+  --accent: #f4f1ea;
+  --accent-strong: #c7c1b4;
+}
+
+body[data-accent="gold"] {
+  --accent: #c9a44c;
+  --accent-strong: #9c7a2f;
+}
+
+body[data-accent="red"] {
+  --accent: #a32621;
+  --accent-strong: #7a0f14;
+}
+
+body[data-accent="rose"] {
+  --accent: #d1a3b1;
+  --accent-strong: #5a1f2e;
+}
+
+main {
+  display: block;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 1px;
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background: var(--page-surface);
+}
+
+.header__inner,
+.footer__inner,
+.page__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-5) var(--gutter);
+}
+
+.header__title {
+  margin: 0 0 var(--space-2);
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  padding-bottom: var(--space-1);
+}
+
+.nav a[aria-current="page"] {
+  border-color: var(--accent-strong);
+}
+
+.breadcrumbs {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-4);
+}
+
+.breadcrumbs ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.breadcrumbs li::after {
+  content: "/";
+  margin-left: var(--space-2);
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
+
+.page__inner {
+  padding-top: var(--space-6);
+  padding-bottom: var(--space-6);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  margin: 0 0 var(--space-4);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+  margin: var(--space-6) 0 var(--space-3);
+}
+
+h3 {
+  font-size: 1.25rem;
+  margin: var(--space-4) 0 var(--space-2);
+}
+
+p {
+  margin: 0 0 var(--space-4);
+}
+
+.section-divider {
+  border-top: 2px solid var(--accent-strong);
+  margin: var(--space-6) 0;
+}
+
+.callout {
+  border-left: 4px solid var(--accent-strong);
+  background: var(--accent-soft);
+  padding: var(--space-4);
+  margin: var(--space-5) 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--accent-strong);
+  color: var(--accent-strong);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.section-list {
+  padding-left: 1.25rem;
+}
+
+.footer {
+  border-top: 1px solid var(--border);
+  background: var(--page-surface);
+  font-size: 0.95rem;
+}
+
+.footer__nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-3);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.inset {
+  border-left: 4px solid var(--accent-strong);
+  padding-left: var(--space-4);
+  margin: var(--space-5) 0;
+}
+
+.summary-card {
+  border-top: 2px solid var(--accent-strong);
+  padding-top: var(--space-3);
+  margin-bottom: var(--space-4);
+}
