@@ -457,11 +457,10 @@ a:visited{
 }
 .masthead--inner .masthead__top{
   display: grid;
-  grid-template-columns: 1fr auto 1fr;
+  grid-template-columns: 1fr auto auto;
   grid-template-areas:
-    "label title devotion"
-    ". actions ."
-    "subtitle subtitle subtitle";
+    "label title actions"
+    "subtitle subtitle actions";
   align-items: center;
   column-gap: 16px;
   row-gap: 8px;
@@ -482,20 +481,25 @@ a:visited{
   text-align: center;
   color: #fff;
 }
-.masthead--inner .devotion{
-  grid-area: devotion;
-  justify-self: end;
-  color: color-mix(in srgb, #fff 70%, transparent);
-}
 .masthead--inner .masthead__actions{
   grid-area: actions;
-  justify-self: center;
+  justify-self: end;
+  align-self: start;
+  width: auto;
+  grid-template-columns: repeat(2, auto) auto;
 }
 .masthead--inner .subtitle,
 .masthead--inner .orientation,
 .masthead--inner .threshold{
   grid-area: subtitle;
   margin-top: 10px;
+  text-align: left;
+  justify-self: start;
+}
+.masthead--inner .masthead__actions .back,
+.masthead--inner .masthead__actions .lang__toggle{
+  width: auto;
+  min-width: 96px;
 }
 .masthead--inner .back,
 .masthead--inner .lang__toggle{
@@ -751,6 +755,9 @@ a:visited{
   max-width: var(--measure);
   margin: 0 auto;
   gap: 18px;
+}
+.home-page .opening{
+  max-width: none;
 }
 
 /* Responsive: stack portrait above text and keep spacing consistent */
