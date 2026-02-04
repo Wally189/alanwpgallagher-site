@@ -61,25 +61,31 @@ main {
   z-index: 1;
 }
 
-.page-shell{
+.page{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.page-grid{
   display: grid;
-  grid-template-columns: var(--rail-w) minmax(0, 1fr) var(--rail-w);
-  gap: var(--gap);
+  grid-template-columns: 320px minmax(0, 1fr) 320px;
+  gap: 24px;
   align-items: start;
 }
 
-.left-rail,
-.right-rail{
+.col-left,
+.col-right{
   position: sticky;
   top: 0;
   overflow: auto;
 }
 
 /* Hide Dies/Hora only inside the side menus */
-.left-rail .dies,
-.left-rail .hora,
-.right-rail .dies,
-.right-rail .hora{
+.col-left .dies,
+.col-left .hora,
+.col-right .dies,
+.col-right .hora{
   display: none !important;
 }
 
@@ -102,6 +108,14 @@ main {
   width: 100%;
   max-width: 100%;
   flex: 0 0 auto;
+}
+
+.card,
+.col-left > *,
+.col-main > *,
+.col-right > *{
+  width: 100%;
+  max-width: none;
 }
 
 .vocation-cards{
@@ -805,8 +819,8 @@ a:visited{
 /* HOME PAGE: image + text within ONE bordered card, evenly spaced */
 .home-page .frontis{
   grid-template-columns: 1fr;      /* the “card” is one column */
-  max-width: var(--measure);
-  margin: 0 auto;
+  max-width: none;
+  margin: 0;
   gap: 18px;
 }
 .home-page .opening{
@@ -1390,22 +1404,19 @@ h2{
 
 /* Hide fixed UI on small screens */
 @media (max-width: 1100px) {
-  .pillar-fixed,
-  .top-menu-fixed,
   .hora-fixed,
   .date-fixed{
     display: none;
   }
-  .left-rail,
-  .right-rail{
-    display: none;
-  }
-  .page-shell{
-    grid-template-columns: minmax(0, 1fr);
-  }
   .mobile-nav-top,
   .mobile-nav-bottom{
     display: block;
+  }
+}
+
+@media (max-width: 980px) {
+  .page-grid{
+    grid-template-columns: 1fr;
   }
 }
 
