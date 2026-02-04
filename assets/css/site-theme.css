@@ -19,4 +19,11 @@
   --para-space: 1.1rem;
   --transition-fast: 0.15s ease;
   --transition-medium: 0.25s ease;
+  --wl-liturgical-purple: #5a1f2e;
+  --wl-liturgical-red: #a32621;
+  --wl-liturgical-white: #f4f1ea;
+  --wl-liturgical-green: #355e3b;
+  --wl-liturgical-gold: #c9a44c;
+  --wl-liturgical-black: #1e2a44;
+  --wl-liturgical-rose: color-mix(in srgb, #5a1f2e 35%, #f4f1ea);
 }

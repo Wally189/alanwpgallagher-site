@@ -1,14 +1,14 @@
 (() => {
   const fallback = "var(--accent)";
   const colorMap = {
-    green: "var(--accent)",
-    violet: "var(--accent)",
-    purple: "var(--accent)",
-    white: "var(--accent)",
-    red: "var(--accent)",
-    rose: "var(--accent)",
-    black: "var(--accent)",
-    gold: "var(--accent)",
+    green: "var(--wl-liturgical-green, var(--accent))",
+    violet: "var(--wl-liturgical-purple, var(--accent))",
+    purple: "var(--wl-liturgical-purple, var(--accent))",
+    white: "var(--wl-liturgical-white, var(--accent))",
+    red: "var(--wl-liturgical-red, var(--accent))",
+    rose: "var(--wl-liturgical-rose, var(--accent))",
+    black: "var(--wl-liturgical-black, var(--accent))",
+    gold: "var(--wl-liturgical-gold, var(--accent))",
   };
 
   const getLondonDateParts = () => {
