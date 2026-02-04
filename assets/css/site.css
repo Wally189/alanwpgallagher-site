@@ -949,7 +949,8 @@ a:visited{
 .panel{
   padding: 18px 0;
   border-bottom: 1px solid var(--rule);
-  max-width: var(--measure);
+  max-width: none;
+  width: 100%;
 }
 .panel,
 details[open]{
