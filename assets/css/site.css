@@ -104,6 +104,29 @@ main {
   flex: 0 0 auto;
 }
 
+.vocation-cards{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 24px;
+}
+
+.vocation-card{
+  max-width: none;
+}
+
+@media (min-width: 1100px) {
+  .vocation-cards{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+
+  .vocation-card{
+    max-height: calc(100vh - 260px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+}
+
 .home-cards .doorway__indent{
   margin-left: 0;
 }
