@@ -104,6 +104,18 @@ main {
   flex: 0 0 auto;
 }
 
+.vocation-card{
+  max-width: none;
+}
+
+@media (min-width: 1100px) {
+  .vocation-card{
+    max-height: calc(100vh - 260px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+}
+
 .home-cards .doorway__indent{
   margin-left: 0;
 }
