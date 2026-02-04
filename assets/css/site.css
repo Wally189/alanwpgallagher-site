@@ -112,6 +112,17 @@ main {
   overflow: auto;
   max-height: 100%;
 }
+.card-contact.panel{
+  max-width: none;
+}
+.card-contact .form{
+  max-width: none;
+  width: 100%;
+}
+.card-contact p,
+.card-contact .contact-frame{
+  max-width: none;
+}
 
 main{
   padding: var(--gap);
@@ -488,9 +499,22 @@ a:visited{
   width: auto;
   grid-template-columns: repeat(2, auto) auto;
 }
+.masthead--inner .masthead__message{
+  grid-area: subtitle;
+  grid-column: 1 / 3;
+  margin-top: 10px;
+  text-align: left;
+  justify-self: start;
+  width: 100%;
+}
 .masthead--inner .subtitle,
 .masthead--inner .orientation,
 .masthead--inner .threshold{
+  margin-top: 0;
+  max-width: none;
+}
+.masthead--inner .threshold{
+  margin-top: 6px;
   grid-area: subtitle;
   margin-top: 10px;
   text-align: left;
@@ -531,6 +555,7 @@ a:visited{
       "subtitle subtitle";
   }
   .masthead--inner .kicker,
+  .masthead--inner .masthead__message,
   .masthead--inner .subtitle,
   .masthead--inner .orientation,
   .masthead--inner .threshold{
