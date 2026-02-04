@@ -104,6 +104,18 @@ main {
   flex: 0 0 auto;
 }
 
+.vocation-cards{
+  display: block;
+}
+
+.vocation-card{
+  max-width: none;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+}
+
 .home-cards .doorway__indent{
   margin-left: 0;
 }
