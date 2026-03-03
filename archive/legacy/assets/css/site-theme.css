@@ -1,0 +1,22 @@
+:root {
+  --wl-accent: var(--accent);
+  --wl-accent-soft: var(--accent-soft);
+  --accent: var(--wl-primary);
+  --accent-soft: var(--wl-primary-soft);
+  --wine: var(--wl-accent);
+  --wine-soft: var(--wl-accent-soft);
+  --sidebar-rail: var(--stroke);
+  --sidebar-rail-gap: 14px;
+  --max: 980px;
+  --pad: 20px;
+  --portrait: 220px;
+  --frontis-gap: 18px;
+  --sidebar-width: 250px;
+  --sidebar-gap: 24px;
+  --sidebar-min-height: 55vh;
+  --measure: 70ch;
+  --leading: 1.7;
+  --para-space: 1.1rem;
+  --transition-fast: 0.15s ease;
+  --transition-medium: 0.25s ease;
+}
