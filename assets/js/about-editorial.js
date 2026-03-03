@@ -6,6 +6,46 @@
     node.textContent = String(new Date().getFullYear());
   });
 
+  const datetimeNodes = Array.from(document.querySelectorAll("[data-datetime]"));
+  const getOrdinal = (day) => {
+    const tens = day % 100;
+    if (tens >= 11 && tens <= 13) {
+      return "th";
+    }
+    switch (day % 10) {
+      case 1:
+        return "st";
+      case 2:
+        return "nd";
+      case 3:
+        return "rd";
+      default:
+        return "th";
+    }
+  };
+
+  const updateDateTime = () => {
+    if (datetimeNodes.length === 0) {
+      return;
+    }
+    const now = new Date();
+    const weekday = now.toLocaleDateString("en-GB", { weekday: "long" });
+    const month = now.toLocaleDateString("en-GB", { month: "long" });
+    const day = now.getDate();
+    const year = now.getFullYear();
+    const hours = String(now.getHours()).padStart(2, "0");
+    const minutes = String(now.getMinutes()).padStart(2, "0");
+    const formatted = `${weekday} ${day}${getOrdinal(day)} ${month} ${year} ${hours}:${minutes}`;
+    datetimeNodes.forEach((node) => {
+      node.textContent = formatted;
+    });
+  };
+
+  updateDateTime();
+  if (datetimeNodes.length > 0) {
+    window.setInterval(updateDateTime, 1000);
+  }
+
   const getCurrentFile = () => {
     const file = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
     return file === "" ? "index.html" : file;
@@ -24,6 +64,19 @@
   });
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const mobileHeaderMedia = window.matchMedia("(max-width: 760px)");
+  const siteHeader = document.querySelector(".site-header");
+
+  const updateHeaderCondensed = () => {
+    if (!siteHeader) {
+      return;
+    }
+    if (!mobileHeaderMedia.matches) {
+      siteHeader.classList.remove("is-condensed");
+      return;
+    }
+    siteHeader.classList.toggle("is-condensed", window.scrollY > 72);
+  };
 
   const progressBar = document.querySelector("[data-scroll-progress]");
   const updateProgress = () => {
@@ -44,6 +97,7 @@
     ticking = true;
     window.requestAnimationFrame(() => {
       updateProgress();
+      updateHeaderCondensed();
       if (!reduceMotion) {
         updateParallax();
       }
@@ -97,6 +151,7 @@
   };
 
   updateProgress();
+  updateHeaderCondensed();
   if (!reduceMotion) {
     updateParallax();
   }
