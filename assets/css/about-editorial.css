@@ -236,6 +236,14 @@ h4 {
   color: var(--ink-soft);
 }
 
+.page-line {
+  margin-bottom: 0.75rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
 .intro-rhythm {
   margin-top: var(--space-4);
   display: grid;
@@ -510,6 +518,110 @@ h4 {
   color: var(--ink-soft);
 }
 
+.project-register {
+  align-items: start;
+}
+
+.project-stack {
+  margin-top: var(--space-3);
+  display: grid;
+  gap: var(--space-3);
+}
+
+.ledger-section {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-2);
+}
+
+.ledger-section-head {
+  display: grid;
+  gap: 0.45rem;
+  margin-bottom: 0.9rem;
+}
+
+.ledger-section h4 {
+  font-size: clamp(1.1rem, 1.03rem + 0.35vw, 1.35rem);
+}
+
+.ledger-section-head p {
+  margin: 0;
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.ledger-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line);
+  background: white;
+}
+
+.ledger-table th,
+.ledger-table td {
+  padding: 0.8rem 0.9rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+  text-align: left;
+}
+
+.ledger-table thead th {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  background: color-mix(in srgb, var(--page) 55%, white);
+}
+
+.ledger-table tbody th {
+  width: 22%;
+  min-width: 11rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: color-mix(in srgb, var(--page) 35%, white);
+}
+
+.ledger-table tbody td {
+  color: var(--ink-soft);
+}
+
+.ledger-table tr:last-child th,
+.ledger-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ledger-table a {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.pillar-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.pillar-list li {
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.pillar-list li:last-child {
+  border-bottom: none;
+}
+
+.pillar-list a {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
 .chapter-note {
   margin-top: var(--space-3);
   border-left: 2px solid var(--line-strong);
@@ -606,11 +718,10 @@ h4 {
 }
 
 .footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: var(--space-2);
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: var(--space-2) var(--space-3);
   padding: var(--space-3) 0;
 }
 
@@ -619,6 +730,13 @@ h4 {
   flex-wrap: wrap;
   gap: 0.6rem;
   font-size: 0.8rem;
+}
+
+.footer-right {
+  display: grid;
+  gap: 0.35rem;
+  justify-items: end;
+  text-align: right;
 }
 
 .footer-btn {
@@ -646,6 +764,7 @@ h4 {
 }
 
 .footer-meta {
+  margin: 0;
   font-variant-numeric: tabular-nums;
   letter-spacing: 0.02em;
 }
@@ -659,6 +778,23 @@ h4 {
   margin: 0;
   font-size: 0.8rem;
   color: var(--ink-soft);
+}
+
+.waylight-legal-block {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.waylight-legal-links,
+.waylight-legal-location,
+.waylight-legal-copyright {
+  margin: 0;
+}
+
+.waylight-legal-links a,
+.waylight-legal-copyright a {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
 }
 
 .js [data-reveal] {
@@ -846,6 +982,7 @@ h4 {
   }
 
   .footer-inner {
+    grid-template-columns: 1fr;
     align-items: flex-start;
     gap: 0.85rem;
   }
@@ -864,6 +1001,11 @@ h4 {
   .footer-nav .contact-btn {
     margin-left: 0;
     margin-top: 0;
+  }
+
+  .footer-right {
+    justify-items: start;
+    text-align: left;
   }
 
   .contact-form {
