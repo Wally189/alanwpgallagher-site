@@ -1,8 +1,8 @@
 # Alan W Gallagher Site
 
-This is the repository for my personal profile and portfolio site: a public place to present my work, experience, projects and professional direction in my own words.
+This is the repository for my personal profile and portfolio site: a public place to present my work, experience, projects and professional direction.
 
-I built this site because I wanted more than a standard CV or LinkedIn profile. It gives me a controlled space to show how I think, how I organise information, and how I use digital tools to turn experience, projects and evidence into something readable for employers, collaborators and decision-makers.
+I have built this site because I wanted more than a standard CV or LinkedIn profile. It gives me a controlled space to show how I think, how I organise information, and how I use digital tools to turn experience, projects and evidence into something readable for employers, collaborators and decision-makers.
 
 This is not meant to present me as a conventional software developer. The point is that I understand enough of the stack to plan it, structure it, work with it, use GitHub properly, guide AI-supported development, and translate the output back into language that people can actually use.
 
@@ -54,12 +54,15 @@ There is no heavy framework here. That is intentional. The site should remain un
 
 The public site is organised around the main professional story:
 
-- `index.html` — homepage and first impression
-- `about.html` — personal and professional context
-- `profile.html` — professional profile and positioning
-- `experience.html` — work history and capability evidence
-- `projects.html` — selected projects and demonstrations
-- `timeline.html` — career and project chronology
+- `index.html` — homepage and first impression.
+- `profile.html` — professional profile and positioning.
+- `experience.html` — work history and capability evidence.
+- `method.html` — detail about the way I like to work.
+- `workbench.html` — selected projects and demonstrations of my work.
+- `timeline.html` — career and project chronology.
+- 'CV.html` — where my CV is located.
+- `about.html` — personal context
+- `contact.html` — personal context
 - `assets/` — images, styles and scripts
 - `archive/legacy/` — older material retained for reference, not treated as current public positioning
 
@@ -99,7 +102,7 @@ My approach is:
 5. keep the language human and understandable
 6. commit changes in GitHub so the work has a record
 
-That is the real skill I want this site to show: not just pressing buttons, but knowing what needs to be built, why it matters, and how to make it usable for people.
+That is the real skill I want this site to show: not just pressing buttons, but knowing what needs to be built, why it matters, and how to make it usable for people - with the assistance of AI.
 
 ## Showcase standard
 
