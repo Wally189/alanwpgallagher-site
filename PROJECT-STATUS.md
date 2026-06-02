@@ -4,25 +4,31 @@
 
 **Portfolio**
 
-This is a primary public portfolio site. It should be treated as one of the main evidence points for Alan W Gallagher's employability and professional positioning.
+This is my primary public portfolio site. I want it to become the main evidence hub for my professional profile, selected projects, work history and practical digital fluency.
 
 ## Purpose
 
-The site should present Alan as a business and technical operations professional, not as a generic administrator and not as a software developer trying to sell coding ability.
+I am using this site to present myself as a business and technical operations professional: someone who can work across people, process, technology, evidence and decision-making.
 
-The purpose is to show:
-
-- practical understanding of digital tools and web publishing
-- ability to structure information clearly
-- ability to use AI responsibly as part of a workflow
-- capacity to translate between technical systems and ordinary users
-- operational judgement, documentation discipline, and service-improvement thinking
+The site is not meant to sell me as a conventional software developer. It is meant to show that I can understand digital tools, organise information, use AI responsibly, manage GitHub-based workflows, document decisions, and translate technical work into something useful for ordinary people and decision-makers.
 
 ## Public showcase status
 
 **Showcase after final polish.**
 
-The repository may be public, but the site should only be actively promoted once core pages are coherent, links are checked, and the project examples support the professional message.
+The repository can be public while I am still improving it, but I should only promote the site actively when the core pages are coherent, links are checked, and the selected projects support the professional story.
+
+## What this site should prove
+
+This site should demonstrate that I can:
+
+- structure a professional profile beyond a standard CV
+- explain my experience clearly
+- organise public-facing content
+- use GitHub and static-site workflows sensibly
+- work with AI without outsourcing judgement
+- document projects in a way non-technical people can follow
+- connect operational experience, digital tools and decision-making
 
 ## Do not include
 
@@ -32,7 +38,7 @@ The repository may be public, but the site should only be actively promoted once
 - third-party personal data
 - unfinished grievance material
 - exaggerated claims about development skill
-- American-style personal-brand language
+- vague personal-brand language that does not say anything useful
 
 ## Portfolio standard
 
@@ -41,14 +47,18 @@ Each showcased project should explain:
 - the problem
 - the intended audience
 - the practical constraints
-- the tools used
+- the tools or method used
 - the outcome or learning
-- what the work demonstrates about Alan's value
+- what the work demonstrates about my judgement, communication, organisation or delivery ability
 
 ## Current clean-up priority
 
-1. Clarify homepage positioning.
-2. Strengthen CV and experience pages.
-3. Add selected project/case-study pages.
-4. Link only the best GitHub repositories.
-5. Keep the tone practical, mature, British/Irish, and evidence-led.
+1. Clarify the homepage positioning.
+2. Strengthen the profile and experience pages.
+3. Add selected project or case-study pages.
+4. Link only the best supporting GitHub repositories.
+5. Keep the tone practical, mature, British/Irish and evidence-led.
+
+## Current monthly GitHub task
+
+For this month's GitHub governance cycle, this repository is the main priority. It should become the clean front door before wider template or archive repos are polished.
