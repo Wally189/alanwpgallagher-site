@@ -29,8 +29,8 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-004 | Repository basics | Add or defer `.gitignore` | 2026-06-04 | Not started | Decide later whether a simple static-site `.gitignore` is useful. |
 | AWG-005 | Repository basics | Add or defer `CHANGELOG.md` | 2026-06-05 | Deferred | Optional; only add if it helps maintain the site calmly. |
 | AWG-006 | Content | Tighten homepage positioning | 2026-06-05 | Done | `index.html` polished and pushed to `main`; Alan still to view live page and give final tick-off. |
-| AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | Next | Review `profile.html` for content, tone, role fit, confidence and any public-risk issues. |
-| AWG-008 | Content | Strengthen experience page | 2026-06-06 | Not started | Review after Profile page. |
+| AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | Done | `profile.html` polished and pushed to `main`; Alan approved moving on. |
+| AWG-008 | Content | Strengthen experience page | 2026-06-06 | Next | Review `experience.html` for structure, tone, evidence, target-role fit and public-risk issues. |
 | AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added; DOCX removed; CV links updated on branch and `cv.html`. |
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
 | AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
@@ -46,11 +46,13 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 
 - `cv-web-vscode-snapshot` created to preserve Alan's VS Code version without immediately changing live `main`.
 - `index.html` reviewed, polished and promoted to `main` despite some branch-only links, accepted as a short-term risk.
+- `profile.html` reviewed, polished and promoted to `main`.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
 - Workbench chapter number corrected to Chapter IV on the working branch.
 - SEO/social metadata pass deliberately parked until later.
+- Image filename cleanup deliberately parked until later.
 
 ## How to use this board with ChatGPT
 
