@@ -37,7 +37,7 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Deferred | Do a full safety pass after the remaining content pages are settled. Continue avoiding grievance, medical, financial, third-party or confidential material. |
 | AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Not started | Contact page exists; confirm form behaviour and privacy wording later. |
 | AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
-| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Continue checking on phone across pages after Timeline, CV, About and Contact are updated. |
+| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Continue checking on phone across pages after CV, About and Contact are updated. |
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Deferred | Return after remaining pages are settled; Workbench has been kept as restrained evidence panels rather than noisy card soup. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
@@ -52,7 +52,8 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-027 | Workbench examples | Create responsible AI workflow demo | 2026-06-10 | Not started | Show level-headed AI use with guardrails: task, source check, draft, review, correction and final human responsibility. |
 | AWG-028 | Workbench examples | Create civic/public-information example | 2026-06-10 | Not started | Link once the civic project has a suitable public example; keep it clearly personal-interest origin and professional-method evidence. |
 | AWG-029 | Workbench examples | Create communication/briefing example | 2026-06-11 | Not started | Public example of plain-English briefing, structured email, meeting note or stakeholder update. |
-| AWG-030 | Content | Strengthen timeline page | 2026-06-06 | In progress | `timeline.html` has been refocused as a chronological career map; Alan to review visually before sign-off. |
+| AWG-030 | Content | Strengthen timeline page | 2026-06-06 | Done | `timeline.html` refocused as a chronological career map and approved by Alan. |
+| AWG-031 | Content | Strengthen CV landing page | 2026-06-06 | In progress | `cv.html` now exists and has been personalised; review visually before sign-off, then move to About. |
 
 ## Notes on work completed since setup
 
@@ -65,7 +66,8 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 - `method.html` reviewed, polished and promoted to `main`.
 - `workbench.html` created and promoted to `main`; `projects.html` now redirects to it.
 - Workbench page now explains ownership as “my workbench”, includes a Tools & Methods strip, uses evidence panels, links GitHub and records TBC examples in the Workbench example backlog.
-- Timeline page refocused as a lean chronological career map rather than a second Experience page.
+- Timeline page refocused as a lean chronological career map rather than a second Experience page and approved by Alan.
+- `cv.html` added as a live landing page for the current PDF CV and then personalised to use “my CV” language.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
