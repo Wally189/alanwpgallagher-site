@@ -2,33 +2,34 @@
 
 ## Active task
 
-**AWG-007 — Strengthen professional profile page**
+**AWG-008 — Strengthen experience page**
 
 **Status:** Next
 
 ## Goal
 
-Review and improve `profile.html` so it supports the CV web purpose: presenting Alan as a credible business and technical operations support candidate with strengths in service operations, process improvement, documentation, governance, technical liaison and practical systems thinking.
+Review and improve `experience.html` so it gives credible, evidence-led career history for Alan's target roles: business operations, service operations, project support, governance, documentation, technical liaison and practical systems support.
 
 ## Why this matters
 
-The homepage is now polished and has been promoted to `main`. The profile page is the next logical page because it explains Alan's professional identity and working style. It needs to be strong enough for recruiters and hiring managers without becoming inflated, vague or too personal.
+The homepage and profile page are now polished and live. The experience page must now back up those claims with career evidence without becoming too long, too generic or too inflated.
 
 ## Mini tasks
 
-- [ ] Read `profile.html` on `cv-web-vscode-snapshot`.
-- [ ] Check whether the page supports the target roles clearly.
+- [ ] Read `experience.html` on `cv-web-vscode-snapshot`.
+- [ ] Check whether each role supports the target career direction.
+- [ ] Check whether the page avoids generic admin framing.
+- [ ] Check whether the page shows systems, operations, process, documentation, governance and stakeholder value.
 - [ ] Check tone: mature, British/Irish, professional, not Silicon Valley, not overblown.
 - [ ] Check for public-risk issues: grievance, medical, financial, confidential employer material or unnecessary personal detail.
 - [ ] Check navigation and footer links.
-- [ ] Check consistency with the homepage wording.
 - [ ] Suggest only necessary edits.
 - [ ] Make branch edits only after Alan agrees.
-- [ ] Once Alan is happy, offer the choice to make `profile.html` live.
+- [ ] Once Alan is happy, offer the choice to make `experience.html` live.
 
 ## Current next action
 
-Review `profile.html` on the working branch and decide whether the content is already strong enough or needs a polish pass.
+Review `experience.html` on the working branch and decide whether the content is strong enough or needs a polish pass.
 
 ## Current caution
 
