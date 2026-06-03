@@ -1,0 +1,107 @@
+/* Small site-wide polish layer for shared presentation fixes. */
+
+.site-nav-toggle {
+  display: none !important;
+}
+
+.profile-page .page-intro {
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--line);
+}
+
+.profile-page .page-intro-grid {
+  align-items: center;
+}
+
+.profile-page .page-intro p {
+  max-width: 52ch;
+  line-height: 1.78;
+}
+
+.profile-page .profile-narrative,
+.profile-page .profile-principles {
+  margin-top: var(--space-4);
+}
+
+.profile-page .profile-narrative {
+  max-width: 920px;
+  border-left: 2px solid var(--line-strong);
+  padding-left: clamp(1rem, 0.7rem + 1vw, 1.5rem);
+}
+
+.profile-page .profile-narrative h3,
+.profile-page .profile-principles h3 {
+  margin-top: 0.45rem;
+}
+
+.profile-page .profile-narrative p {
+  max-width: 76ch;
+}
+
+.profile-page .profile-principles {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-3);
+}
+
+.profile-page .profile-principles-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: var(--space-2);
+}
+
+.profile-page .profile-principle {
+  margin: 0;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, white 84%, var(--page));
+  padding: 0.9rem 1rem;
+  color: var(--ink-soft);
+  line-height: 1.7;
+}
+
+.profile-page .chapter-next {
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 1080px) {
+  .workbench-page .workbench-evidence:first-of-type .workbench-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .workbench-page .workbench-evidence--continued .workbench-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .workbench-page .workbench-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .workbench-page .workbench-tags {
+    margin-top: auto;
+    padding-top: 0.65rem;
+  }
+}
+
+@media (max-width: 980px) {
+  .profile-page .profile-principles-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .profile-page .page-intro {
+    padding-bottom: var(--space-3);
+  }
+
+  .profile-page .profile-narrative {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: var(--space-3);
+  }
+
+  .profile-page .profile-principle {
+    padding: 0.85rem 0.9rem;
+  }
+}
