@@ -22,6 +22,23 @@
   transform: none !important;
 }
 
+.workbench-page .workbench-toolstrip {
+  margin-top: var(--space-4);
+  border-block: 1px solid var(--line);
+  background: color-mix(in srgb, white 72%, var(--page));
+  padding-block: var(--space-3);
+}
+
+.workbench-page .workbench-toolstrip h3 {
+  margin-top: 0.45rem;
+  max-width: 14ch;
+}
+
+.workbench-page .workbench-toolstrip p:not(.kicker) {
+  max-width: 72ch;
+  color: var(--ink-soft);
+}
+
 .workbench-page .workbench-image-break {
   position: relative;
   margin-block: var(--space-4);
@@ -133,6 +150,10 @@
 }
 
 @media (max-width: 760px) {
+  .workbench-page .workbench-toolstrip {
+    margin-top: var(--space-3);
+  }
+
   .workbench-page .workbench-image-break {
     margin-block: var(--space-3);
   }
