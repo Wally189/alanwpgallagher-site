@@ -1,0 +1,94 @@
+.workbench-page .workbench-links,
+.workbench-page .workbench-status {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+}
+
+.workbench-page .workbench-links a {
+  text-decoration: underline;
+  text-underline-offset: 0.14em;
+}
+
+.workbench-page .workbench-status {
+  color: var(--ink-soft);
+}
+
+.workbench-page .workbench-status strong {
+  color: var(--ink);
+}
+
+@media (max-width: 760px) {
+  .workbench-page .table-wrap {
+    overflow: visible;
+  }
+
+  .workbench-page .ledger-table,
+  .workbench-page .ledger-table thead,
+  .workbench-page .ledger-table tbody,
+  .workbench-page .ledger-table tr,
+  .workbench-page .ledger-table th,
+  .workbench-page .ledger-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .workbench-page .ledger-table {
+    border-top: 0;
+    border-bottom: 0;
+    background: transparent;
+  }
+
+  .workbench-page .ledger-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .workbench-page .ledger-table tbody tr {
+    margin-bottom: 1rem;
+    border: 1px solid var(--line);
+    background: white;
+  }
+
+  .workbench-page .ledger-table tbody th {
+    padding: 1rem;
+    border-bottom: 1px solid var(--line);
+    background: color-mix(in srgb, var(--page) 42%, white);
+    font-size: 1rem;
+  }
+
+  .workbench-page .ledger-table tbody td {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .workbench-page .ledger-table tbody td::before {
+    content: attr(data-label);
+    color: var(--ink);
+    font-size: 0.67rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    line-height: 1.45;
+    text-transform: uppercase;
+  }
+
+  .workbench-page .ledger-table tr:last-child th,
+  .workbench-page .ledger-table tr:last-child td {
+    border-bottom: 1px solid var(--line);
+  }
+}
+
+@media (max-width: 430px) {
+  .workbench-page .ledger-table tbody td {
+    grid-template-columns: 1fr;
+    gap: 0.32rem;
+  }
+}
