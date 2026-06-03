@@ -2,6 +2,11 @@
   const root = document.documentElement;
   root.classList.add("js");
 
+  document.querySelectorAll(".site-nav-toggle").forEach((button) => {
+    button.hidden = true;
+    button.setAttribute("aria-hidden", "true");
+  });
+
   document.querySelectorAll("[data-year]").forEach((node) => {
     node.textContent = String(new Date().getFullYear());
   });
