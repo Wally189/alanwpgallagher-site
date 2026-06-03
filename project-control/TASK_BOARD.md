@@ -16,14 +16,14 @@ Working branch for the wider CV web review: `cv-web-vscode-snapshot`.
 
 Live branch: `main`.
 
-Important: Alan stepped away from VS Code before pulling the latest GitHub-side edits. Before doing local work, pull both `cv-web-vscode-snapshot` and `main` as advised in the chat.
+Important: Alan has now pulled the main GitHub-side edits to Gertrude and added the current May 2026 CV PDF to `main`.
 
 ## Current board
 
 | ID | Phase | Task | Target date | Status | Current next action |
 |---|---|---:|---:|---|---|
 | AWG-000 | Setup | Add Project Web Builder control files | 2026-06-03 | Done | Project control files exist on `main`; `NOT_YET.md` added for parked work. |
-| AWG-001 | Setup | Reconcile GitHub with local VS Code copy | 2026-06-04 | Deferred | Alan to pull latest GitHub changes into VS Code when back at the machine. |
+| AWG-001 | Setup | Reconcile GitHub with local VS Code copy | 2026-06-04 | Done | Gertrude pulled latest `main`; working branch also refreshed from origin. |
 | AWG-002 | Setup | Confirm site structure and navigation | 2026-06-04 | Done | Main chapter structure confirmed: Home, Profile, Experience, Method, Workbench, Timeline, CV, About and Contact. Remaining URL clean-up is tracked separately. |
 | AWG-003 | Repository basics | Confirm README and project status quality | 2026-06-03 | Done | README and PROJECT-STATUS exist and broadly meet the public portfolio standard. |
 | AWG-004 | Repository basics | Add or defer `.gitignore` | 2026-06-04 | Not started | Decide later whether a simple static-site `.gitignore` is useful. |
@@ -31,7 +31,7 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-006 | Content | Tighten homepage positioning | 2026-06-05 | Done | `index.html` polished and pushed to `main`; Alan still to view live page and give final tick-off. |
 | AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | Done | `profile.html` polished and pushed to `main`; Alan approved moving on. |
 | AWG-008 | Content | Strengthen experience page | 2026-06-06 | Done | `experience.html` polished and pushed to `main`; Alan approved moving on. |
-| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added to working branch; DOCX removed; live pages point to May 2026 PDF. |
+| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added to working branch, DOCX removed, and current PDF now added to live `main`. |
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
 | AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Deferred | Do a full safety pass after the remaining content pages are settled. Continue avoiding grievance, medical, financial, third-party or confidential employer material. |
@@ -42,7 +42,7 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Deferred | Return after remaining pages are settled; Workbench has been kept as restrained evidence panels rather than noisy card soup. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
 | AWG-019 | Content | Strengthen method page | 2026-06-06 | Done | `method.html` polished and pushed to `main`; Alan approved moving on. |
-| AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Blocked | Requires VS Code/local git because the live branch is missing `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`; live CV links will break until added. |
+| AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Done | Gertrude added `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf` to `main` and pushed commit `b0dce09`; live CV links should now resolve once deployed. |
 | AWG-021 | Content | Strengthen Workbench page | 2026-06-06 | Done | `workbench.html` is live with ownership wording, tools/methods strip, evidence panels, GitHub link and TBC examples recorded as backlog tasks. |
 | AWG-022 | Navigation | Standardise Workbench URL | 2026-06-06 | Deferred | `workbench.html` created and `projects.html` redirects; update remaining internal links from `projects.html` to `workbench.html` during page passes. |
 | AWG-023 | Workbench examples | Create CV website case study | 2026-06-08 | Not started | Build a concise case study showing information architecture, GitHub workflow, content review and professional positioning. |
@@ -57,6 +57,8 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 ## Notes on work completed since setup
 
 - `cv-web-vscode-snapshot` created to preserve Alan's VS Code version without immediately changing live `main`.
+- Gertrude pulled latest live `main` and refreshed `cv-web-vscode-snapshot` from origin.
+- Current CV PDF added to live `main` from Gertrude and pushed as commit `b0dce09`.
 - `index.html` reviewed, polished and promoted to `main` despite some branch-only links, accepted as a short-term risk.
 - `profile.html` reviewed, polished and promoted to `main`.
 - `experience.html` reviewed, polished and promoted to `main`.
@@ -64,7 +66,6 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 - `workbench.html` created and promoted to `main`; `projects.html` now redirects to it.
 - Workbench page now explains ownership as “my workbench”, includes a Tools & Methods strip, uses evidence panels, links GitHub and records TBC examples in the Workbench example backlog.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
-- Live CV links now point to `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`, but that binary PDF still needs adding to `main` from VS Code.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
 - SEO/social metadata pass deliberately parked until later.
