@@ -2,34 +2,33 @@
 
 ## Active task
 
-**AWG-019 — Strengthen method page**
+**AWG-021 — Strengthen Workbench page**
 
 **Status:** Next
 
 ## Goal
 
-Review and improve `method.html` so it explains Alan's working method clearly and supports the CV web purpose: business operations, service operations, project support, governance, documentation, technical liaison and practical systems thinking.
+Review and improve `projects.html` as the Workbench page so it demonstrates Alan's practical proof-of-work: small digital builds, documentation systems, registers, process notes, responsible AI-assisted workflow and useful project structure.
 
 ## Why this matters
 
-The homepage, profile page and experience page are now polished and live. The method page should show how Alan works in practice: clarifying problems, mapping routes, keeping records, separating facts from assumptions, supporting decisions and following through.
+The homepage, profile page, experience page and method page are now polished and live. The Workbench page should show practical evidence of how Alan thinks and works without becoming cluttered, over-personal or too broad.
 
 ## Mini tasks
 
-- [ ] Read `method.html` on `cv-web-vscode-snapshot`.
-- [ ] Check whether it explains the working method clearly.
-- [ ] Check whether it supports target roles without sounding inflated.
-- [ ] Check whether it connects to the homepage/profile/experience pages.
+- [ ] Read `projects.html` on `cv-web-vscode-snapshot`.
+- [ ] Check whether Workbench is clear as proof-of-work rather than random personal projects.
+- [ ] Check whether the page supports target roles and portfolio credibility.
 - [ ] Check tone: mature, British/Irish, professional, not Silicon Valley, not overblown.
 - [ ] Check for public-risk issues: grievance, medical, financial, confidential employer material or unnecessary personal detail.
-- [ ] Check navigation and footer links.
+- [ ] Check navigation, chapter numbering and footer links.
 - [ ] Suggest only necessary edits.
 - [ ] Make branch edits only after Alan agrees.
-- [ ] Once Alan is happy, offer the choice to make `method.html` live.
+- [ ] Once Alan is happy, offer the choice to make `projects.html` live.
 
 ## Current next action
 
-Review `method.html` on the working branch and decide whether the content is strong enough or needs a polish pass.
+Review `projects.html` on the working branch and decide whether the Workbench page is strong enough or needs a polish pass.
 
 ## Current caution
 
