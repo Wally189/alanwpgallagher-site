@@ -2,35 +2,34 @@
 
 ## Active task
 
-**AWG-001 — Reconcile GitHub with local VS Code copy**
+**AWG-007 — Strengthen professional profile page**
 
 **Status:** Next
 
 ## Goal
 
-Check whether the GitHub repository matches the local VS Code working copy before making further public website changes.
+Review and improve `profile.html` so it supports the CV web purpose: presenting Alan as a credible business and technical operations support candidate with strengths in service operations, process improvement, documentation, governance, technical liaison and practical systems thinking.
 
 ## Why this matters
 
-The project-control files have now been added to GitHub, but the public website may also have local edits, uncommitted files or unfinished work in VS Code. If we change public content before reconciling the local copy, we may overwrite or duplicate work.
+The homepage is now polished and has been promoted to `main`. The profile page is the next logical page because it explains Alan's professional identity and working style. It needs to be strong enough for recruiters and hiring managers without becoming inflated, vague or too personal.
 
 ## Mini tasks
 
-- [ ] Open the `alanwpgallagher-site` folder in VS Code.
-- [ ] Check the source control panel for uncommitted changes.
-- [ ] Check whether a CV page exists locally, especially `CV.html`, `cv.html` or another CV route.
-- [ ] Check whether `.gitignore` exists locally.
-- [ ] Check whether any project-control files already existed locally.
-- [ ] Check whether contact form or contact route files exist locally.
-- [ ] Pull from GitHub if safe, so the new `project-control` folder appears locally.
-- [ ] If local changes exist, decide whether to commit, stash or copy notes before pulling.
-- [ ] Update `project-control/TASK_BOARD.md` with what was found.
-- [ ] Move the next task to **Next** once reconciliation is complete.
+- [ ] Read `profile.html` on `cv-web-vscode-snapshot`.
+- [ ] Check whether the page supports the target roles clearly.
+- [ ] Check tone: mature, British/Irish, professional, not Silicon Valley, not overblown.
+- [ ] Check for public-risk issues: grievance, medical, financial, confidential employer material or unnecessary personal detail.
+- [ ] Check navigation and footer links.
+- [ ] Check consistency with the homepage wording.
+- [ ] Suggest only necessary edits.
+- [ ] Make branch edits only after Alan agrees.
+- [ ] Once Alan is happy, offer the choice to make `profile.html` live.
 
 ## Current next action
 
-Open VS Code tomorrow and check whether local work exists that has not been pushed to GitHub.
+Review `profile.html` on the working branch and decide whether the content is already strong enough or needs a polish pass.
 
 ## Current caution
 
-Do not make further public content changes until the VS Code copy is checked, unless the change is clearly limited to the project-control folder.
+Alan has stepped away from VS Code. Before local work continues, pull the latest GitHub changes into VS Code so the local copy matches GitHub.
