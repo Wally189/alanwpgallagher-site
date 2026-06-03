@@ -23,6 +23,7 @@
 }
 
 .workbench-page .workbench-image-break {
+  position: relative;
   margin-block: var(--space-4);
   border-block: 1px solid var(--line);
   padding-block: 1rem;
@@ -33,13 +34,21 @@
   width: 100%;
   max-height: 28rem;
   object-fit: cover;
+  filter: saturate(78%) contrast(94%) brightness(0.96);
 }
 
 .workbench-page .workbench-image-break figcaption {
-  margin-top: 0.65rem;
+  position: absolute;
+  right: clamp(0.7rem, 1.6vw, 1.4rem);
+  bottom: clamp(1.55rem, 2.2vw, 2rem);
+  margin: 0;
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, var(--paper) 91%, transparent);
+  padding: 0.18rem 0.5rem;
   color: var(--ink-soft);
-  font-size: 0.72rem;
+  font-size: 0.62rem;
   letter-spacing: 0.12em;
+  line-height: 1.35;
   text-transform: uppercase;
 }
 
@@ -61,9 +70,21 @@
 }
 
 .workbench-page .workbench-card {
+  position: relative;
   border: 1px solid var(--line);
-  background: color-mix(in srgb, white 82%, var(--page));
+  border-top: 0.35rem solid color-mix(in srgb, var(--accent) 52%, var(--ink));
+  background: color-mix(in srgb, white 86%, var(--page));
   padding: clamp(1rem, 0.8rem + 1vw, 1.45rem);
+  box-shadow: 0 0.55rem 1.4rem color-mix(in srgb, var(--ink) 6%, transparent);
+}
+
+.workbench-page .workbench-card:nth-child(2n) {
+  border-top-color: color-mix(in srgb, var(--accent) 38%, #6e7b63);
+  background: color-mix(in srgb, white 78%, var(--page));
+}
+
+.workbench-page .workbench-card:nth-child(3n) {
+  border-top-color: color-mix(in srgb, var(--accent) 32%, #8b7358);
 }
 
 .workbench-page .workbench-card h4 {
@@ -90,8 +111,9 @@
 }
 
 .workbench-page .workbench-tags span {
+  display: inline-block;
   border: 1px solid var(--line);
-  background: white;
+  background: color-mix(in srgb, white 88%, var(--page));
   padding: 0.28rem 0.45rem;
   color: var(--ink-soft);
   font-size: 0.72rem;
@@ -117,6 +139,13 @@
 
   .workbench-page .workbench-image-break img {
     max-height: 15rem;
+  }
+
+  .workbench-page .workbench-image-break figcaption {
+    right: 0.65rem;
+    bottom: 1.45rem;
+    max-width: calc(100% - 1.3rem);
+    font-size: 0.56rem;
   }
 
   .workbench-page .workbench-card {
