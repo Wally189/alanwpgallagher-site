@@ -10,51 +10,53 @@ Working rule:
 
 ## Source note
 
-This board was created on 2026-06-03 from the GitHub repository state and previous CV web planning conversations. It may not capture local VS Code changes, uncommitted files or unpushed work. Treat local VS Code review as a required reconciliation step before changing public content.
+This board was refreshed on 2026-06-03 after the VS Code snapshot branch was created and the homepage was partly promoted to `main`.
+
+Working branch for the wider CV web review: `cv-web-vscode-snapshot`.
+
+Live branch: `main`.
+
+Important: Alan stepped away from VS Code before pulling the latest GitHub-side edits. Before doing local work, pull both `cv-web-vscode-snapshot` and `main` as advised in the chat.
 
 ## Current board
 
 | ID | Phase | Task | Target date | Status | Current next action |
 |---|---|---:|---:|---|---|
-| AWG-000 | Setup | Add Project Web Builder control files | 2026-06-03 | In progress | Add project brief, task board and current-task file. |
-| AWG-001 | Setup | Reconcile GitHub with local VS Code copy | 2026-06-04 | Next | Check local files, uncommitted changes and any pages not visible in GitHub. |
-| AWG-002 | Setup | Confirm site structure and navigation | 2026-06-04 | In progress | Confirm which pages exist, which are linked, and whether the CV/contact route is complete. |
+| AWG-000 | Setup | Add Project Web Builder control files | 2026-06-03 | Done | Project control files exist on `main`; `NOT_YET.md` added for parked work. |
+| AWG-001 | Setup | Reconcile GitHub with local VS Code copy | 2026-06-04 | Deferred | Alan to pull latest GitHub changes into VS Code when back at the machine. |
+| AWG-002 | Setup | Confirm site structure and navigation | 2026-06-04 | In progress | Continue page-by-page review; current structure includes Home, Profile, Experience, Method, Workbench, Timeline, CV, About and Contact. |
 | AWG-003 | Repository basics | Confirm README and project status quality | 2026-06-03 | Done | README and PROJECT-STATUS exist and broadly meet the public portfolio standard. |
-| AWG-004 | Repository basics | Add or defer `.gitignore` | 2026-06-04 | Not started | Decide whether a simple static-site `.gitignore` is needed after VS Code review. |
+| AWG-004 | Repository basics | Add or defer `.gitignore` | 2026-06-04 | Not started | Decide later whether a simple static-site `.gitignore` is useful. |
 | AWG-005 | Repository basics | Add or defer `CHANGELOG.md` | 2026-06-05 | Deferred | Optional; only add if it helps maintain the site calmly. |
-| AWG-006 | Content | Tighten homepage positioning | 2026-06-05 | In progress | Make the first impression clearly about business and technical operations, service improvement and practical systems thinking. |
-| AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | In progress | Align profile with target roles around operations, process, governance and technical liaison. |
-| AWG-008 | Content | Strengthen experience page | 2026-06-06 | In progress | Make experience evidence-led and aimed at £38k–£45k target-adjacent roles. |
-| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Blocked | GitHub README references `CV.html`, but `CV.html` / `cv.html` was not found in GitHub; check VS Code. |
+| AWG-006 | Content | Tighten homepage positioning | 2026-06-05 | Done | `index.html` polished and pushed to `main`; Alan still to view live page and give final tick-off. |
+| AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | Next | Review `profile.html` for content, tone, role fit, confidence and any public-risk issues. |
+| AWG-008 | Content | Strengthen experience page | 2026-06-06 | Not started | Review after Profile page. |
+| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added; DOCX removed; CV links updated on branch and `cv.html`. |
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
-| AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community or civic project once safe and coherent. |
-| AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Not started | Check for employment dispute, medical, financial, third-party or confidential material. |
-| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Blocked | Contact page exists in GitHub; confirm whether the form/contact route works and whether a privacy note is needed. |
-| AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | In progress | Meta, Open Graph and structured data exist on some pages; review consistency across all core pages. |
+| AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
+| AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | In progress | Keep checking each page for employment dispute, medical, financial, third-party or confidential material. |
+| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Not started | Contact page exists; confirm form behaviour and privacy wording later. |
+| AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
 | AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Review on phone for readability, navigation, spacing, tone and awkward layout. |
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Not started | Remove clutter, gimmicks, repeated claims and anything that weakens the mature professional tone. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
 
-## Notes on previous work captured
+## Notes on work completed since setup
 
-Already evidenced in GitHub:
-
-- The repository has a public README with purpose, live site, tech stack, site structure, content rules and next improvements.
-- `PROJECT-STATUS.md` exists and classifies the site as a portfolio project.
-- Core pages visible in GitHub include `index.html`, `about.html`, `profile.html`, `experience.html`, `projects.html`, `timeline.html` and `contact.html`.
-- The site already uses en-GB language metadata, page descriptions, Open Graph/Twitter tags on sampled pages, shared CSS/JS and a consistent primary navigation.
-
-Known uncertainty:
-
-- The CV route is unclear because the README references `CV.html`, but that file was not found in GitHub at setup time.
-- Local VS Code may contain files or changes not visible in GitHub yet.
+- `cv-web-vscode-snapshot` created to preserve Alan's VS Code version without immediately changing live `main`.
+- `index.html` reviewed, polished and promoted to `main` despite some branch-only links, accepted as a short-term risk.
+- CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated.
+- Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
+- Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
+- Workbench chapter number corrected to Chapter IV on the working branch.
+- SEO/social metadata pass deliberately parked until later.
 
 ## How to use this board with ChatGPT
 
 1. Ask: “Use Project Web Builder. What task are we working on?”
-2. ChatGPT should identify the first task marked **Next** or **In progress**.
-3. Ask: “Break this task into mini-tasks.”
+2. ChatGPT should identify the first task marked **Next** or **In progress**, then check `project-control/current-task.md`.
+3. Break the task into mini-tasks.
 4. Work through the mini-tasks one by one.
 5. When done, change the task status to **Done** and mark the next task as **Next**.
 
