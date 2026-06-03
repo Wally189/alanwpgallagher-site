@@ -2,34 +2,35 @@
 
 ## Active task
 
-**AWG-021 — Strengthen Workbench page**
+**AWG-030 — Strengthen timeline page**
 
 **Status:** Next
 
 ## Goal
 
-Review and improve `projects.html` as the Workbench page so it demonstrates Alan's practical proof-of-work: small digital builds, documentation systems, registers, process notes, responsible AI-assisted workflow and useful project structure.
+Review and improve `timeline.html` so it matches the updated site structure, tone and employability focus.
 
 ## Why this matters
 
-The homepage, profile page, experience page and method page are now polished and live. The Workbench page should show practical evidence of how Alan thinks and works without becoming cluttered, over-personal or too broad.
+The Timeline page is still using an older structure and navigation. It currently links to Projects rather than Workbench, uses older footer CV naming, has different navigation order, and reads less like the polished chapter pages.
 
 ## Mini tasks
 
-- [ ] Read `projects.html` on `cv-web-vscode-snapshot`.
-- [ ] Check whether Workbench is clear as proof-of-work rather than random personal projects.
-- [ ] Check whether the page supports target roles and portfolio credibility.
-- [ ] Check tone: mature, British/Irish, professional, not Silicon Valley, not overblown.
-- [ ] Check for public-risk issues: grievance, medical, financial, confidential employer material or unnecessary personal detail.
-- [ ] Check navigation, chapter numbering and footer links.
-- [ ] Suggest only necessary edits.
-- [ ] Make branch edits only after Alan agrees.
-- [ ] Once Alan is happy, offer the choice to make `projects.html` live.
+- [ ] Align navigation with the current site: Home, Profile, Experience, Method, Workbench, Timeline, CV, About, Contact.
+- [ ] Replace any `projects.html` links with `workbench.html` where appropriate.
+- [ ] Update footer CV link to the current May 2026 PDF path.
+- [ ] Check whether Timeline should remain a career chronology page or be simplified into career highlights.
+- [ ] Tighten the opening copy so it does not over-explain or drift into personal reflection.
+- [ ] Check the NHS/NBT wording for public risk and employment-dispute sensitivity.
+- [ ] Check whether the Covid hardware paragraph is strong, proportionate and useful for target roles.
+- [ ] Bring chapter cards / continue-reading structure into line with the newer pages.
+- [ ] Keep tone mature, British/Irish, professional, evidence-led and not overblown.
+- [ ] Once Alan agrees, update and push `timeline.html` live.
 
 ## Current next action
 
-Review `projects.html` on the working branch and decide whether the Workbench page is strong enough or needs a polish pass.
+Review the live `timeline.html` content and decide what should change before editing.
 
 ## Current caution
 
-The live CV PDF file is still missing from `main`, so live CV links will break until Alan adds `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf` to `main` from VS Code.
+Timeline contains employment history and current employer wording. Keep it factual, proportionate and safe for public job-search use.
