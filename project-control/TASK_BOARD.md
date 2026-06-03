@@ -37,13 +37,21 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | In progress | Keep checking each page for employment dispute, medical, financial, third-party or confidential material. |
 | AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Not started | Contact page exists; confirm form behaviour and privacy wording later. |
 | AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
-| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Review on phone for readability, navigation, spacing, tone and awkward layout. |
+| AWG-015 | Review | Mobile visual review | 2026-06-12 | In progress | Workbench mobile table/spacing patched; continue checking on phone across pages. |
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
-| AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Not started | Remove clutter, gimmicks, repeated claims and anything that weakens the mature professional tone. |
+| AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | In progress | Workbench is being reduced toward useful proof-of-work entries rather than repeated explanation. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
 | AWG-019 | Content | Strengthen method page | 2026-06-06 | Done | `method.html` polished and pushed to `main`; Alan approved moving on. |
 | AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Blocked | Requires VS Code/local git because the live branch is missing `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`; live CV links will break until added. |
-| AWG-021 | Content | Strengthen Workbench page | 2026-06-06 | Next | Review `projects.html` as the Workbench page for clarity, proof-of-work value, structure and public-risk issues. |
+| AWG-021 | Content | Strengthen Workbench page | 2026-06-06 | In progress | `workbench.html` created and live; ownership wording added; Alan to review live page before sign-off. |
+| AWG-022 | Navigation | Standardise Workbench URL | 2026-06-06 | In progress | `workbench.html` created and `projects.html` redirects; update remaining internal links from `projects.html` to `workbench.html`. |
+| AWG-023 | Workbench examples | Create CV website case study | 2026-06-08 | Not started | Build a concise case study showing information architecture, GitHub workflow, content review and professional positioning. |
+| AWG-024 | Workbench examples | Create Waylight Atlantic case study | 2026-06-08 | Not started | Show small-organisation digital support, low-complexity web structure, plain-English pages and maintainable design. |
+| AWG-025 | Workbench examples | Create documentation/control-system demo | 2026-06-09 | Not started | Public demo using sample material: task board, current-task note, decision log, action tracker and status discipline. |
+| AWG-026 | Workbench examples | Create process clean-up demo | 2026-06-09 | Not started | Safe public demo using sample/public material only; show messy information becoming a clear route, register or folder structure. |
+| AWG-027 | Workbench examples | Create responsible AI workflow demo | 2026-06-10 | Not started | Show level-headed AI use with guardrails: task, source check, draft, review, correction and final human responsibility. |
+| AWG-028 | Workbench examples | Create civic/public-information example | 2026-06-10 | Not started | Link once the civic project has a suitable public example; keep it clearly personal-interest origin and professional-method evidence. |
+| AWG-029 | Workbench examples | Create communication/briefing example | 2026-06-11 | Not started | Public example of plain-English briefing, structured email, meeting note or stakeholder update. |
 
 ## Notes on work completed since setup
 
@@ -52,11 +60,12 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 - `profile.html` reviewed, polished and promoted to `main`.
 - `experience.html` reviewed, polished and promoted to `main`.
 - `method.html` reviewed, polished and promoted to `main`.
+- `workbench.html` created and promoted to `main`; `projects.html` now redirects to it.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
 - Live CV links now point to `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`, but that binary PDF still needs adding to `main` from VS Code.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
-- Workbench chapter number corrected to Chapter IV on the working branch.
+- Workbench page now explains ownership as “my workbench” and why Alan included it.
 - SEO/social metadata pass deliberately parked until later.
 - Image filename cleanup deliberately parked until later.
 
