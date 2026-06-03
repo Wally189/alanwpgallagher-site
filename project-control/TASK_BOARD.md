@@ -35,9 +35,9 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
 | AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Deferred | Do a full safety pass after the remaining content pages are settled. Continue avoiding grievance, medical, financial, third-party or confidential material. |
-| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Not started | Contact page exists; confirm form behaviour and privacy wording later. |
+| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | In progress | `contact.html` has been refreshed with current navigation, safer wording and current CV link; Alan to review visually. |
 | AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
-| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Continue checking on phone across pages after About and Contact are updated. |
+| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Continue checking on phone across pages after Contact is approved. |
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Deferred | Return after remaining pages are settled; Workbench has been kept as restrained evidence panels rather than noisy card soup. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
@@ -54,7 +54,7 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-029 | Workbench examples | Create communication/briefing example | 2026-06-11 | Not started | Public example of plain-English briefing, structured email, meeting note or stakeholder update. |
 | AWG-030 | Content | Strengthen timeline page | 2026-06-06 | Done | `timeline.html` refocused as a chronological career map and approved by Alan. |
 | AWG-031 | Content | Strengthen CV landing page | 2026-06-06 | Done | `cv.html` created, personalised and approved by Alan. |
-| AWG-032 | Content | Strengthen About page | 2026-06-06 | Next | Review `about.html` so it fits the professional site, avoids personal drift and explains the site without duplicating Profile or CV. |
+| AWG-032 | Content | Strengthen About page | 2026-06-06 | Done | `about.html` refreshed as a warmer personal page and approved by Alan. |
 
 ## Notes on work completed since setup
 
@@ -69,6 +69,8 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 - Workbench page now explains ownership as “my workbench”, includes a Tools & Methods strip, uses evidence panels, links GitHub and records TBC examples in the Workbench example backlog.
 - Timeline page refocused as a lean chronological career map rather than a second Experience page and approved by Alan.
 - `cv.html` added as a live landing page for the current PDF CV and then personalised to use “my CV” language; Alan approved it.
+- `about.html` refreshed as a warmer, more personal page with Bristol roots, Donegal context, language learning, reading and civic interest; Alan approved it.
+- `contact.html` refreshed with current navigation, safer form wording and current PDF CV link; awaiting Alan visual review.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
