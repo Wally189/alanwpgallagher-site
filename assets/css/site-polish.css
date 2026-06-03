@@ -63,6 +63,81 @@
   margin-top: var(--space-4);
 }
 
+.contact-page .chapter-main {
+  padding-top: 0;
+}
+
+.contact-page .contact-bridge {
+  background: color-mix(in srgb, white 62%, var(--page));
+}
+
+.contact-page .page-intro {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-page .page-intro-grid {
+  align-items: center;
+}
+
+.contact-page .page-intro p {
+  line-height: 1.78;
+}
+
+.contact-page .contact-route-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: var(--space-3);
+}
+
+.contact-page .contact-route {
+  border-top: 0.28rem solid color-mix(in srgb, var(--accent) 55%, var(--ink));
+  border-inline: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: color-mix(in srgb, white 84%, var(--page));
+  padding: 1rem;
+}
+
+.contact-page .contact-route:nth-child(2) {
+  border-top-color: color-mix(in srgb, var(--accent) 38%, #6e7b63);
+}
+
+.contact-page .contact-route:nth-child(3) {
+  border-top-color: color-mix(in srgb, var(--accent) 32%, #8b7358);
+}
+
+.contact-page .contact-route h3 {
+  margin-top: 0.35rem;
+  font-size: clamp(1.15rem, 1.05rem + 0.35vw, 1.35rem);
+}
+
+.contact-page .contact-route p:not(.kicker) {
+  margin: 0.8rem 0 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.contact-page .contact-panel {
+  margin-top: var(--space-3);
+  padding-bottom: var(--space-4);
+}
+
+.contact-page .contact-form {
+  max-width: 860px;
+  border: 1px solid var(--line);
+  border-top: 0.35rem solid var(--line-strong);
+  background: color-mix(in srgb, white 82%, var(--page));
+  padding: var(--space-3);
+  box-shadow: 0 0.55rem 1.4rem color-mix(in srgb, var(--ink) 5%, transparent);
+}
+
+.contact-page .chapter-next {
+  margin-top: 0;
+}
+
 @media (min-width: 1080px) {
   .workbench-page .workbench-evidence:not(.workbench-evidence--continued) .workbench-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -84,7 +159,8 @@
 }
 
 @media (max-width: 980px) {
-  .profile-page .profile-principles-list {
+  .profile-page .profile-principles-list,
+  .contact-page .contact-route-strip {
     grid-template-columns: 1fr;
   }
 }
@@ -103,5 +179,13 @@
 
   .profile-page .profile-principle {
     padding: 0.85rem 0.9rem;
+  }
+
+  .contact-page .page-intro {
+    padding-top: var(--space-3);
+  }
+
+  .contact-page .contact-form {
+    padding: 1rem;
   }
 }
