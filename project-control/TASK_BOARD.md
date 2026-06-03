@@ -30,8 +30,8 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-005 | Repository basics | Add or defer `CHANGELOG.md` | 2026-06-05 | Deferred | Optional; only add if it helps maintain the site calmly. |
 | AWG-006 | Content | Tighten homepage positioning | 2026-06-05 | Done | `index.html` polished and pushed to `main`; Alan still to view live page and give final tick-off. |
 | AWG-007 | Content | Strengthen professional profile page | 2026-06-06 | Done | `profile.html` polished and pushed to `main`; Alan approved moving on. |
-| AWG-008 | Content | Strengthen experience page | 2026-06-06 | Next | Review `experience.html` for structure, tone, evidence, target-role fit and public-risk issues. |
-| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added; DOCX removed; CV links updated on branch and `cv.html`. |
+| AWG-008 | Content | Strengthen experience page | 2026-06-06 | Done | `experience.html` polished and pushed to `main`; Alan approved moving on. |
+| AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added to working branch; DOCX removed; live pages point to May 2026 PDF. |
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
 | AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | In progress | Keep checking each page for employment dispute, medical, financial, third-party or confidential material. |
@@ -41,13 +41,17 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Not started | Remove clutter, gimmicks, repeated claims and anything that weakens the mature professional tone. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
+| AWG-019 | Content | Strengthen method page | 2026-06-06 | Next | Review `method.html` for clarity, professional value, target-role fit and public-risk issues. |
+| AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Blocked | Requires VS Code/local git because the live branch is missing `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`; live CV links will break until added. |
 
 ## Notes on work completed since setup
 
 - `cv-web-vscode-snapshot` created to preserve Alan's VS Code version without immediately changing live `main`.
 - `index.html` reviewed, polished and promoted to `main` despite some branch-only links, accepted as a short-term risk.
 - `profile.html` reviewed, polished and promoted to `main`.
-- CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated.
+- `experience.html` reviewed, polished and promoted to `main`.
+- CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
+- Live CV links now point to `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`, but that binary PDF still needs adding to `main` from VS Code.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
 - Workbench chapter number corrected to Chapter IV on the working branch.
