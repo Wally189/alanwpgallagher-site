@@ -4,6 +4,11 @@
 - Purpose:
 - Status:
 - Next:
+- Editorial house style (permanent project preference):
+  - British-Irish lens by default in tone, spelling and idiom.
+  - First-person voice only ("I"), never third-person self-reference.
+  - Professional, senior and grounded language; avoid generic or juvenile phrasing.
+  - No Americanised wording unless explicitly required for a specific audience.
 - Waylight-family LAW:
   - Roman Purple / Burgundy (Advent & Lent): Roman Purple #5A1F2E; Burgundy Wine #6B1F2A; Aubergine Violet #4B2C3A
   - Liturgical Red (Martyrs, Pentecost, Passion): Crimson #8C1D18; Deep Scarlet #A32621; Blood Red #7A0F14
@@ -15,3 +20,4 @@
 - Log:
   - 04/01/2026 - Notes.MD added to better manage changes and flow in web building.
   - 05/01/2026 - Applied Waylight Family palette and footer updates.
+  - 28/05/2026 - Added permanent British-Irish editorial standard for all future copy edits.

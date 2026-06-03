@@ -6,46 +6,6 @@
     node.textContent = String(new Date().getFullYear());
   });
 
-  const datetimeNodes = Array.from(document.querySelectorAll("[data-datetime]"));
-  const getOrdinal = (day) => {
-    const tens = day % 100;
-    if (tens >= 11 && tens <= 13) {
-      return "th";
-    }
-    switch (day % 10) {
-      case 1:
-        return "st";
-      case 2:
-        return "nd";
-      case 3:
-        return "rd";
-      default:
-        return "th";
-    }
-  };
-
-  const updateDateTime = () => {
-    if (datetimeNodes.length === 0) {
-      return;
-    }
-    const now = new Date();
-    const weekday = now.toLocaleDateString("en-GB", { weekday: "long" });
-    const month = now.toLocaleDateString("en-GB", { month: "long" });
-    const day = now.getDate();
-    const year = now.getFullYear();
-    const hours = String(now.getHours()).padStart(2, "0");
-    const minutes = String(now.getMinutes()).padStart(2, "0");
-    const formatted = `${weekday} ${day}${getOrdinal(day)} ${month} ${year} ${hours}:${minutes}`;
-    datetimeNodes.forEach((node) => {
-      node.textContent = formatted;
-    });
-  };
-
-  updateDateTime();
-  if (datetimeNodes.length > 0) {
-    window.setInterval(updateDateTime, 1000);
-  }
-
   const getCurrentFile = () => {
     const file = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
     return file === "" ? "index.html" : file;
@@ -62,6 +22,43 @@
       link.setAttribute("aria-current", "page");
     }
   });
+
+  const navToggle = document.querySelector(".site-nav-toggle");
+  const siteNav = document.querySelector(".site-nav");
+  if (navToggle && siteNav) {
+    const closeNav = () => {
+      siteNav.classList.remove("is-open");
+      navToggle.setAttribute("aria-expanded", "false");
+    };
+    const openNav = () => {
+      siteNav.classList.add("is-open");
+      navToggle.setAttribute("aria-expanded", "true");
+    };
+
+    navToggle.addEventListener("click", () => {
+      const isOpen = siteNav.classList.contains("is-open");
+      if (isOpen) {
+        closeNav();
+      } else {
+        openNav();
+      }
+    });
+
+    siteNav.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (window.matchMedia("(max-width: 760px)").matches) {
+          closeNav();
+        }
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      if (!window.matchMedia("(max-width: 760px)").matches) {
+        siteNav.classList.remove("is-open");
+        navToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  }
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const mobileHeaderMedia = window.matchMedia("(max-width: 760px)");
