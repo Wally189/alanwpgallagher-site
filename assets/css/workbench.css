@@ -22,93 +22,109 @@
   transform: none !important;
 }
 
-.workbench-page .ledger-section p {
+.workbench-page .workbench-image-break {
+  margin-block: var(--space-4);
+  border-block: 1px solid var(--line);
+  padding-block: 1rem;
+}
+
+.workbench-page .workbench-image-break img {
+  display: block;
+  width: 100%;
+  max-height: 28rem;
+  object-fit: cover;
+}
+
+.workbench-page .workbench-image-break figcaption {
+  margin-top: 0.65rem;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.workbench-page .workbench-evidence-head {
+  margin-bottom: var(--space-3);
+  border-bottom: 1px solid var(--line);
+  padding-bottom: var(--space-2);
+}
+
+.workbench-page .workbench-evidence-head h3,
+.workbench-page .workbench-summary h3 {
+  max-width: 13ch;
+}
+
+.workbench-page .workbench-card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.workbench-page .workbench-card {
+  border: 1px solid var(--line);
+  background: color-mix(in srgb, white 82%, var(--page));
+  padding: clamp(1rem, 0.8rem + 1vw, 1.45rem);
+}
+
+.workbench-page .workbench-card h4 {
+  margin-top: 0.35rem;
+}
+
+.workbench-page .workbench-card p {
   max-width: 68ch;
 }
 
-@media (max-width: 760px) {
-  .workbench-page .chapter-layout {
-    border-top: 1px solid var(--line);
-    padding-top: var(--space-3);
-  }
+.workbench-page .workbench-card-type {
+  color: var(--ink-soft);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
-  .workbench-page .chapter-media {
-    display: none;
-  }
+.workbench-page .workbench-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.9rem;
+}
 
-  .workbench-page .chapter-content h3 {
-    font-size: clamp(1.35rem, 1.15rem + 1vw, 1.7rem);
-  }
+.workbench-page .workbench-tags span {
+  border: 1px solid var(--line);
+  background: white;
+  padding: 0.28rem 0.45rem;
+  color: var(--ink-soft);
+  font-size: 0.72rem;
+  line-height: 1.2;
+}
 
-  .workbench-page .table-wrap {
-    overflow: visible;
-  }
+.workbench-page .workbench-summary {
+  margin-top: var(--space-4);
+  border-block: 1px solid var(--line);
+  padding-block: var(--space-3);
+}
 
-  .workbench-page .ledger-table,
-  .workbench-page .ledger-table thead,
-  .workbench-page .ledger-table tbody,
-  .workbench-page .ledger-table tr,
-  .workbench-page .ledger-table th,
-  .workbench-page .ledger-table td {
-    display: block;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .workbench-page .ledger-table {
-    border-top: 0;
-    border-bottom: 0;
-    background: transparent;
-  }
-
-  .workbench-page .ledger-table thead {
-    display: none;
-  }
-
-  .workbench-page .ledger-table tbody tr {
-    margin-bottom: 1rem;
-    border: 1px solid var(--line);
-    background: white;
-  }
-
-  .workbench-page .ledger-table tbody th {
-    padding: 1rem;
-    border-bottom: 1px solid var(--line);
-    background: color-mix(in srgb, var(--page) 42%, white);
-    font-size: 1rem;
-  }
-
-  .workbench-page .ledger-table tbody td {
-    display: grid;
-    grid-template-columns: 8.5rem minmax(0, 1fr);
-    gap: 0.75rem;
-    padding: 0.85rem 1rem;
-    border-bottom: 1px solid var(--line);
-  }
-
-  .workbench-page .ledger-table tbody td::before {
-    content: attr(data-label);
-    color: var(--ink);
-    font-size: 0.67rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    line-height: 1.45;
-    text-transform: uppercase;
-  }
-
-  .workbench-page .ledger-table tr:last-child th,
-  .workbench-page .ledger-table tr:last-child td {
-    border-bottom: 1px solid var(--line);
-  }
-
-  .workbench-page .ledger-section {
-    padding-top: 1.25rem;
+@media (max-width: 920px) {
+  .workbench-page .workbench-card-grid {
+    grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 430px) {
-  .workbench-page .ledger-table tbody td {
-    grid-template-columns: 1fr;
-    gap: 0.32rem;
+@media (max-width: 760px) {
+  .workbench-page .workbench-image-break {
+    margin-block: var(--space-3);
+  }
+
+  .workbench-page .workbench-image-break img {
+    max-height: 15rem;
+  }
+
+  .workbench-page .workbench-card {
+    padding: 1rem;
+  }
+
+  .workbench-page .workbench-card p {
+    font-size: clamp(1rem, 0.96rem + 0.4vw, 1.1rem);
+    line-height: 1.75;
   }
 }
