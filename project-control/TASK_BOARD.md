@@ -41,8 +41,9 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Not started | Remove clutter, gimmicks, repeated claims and anything that weakens the mature professional tone. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
-| AWG-019 | Content | Strengthen method page | 2026-06-06 | Next | Review `method.html` for clarity, professional value, target-role fit and public-risk issues. |
+| AWG-019 | Content | Strengthen method page | 2026-06-06 | Done | `method.html` polished and pushed to `main`; Alan approved moving on. |
 | AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Blocked | Requires VS Code/local git because the live branch is missing `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`; live CV links will break until added. |
+| AWG-021 | Content | Strengthen Workbench page | 2026-06-06 | Next | Review `projects.html` as the Workbench page for clarity, proof-of-work value, structure and public-risk issues. |
 
 ## Notes on work completed since setup
 
@@ -50,6 +51,7 @@ Important: Alan stepped away from VS Code before pulling the latest GitHub-side 
 - `index.html` reviewed, polished and promoted to `main` despite some branch-only links, accepted as a short-term risk.
 - `profile.html` reviewed, polished and promoted to `main`.
 - `experience.html` reviewed, polished and promoted to `main`.
+- `method.html` reviewed, polished and promoted to `main`.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
 - Live CV links now point to `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf`, but that binary PDF still needs adding to `main` from VS Code.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
