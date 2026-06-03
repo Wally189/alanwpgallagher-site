@@ -35,9 +35,9 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
 | AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Deferred | Do a full safety pass after the remaining content pages are settled. Continue avoiding grievance, medical, financial, third-party or confidential material. |
-| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | In progress | `contact.html` has been refreshed with current navigation, safer wording and current CV link; Alan to review visually. |
+| AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Done | `contact.html` refreshed and approved; `privacy.html`, `gdpr.html` and `terms.html` refreshed for consistency. |
 | AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
-| AWG-015 | Review | Mobile visual review | 2026-06-12 | Not started | Continue checking on phone across pages after Contact is approved. |
+| AWG-015 | Review | Mobile visual review | 2026-06-12 | Next | Review all main pages and legal pages on phone, including navigation, buttons, image behaviour, form layout and footer links. |
 | AWG-016 | Review | Desktop visual review | 2026-06-12 | Not started | Review in browser for layout, line length, spacing, images and links. |
 | AWG-017 | Review | No-card-soup sanity pass | 2026-06-13 | Deferred | Return after remaining pages are settled; Workbench has been kept as restrained evidence panels rather than noisy card soup. |
 | AWG-018 | Launch | Quiet portfolio launch check | 2026-06-14 | Not started | Confirm site is safe to use in applications and LinkedIn. |
@@ -70,7 +70,8 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 - Timeline page refocused as a lean chronological career map rather than a second Experience page and approved by Alan.
 - `cv.html` added as a live landing page for the current PDF CV and then personalised to use “my CV” language; Alan approved it.
 - `about.html` refreshed as a warmer, more personal page with Bristol roots, Donegal context, language learning, reading and civic interest; Alan approved it.
-- `contact.html` refreshed with current navigation, safer form wording and current PDF CV link; awaiting Alan visual review.
+- `contact.html` refreshed with current navigation, safer form wording and current PDF CV link; Alan approved it.
+- `privacy.html`, `gdpr.html` and `terms.html` refreshed to match the site shell and remove old utility-page styling.
 - CV converted to proper PDF, renamed cleanly, DOCX removed and main CV page updated on the working branch.
 - Homepage wording changed from “Long-term strategist” to “Long-term thinking”.
 - Homepage wording changed from “Slow technology” to “Thoughtful, maintainable technology”.
