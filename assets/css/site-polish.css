@@ -64,7 +64,7 @@
 }
 
 @media (min-width: 1080px) {
-  .workbench-page .workbench-evidence:first-of-type .workbench-card-grid {
+  .workbench-page .workbench-evidence:not(.workbench-evidence--continued) .workbench-card-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
