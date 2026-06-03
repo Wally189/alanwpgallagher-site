@@ -4,26 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact | Alan WP Gallagher</title>
-  <meta name="description" content="Contact form for Alan WP Gallagher." />
+  <meta name="description" content="Contact Alan WP Gallagher for role, portfolio, project or professional enquiries." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="author" content="Alan WP Gallagher" />
   <meta property="og:title" content="Contact | Alan WP Gallagher" />
-  <meta property="og:description" content="Send a message using a simple contact form." />
+  <meta property="og:description" content="Use the contact form for role, portfolio, project or professional enquiries." />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Alan WP Gallagher" />
   <meta property="og:locale" content="en_GB" />
-  <meta property="og:image" content="https://www.alanwpgallagher.info/assets/img/alan-oxford-don-vivid.png" />
+  <meta property="og:image" content="https://www.alanwpgallagher.info/assets/img/clifton-suspension-bridge.jpg" />
   <meta property="og:url" content="https://www.alanwpgallagher.info/contact.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Contact | Alan WP Gallagher" />
-  <meta name="twitter:description" content="Send a message using a simple contact form." />
-  <meta name="twitter:image" content="https://www.alanwpgallagher.info/assets/img/alan-oxford-don-vivid.png" />
+  <meta name="twitter:description" content="Use the contact form for role, portfolio, project or professional enquiries." />
+  <meta name="twitter:image" content="https://www.alanwpgallagher.info/assets/img/clifton-suspension-bridge.jpg" />
   <link rel="canonical" href="https://www.alanwpgallagher.info/contact.html" />
   <link rel="icon" href="assets/img/irish-cross.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/about-editorial.css" />
+  <link rel="stylesheet" href="assets/css/site-polish.css?v=1" />
   <script defer src="assets/js/about-editorial.js"></script>
 </head>
 <body>
@@ -33,16 +34,25 @@
   <header class="site-header" id="top">
     <div class="site-width header-inner">
       <h1 class="wordmark">ALAN WP GALLAGHER</h1>
-      <nav class="site-nav" aria-label="Primary">
+      <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+      <nav id="primary-navigation" class="site-nav" aria-label="Primary">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
         <a href="profile.html">Profile</a>
         <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
+        <a href="method.html">Method</a>
+        <a href="workbench.html">Workbench</a>
         <a href="timeline.html">Timeline</a>
+        <a href="cv.html">CV</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
+
+  <div class="site-monogram" aria-hidden="true">AWG</div>
+  <div class="site-width hero-bridge" aria-hidden="true">
+    <p>For role enquiries, professional conversations and portfolio-related messages.</p>
+  </div>
 
   <main id="main" class="chapter-main">
     <section class="site-width page-intro" data-reveal>
@@ -52,14 +62,16 @@
           <h2>Send me a message.</h2>
         </div>
         <div>
-          <p>Please use this form for enquiries. Enter your name, email address and message, then submit.</p>
-          <p>Your message will be delivered through Formspree.</p>
+          <p>Please use this form for role enquiries, project conversations, portfolio questions or professional contact.</p>
+          <p>The form is delivered through Formspree. I have kept it simple so the route is clear and low-friction.</p>
+          <p>Please do not send confidential, sensitive or third-party personal information through this form.</p>
         </div>
       </div>
     </section>
 
     <section class="site-width contact-panel" data-reveal>
       <form class="contact-form" action="https://formspree.io/f/mgvgrgvb" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="Message from alanwpgallagher.info" />
         <div class="contact-field">
           <label for="contact-name">Name</label>
           <input id="contact-name" name="name" type="text" autocomplete="name" required />
@@ -78,6 +90,17 @@
         <button type="submit" class="contact-submit">Send message</button>
       </form>
     </section>
+
+    <section class="site-width chapter-next" aria-label="Useful links">
+      <p class="kicker">Useful Links</p>
+      <h3>Other routes.</h3>
+      <p>
+        <a href="https://www.linkedin.com/in/ailean-wp-o-gallchobhair-a3818a332" target="_blank" rel="noopener noreferrer">LinkedIn</a> &middot;
+        <a href="assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf" target="_blank" rel="noopener noreferrer">CV</a> &middot;
+        <a href="workbench.html">Workbench</a> &middot;
+        <a href="about.html">About</a>
+      </p>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -85,7 +108,7 @@
       <nav class="footer-nav" aria-label="Footer links">
         <a href="https://www.linkedin.com/in/ailean-wp-o-gallchobhair-a3818a332" class="footer-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="contact.html" class="footer-btn contact-btn">Contact</a>
-        <a href="assets/docs/Alan_Walter_Gallagher_CV.pdf" class="footer-btn" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf" class="footer-btn" target="_blank" rel="noopener noreferrer">CV</a>
       </nav>
       <div class="footer-right">
         <div class="waylight-legal-block" data-waylight-legal>
@@ -93,12 +116,8 @@
           <p class="waylight-legal-location">Bristol, United Kingdom</p>
           <p class="waylight-legal-copyright">&#169; 2026 <a href="https://www.waylight-atlantic.co.uk/" rel="noopener">Waylight Atlantic</a></p>
         </div>
-        <p class="footer-meta"><span data-datetime>Loading date and time...</span></p>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
-
-
