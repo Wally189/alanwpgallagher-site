@@ -60,3 +60,24 @@ When the site is stable, check whether `projects.html` is still needed as a redi
 Keep it for now. Remove or archive it only after checking live links, internal links and any search/indexing risk.
 
 Status: Not started.
+
+### AWG-NY-006 — Reporting and interpretation demo
+
+Possible future Workbench demo, not to open until the current core demos are stable.
+
+Working idea: **Reporting and Interpretation Demo: turning raw information into a decision-ready briefing**.
+
+Purpose: demonstrate how Alan takes messy information, identifies what matters, separates facts from interpretation, explains patterns or exceptions, and produces a clear report or briefing that supports decisions. This should not be another dashboard. It should show interpretation, judgement and written reporting.
+
+Possible structure:
+
+1. Messy source information or small synthetic data table.
+2. What changed / what stands out.
+3. Risks, patterns, exceptions and assumptions.
+4. What this means in plain English.
+5. Suggested next actions.
+6. Short decision-ready briefing output.
+
+Relevant roles: PMO support, business operations, service improvement, governance support, reporting analyst/support, project coordination and technical/business liaison.
+
+Status: Not started; parked deliberately.
