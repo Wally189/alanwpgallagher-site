@@ -47,7 +47,7 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-022 | Navigation | Standardise Workbench URL | 2026-06-06 | Deferred | `workbench.html` created and `projects.html` redirects; update remaining internal links from `projects.html` to `workbench.html` during page passes. |
 | AWG-023 | Workbench examples | Create CV website case study | 2026-06-08 | Done | Marked complete by Alan; Workbench evidence item exists and no further task needed now. |
 | AWG-024 | Workbench examples | Create Waylight Atlantic case study | 2026-06-08 | Done | Marked complete by Alan; Workbench evidence item exists and no further task needed now. |
-| AWG-025 | Workbench examples | Create documentation/control-system demo | 2026-06-09 | In progress | Draft page exists on branch `awg-025-documentation-control-demo`; workbook v4 created. Next: attach workbook/screenshots, review page, then decide when to link from Workbench. |
+| AWG-025 | Workbench examples | Create documentation/control-system demo | 2026-06-09 | Done | Documentation control demo is live, linked from Workbench, and includes workbook output, register explanation, target folder naming logic and downloadable workbook. |
 | AWG-026 | Workbench examples | Create process clean-up demo | 2026-06-09 | Not started | Safe public demo using sample/public material only; show messy information becoming a clear route, register or folder structure. |
 | AWG-027 | Workbench examples | Create responsible AI workflow demo | 2026-06-10 | Not started | Show level-headed AI use with guardrails: task, source check, draft, review, correction and final human responsibility. |
 | AWG-028 | Workbench examples | Create civic/public-information example | 2026-06-10 | Not started | Link once the civic project has a suitable public example; keep it clearly personal-interest origin and professional-method evidence. |
@@ -67,6 +67,7 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 - `method.html` reviewed, polished and promoted to `main`.
 - `workbench.html` created and promoted to `main`; `projects.html` now redirects to it.
 - Workbench page now explains ownership as “my workbench”, includes a Tools & Methods strip, uses evidence panels, links GitHub and records TBC examples in the Workbench example backlog.
+- Documentation control demo created as a live Workbench example with a downloadable workbook and target-folder naming logic.
 - Timeline page refocused as a lean chronological career map rather than a second Experience page and approved by Alan.
 - `cv.html` added as a live landing page for the current PDF CV and then personalised to use “my CV” language; Alan approved it.
 - `about.html` refreshed as a warmer, more personal page with Bristol roots, Donegal context, language learning, reading and civic interest; Alan approved it.
