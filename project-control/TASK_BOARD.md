@@ -2,7 +2,7 @@
 
 Use this as the working control board for the CV web / personal website project.
 
-Status options: **Not started**, **Next**, **In progress**, **Blocked**, **Done**, **Deferred**.
+Status options: **Not started**, **Next**, **In progress**, **Blocked**, **Done**, **Deferred**, **Cancelled**.
 
 Working rule:
 
@@ -16,7 +16,7 @@ Working branch for the wider CV web review: `cv-web-vscode-snapshot`.
 
 Live branch: `main`.
 
-Important: Alan has now pulled the main GitHub-side edits to Gertrude and added the current May 2026 CV PDF to `main`.
+Historical source note (June 2026): May 2026 CV PDF was then current. Superseded by the October 2026 PDF on `main` in commit `ab3b82245a9bc3589daf2f62228f41e1416a0981` (21 October 2026).
 
 ## Current board
 
@@ -33,7 +33,7 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-008 | Content | Strengthen experience page | 2026-06-06 | Done | `experience.html` polished and pushed to `main`; Alan approved moving on. |
 | AWG-009 | Content | Create or confirm CV route | 2026-06-07 | Done | Proper PDF CV added to working branch, DOCX removed, and current PDF now added to live `main`. |
 | AWG-010 | Content | Add project / case-study template | 2026-06-08 | Not started | Use a simple case-study format: problem, audience, constraints, method, outcome, skills demonstrated. |
-| AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Not started | Use the volunteering/community/civic project once safe and coherent. |
+| AWG-011 | Content | Add first proof-of-work case study | 2026-06-10 | Cancelled | Civic/community case-study proposal withdrawn from the public portfolio by proprietor instruction, 21 October 2026. Existing independent examples remain. |
 | AWG-012 | Safety | Check public content for private/sensitive material | 2026-06-10 | Deferred | Do a full safety pass after the remaining content pages are settled. Continue avoiding grievance, medical, financial, third-party or confidential material. |
 | AWG-013 | Launch basics | Check contact route and privacy/contact-data note | 2026-06-11 | Done | `contact.html` refreshed and approved; `privacy.html`, `gdpr.html` and `terms.html` refreshed for consistency. |
 | AWG-014 | Launch basics | SEO and sharing basics | 2026-06-11 | Deferred | Parked in `project-control/NOT_YET.md`; return after content pages are settled. |
@@ -44,13 +44,13 @@ Important: Alan has now pulled the main GitHub-side edits to Gertrude and added 
 | AWG-019 | Content | Strengthen method page | 2026-06-06 | Done | `method.html` polished and pushed to `main`; Alan approved moving on. |
 | AWG-020 | Live fix | Add current CV PDF to `main` | 2026-06-06 | Done | Gertrude added `assets/docs/Alan_Walter_Gallagher_CV_May2026.pdf` to `main` and pushed commit `b0dce09`; live CV links should now resolve once deployed. |
 | AWG-021 | Content | Strengthen Workbench page | 2026-06-06 | Done | `workbench.html` is live with ownership wording, tools/methods strip, evidence panels, GitHub link and TBC examples recorded as backlog tasks. |
-| AWG-022 | Navigation | Standardise Workbench URL | 2026-06-06 | Deferred | `workbench.html` created and `projects.html` redirects; update remaining internal links from `projects.html` to `workbench.html` during page passes. |
+| AWG-022 | Navigation | Standardise Workbench URL | 2026-06-06 | Next | Preserve the working `/projects` redirect; change the two remaining links in `experience.html` to `workbench.html`; confirm exact-page behaviour before marking Done. |
 | AWG-023 | Workbench examples | Create CV website case study | 2026-06-08 | Done | Marked complete by Alan; Workbench evidence item exists and no further task needed now. |
 | AWG-024 | Workbench examples | Create Waylight Atlantic case study | 2026-06-08 | Done | Marked complete by Alan; Workbench evidence item exists and no further task needed now. |
 | AWG-025 | Workbench examples | Create documentation/control-system demo | 2026-06-09 | Done | Documentation control demo is live, linked from Workbench, and includes workbook output, register explanation, target folder naming logic and downloadable workbook. |
 | AWG-026 | Workbench examples | Create process improvement workflow demo | 2026-06-09 | Not started | Create a distinct workflow/intake demo: “Process Improvement Demo: Turning ad hoc requests into a visible workflow.” Focus on requests arriving through email/Teams/direct messages, then show intake, triage, prioritisation, ownership, Kanban-style flow, blockers, light measures and review. Use practical Lean/Agile/PRINCE2-style principles without claiming formal certification or turning it into another file-directory clean-up. |
 | AWG-027 | Workbench examples | Create responsible AI workflow demo | 2026-06-10 | Not started | Show level-headed AI use with guardrails: task, source check, draft, review, correction and final human responsibility. |
-| AWG-028 | Workbench examples | Create civic/public-information example | 2026-06-10 | Not started | Link once the civic project has a suitable public example; keep it clearly personal-interest origin and professional-method evidence. |
+| AWG-028 | Workbench examples | Create civic/public-information example | 2026-06-10 | Cancelled | Civic project withdrawn from the public portfolio by proprietor instruction, 21 October 2026. Workbench card position proposed for earlier Optum/PADU career evidence. |
 | AWG-029 | Workbench examples | Create communication/briefing example | 2026-06-11 | Not started | Public example of plain-English briefing, structured email, meeting note or stakeholder update. |
 | AWG-030 | Content | Strengthen timeline page | 2026-06-06 | Done | `timeline.html` refocused as a chronological career map and approved by Alan. |
 | AWG-031 | Content | Strengthen CV landing page | 2026-06-06 | Done | `cv.html` created, personalised and approved by Alan. |
