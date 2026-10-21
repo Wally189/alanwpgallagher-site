@@ -1,0 +1,4 @@
+ID,Type,Title,Version,Status,Owner,Review trigger
+P-001,Policy,Request handling,0.2,Draft; fictional approval outstanding,Service owner,After first usability test
+S-001,SOP,Request handling operating steps,0.3,Draft; fictional approval outstanding,Team coordinator,After process trial
+F-001,Template,Request intake,0.1,Synthetic example,Team coordinator,When SOP changes

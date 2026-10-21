@@ -1,0 +1,5 @@
+Issue,Cause hypothesis,Candidate control,Owner,Evidence,Status
+Missing specification,Request fields vary by market,Common minimum-data checklist,Fictional service owner,Rejected/incomplete request count,Proposed only
+Ownership unclear,No named reviewer at each gate,Explicit triage ownership and handoff rule,Fictional workflow owner,Unowned request count,Proposed only
+Market exception,Local products differ,Technical review with documented exceptions,Fictional engineering reviewer,Exception approval records,Proposed only
+Supplier evidence,Specification sheet unavailable,Evidence request checkpoint,Fictional supplier coordinator,Documented follow-ups,Proposed only

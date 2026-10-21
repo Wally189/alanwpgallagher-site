@@ -1,0 +1,13 @@
+ID,Decision owner,Proposed destination,Decision status,Evidence gate
+CV-001,Fictional accountable document owner,01 Governance / Current Policies,Hold pending owner sign-off,Approval/retention/access check required before any real move
+CV-002,Fictional accountable document owner,01 Governance / Current Policies,Verify approved master,Approval/retention/access check required before any real move
+CV-003,Fictional accountable document owner,02 Operations / Draft Guidance,Needs owner review,Approval/retention/access check required before any real move
+CV-004,Fictional accountable document owner,02 Operations / Handovers,Do not delete,Approval/retention/access check required before any real move
+CV-005,Fictional accountable document owner,02 Operations / Handovers,Do not delete,Approval/retention/access check required before any real move
+CV-006,Fictional accountable document owner,90 Archive / Governance,Retention check,Approval/retention/access check required before any real move
+CV-007,Fictional accountable document owner,03 Working / Triage,Content check required,Approval/retention/access check required before any real move
+CV-008,Fictional accountable document owner,03 Working / Triage,Owner required,Approval/retention/access check required before any real move
+CV-009,Fictional accountable document owner,Restricted / People,Privacy review,Approval/retention/access check required before any real move
+CV-010,Fictional accountable document owner,90 Archive / Meeting Records,Preserve,Approval/retention/access check required before any real move
+CV-011,Fictional accountable document owner,90 Archive / Policy History,Preserve,Approval/retention/access check required before any real move
+CV-012,Fictional accountable document owner,02 Operations / Templates,Review template,Approval/retention/access check required before any real move

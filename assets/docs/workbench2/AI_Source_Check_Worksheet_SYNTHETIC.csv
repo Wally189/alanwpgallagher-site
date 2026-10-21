@@ -1,0 +1,5 @@
+Claim,Problem,Check,Resolution
+All documents may be uploaded,Unsupported and potentially unsafe,Review actual company policy and provider conditions,Remove blanket permission
+Delete files after 30 days,Invented retention rule,Identify applicable retention schedule and owner,No automatic deletion
+AI approves the final procedure,Confuses drafting with authority,Check formal approval and risk gates,Human owner must approve
+No logs are needed,Weak evidence and accountability,Define appropriate review records,Create minimal audit evidence

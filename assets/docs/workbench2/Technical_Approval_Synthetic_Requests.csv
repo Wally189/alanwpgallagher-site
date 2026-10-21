@@ -1,0 +1,25 @@
+ref,market,cause,days,review
+TA-001,Ireland,Missing specification,17,synthetic baseline
+TA-002,Canada,Missing specification,19,synthetic baseline
+TA-003,Australia,Missing specification,18,synthetic baseline
+TA-004,UK,Missing specification,15,synthetic baseline
+TA-005,Ireland,Missing specification,16,synthetic baseline
+TA-006,Canada,Missing specification,12,synthetic baseline
+TA-007,Australia,Missing specification,18,synthetic baseline
+TA-008,UK,Missing specification,15,synthetic baseline
+TA-009,Ireland,Missing specification,16,synthetic baseline
+TA-010,Canada,Ownership unclear,14,synthetic baseline
+TA-011,Australia,Ownership unclear,17,synthetic baseline
+TA-012,UK,Ownership unclear,17,synthetic baseline
+TA-013,Ireland,Ownership unclear,13,synthetic baseline
+TA-014,Canada,Ownership unclear,11,synthetic baseline
+TA-015,Australia,Ownership unclear,15,synthetic baseline
+TA-016,UK,Market exception,18,synthetic baseline
+TA-017,Ireland,Market exception,17,synthetic baseline
+TA-018,Canada,Market exception,19,synthetic baseline
+TA-019,Australia,Market exception,26,synthetic baseline
+TA-020,UK,Market exception,22,synthetic baseline
+TA-021,Ireland,Supplier evidence,8,synthetic baseline
+TA-022,Canada,Supplier evidence,8,synthetic baseline
+TA-023,Australia,Supplier evidence,14,synthetic baseline
+TA-024,UK,Supplier evidence,14,synthetic baseline

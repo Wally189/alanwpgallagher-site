@@ -1,0 +1,5 @@
+Requirement or risk,Source class,Proposed control,Assigned owner,Evidence,Status
+Orphaned user access,Organisation-specific risk; review applicable standards,Quarterly access ownership review,Fictional system owner,"Review list, decisions, completion dates",Design only
+Unauthorised privilege,Risk assessment + ISO/IEC 27001 and 27002 reference,Appropriate authorisation and exception handling,Fictional security owner,Approval record and exception log,Design only
+Stale leaver accounts,Employment lifecycle process,Joiner/mover/leaver workflow with reconciliation,Fictional IT operations,Closure evidence and sample-check log,Design only
+Sensitive personal information,"Applicable UK privacy obligations, assess applicability",Data minimisation and controlled access,Fictional controller,Access scope and privacy review,Needs applicability check

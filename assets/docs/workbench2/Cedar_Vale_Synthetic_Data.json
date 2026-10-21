@@ -1,0 +1,134 @@
+[
+  {
+    "id": "CV-001",
+    "area": "Governance",
+    "name": "Policy_FINAL_NEW_v7.docx",
+    "folder": "governance",
+    "issue": "Missing approval",
+    "evidence": "Conflicts with controlled v3; filename alone is not authority.",
+    "treatment": "Compare version history and seek policy-owner confirmation before designating the approved copy.",
+    "proposed": "01 Governance / Current Policies",
+    "status": "Hold pending owner sign-off"
+  },
+  {
+    "id": "CV-002",
+    "area": "Governance",
+    "name": "Policy_Approved_v3.pdf",
+    "folder": "governance",
+    "issue": "Possible authority",
+    "evidence": "Approval metadata appears complete in this fictional example.",
+    "treatment": "Verify approval signature and effective date; retain as candidate master.",
+    "proposed": "01 Governance / Current Policies",
+    "status": "Verify approved master"
+  },
+  {
+    "id": "CV-003",
+    "area": "Operations",
+    "name": "Service Desk Notes.docx",
+    "folder": "operations",
+    "issue": "Unclear use",
+    "evidence": "Operational notes do not identify an owner or review cycle.",
+    "treatment": "Request owner classification; keep editable in controlled working area.",
+    "proposed": "02 Operations / Draft Guidance",
+    "status": "Needs owner review"
+  },
+  {
+    "id": "CV-004",
+    "area": "Operations",
+    "name": "Handover_FINAL_2.docx",
+    "folder": "operations",
+    "issue": "Version conflict",
+    "evidence": "Multiple files present as final with no decision record.",
+    "treatment": "Compare content with master and obtain handover-owner decision.",
+    "proposed": "02 Operations / Handovers",
+    "status": "Do not delete"
+  },
+  {
+    "id": "CV-005",
+    "area": "Operations",
+    "name": "Handover_FINAL_3.docx",
+    "folder": "operations",
+    "issue": "Version conflict",
+    "evidence": "A later number does not itself prove approved status.",
+    "treatment": "Compare evidence and seek owner approval before superseding another copy.",
+    "proposed": "02 Operations / Handovers",
+    "status": "Do not delete"
+  },
+  {
+    "id": "CV-006",
+    "area": "Governance",
+    "name": "Privacy note 2021.pdf",
+    "folder": "governance",
+    "issue": "Review due",
+    "evidence": "Outdated review cycle in the fictional register.",
+    "treatment": "Escalate to responsible owner for retention and replacement assessment.",
+    "proposed": "90 Archive / Governance",
+    "status": "Retention check"
+  },
+  {
+    "id": "CV-007",
+    "area": "Unsorted",
+    "name": "scan0002.pdf",
+    "folder": "inbox",
+    "issue": "Unidentified",
+    "evidence": "Filename and folder reveal no content or owner.",
+    "treatment": "Inspect safely, classify, and agree retention before moving.",
+    "proposed": "03 Working / Triage",
+    "status": "Content check required"
+  },
+  {
+    "id": "CV-008",
+    "area": "Unsorted",
+    "name": "final-contract-2.docx",
+    "folder": "inbox",
+    "issue": "Ambiguous contract",
+    "evidence": "Draft and signed-copy status is not established.",
+    "treatment": "Route to contract owner and verify signature/state before migration.",
+    "proposed": "03 Working / Triage",
+    "status": "Owner required"
+  },
+  {
+    "id": "CV-009",
+    "area": "Unsorted",
+    "name": "Staff list.xlsx",
+    "folder": "inbox",
+    "issue": "Access sensitivity",
+    "evidence": "Likely contains personal information in this invented scenario.",
+    "treatment": "Restrict access, minimise exposure, confirm purpose and applicable retention.",
+    "proposed": "Restricted / People",
+    "status": "Privacy review"
+  },
+  {
+    "id": "CV-010",
+    "area": "Archives",
+    "name": "Minutes 2022.pdf",
+    "folder": "archives",
+    "issue": "Historical record",
+    "evidence": "No evidence of active use; may remain a record requiring retention.",
+    "treatment": "Retain in controlled archive pending schedule confirmation.",
+    "proposed": "90 Archive / Meeting Records",
+    "status": "Preserve"
+  },
+  {
+    "id": "CV-011",
+    "area": "Archives",
+    "name": "Policy draft old.docx",
+    "folder": "archives",
+    "issue": "Legacy draft",
+    "evidence": "Draft status confirmed in fictional register.",
+    "treatment": "Retain under version history with context; do not substitute as policy master.",
+    "proposed": "90 Archive / Policy History",
+    "status": "Preserve"
+  },
+  {
+    "id": "CV-012",
+    "area": "Operations",
+    "name": "New employee request.xlsx",
+    "folder": "operations",
+    "issue": "Template drift",
+    "evidence": "Fields inconsistent with documented approval process.",
+    "treatment": "Standardise only after confirming process owner and fields.",
+    "proposed": "02 Operations / Templates",
+    "status": "Review template"
+  }
+]

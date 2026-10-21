@@ -1,0 +1,51 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1222 >>
+stream
+BT /F1 10 Tf 42 812 Td (WORKBENCH 2.0 / SYNTHETIC DEMONSTRATION) Tj ET
+BT /F1 10 Tf 42 795 Td () Tj ET
+BT /F1 17 Tf 42 778 Td (Request-intake template) Tj ET
+BT /F1 10 Tf 42 750 Td (Atlas Support Services - fictional form F-001 - Version 0.1) Tj ET
+BT /F1 10 Tf 42 733 Td () Tj ET
+BT /F1 10 Tf 42 716 Td () Tj ET
+BT /F1 10 Tf 42 699 Td (Identification) Tj ET
+BT /F1 10 Tf 42 682 Td (Request ID: ______  Date received: ______  Requestor role: ______) Tj ET
+BT /F1 10 Tf 42 665 Td () Tj ET
+BT /F1 10 Tf 42 648 Td (Purpose) Tj ET
+BT /F1 10 Tf 42 631 Td (Requested outcome: ______  Required by: ______  Source reference: ______) Tj ET
+BT /F1 10 Tf 42 614 Td () Tj ET
+BT /F1 10 Tf 42 597 Td (Routing and risk) Tj ET
+BT /F1 10 Tf 42 580 Td (Category: ______  Urgency evidence: ______  Privacy concern: ______  Assigned owner: ______) Tj ET
+BT /F1 10 Tf 42 563 Td () Tj ET
+BT /F1 10 Tf 42 546 Td (Decision and outcome) Tj ET
+BT /F1 10 Tf 42 529 Td (Clarification: ______  Action: ______  Approval reference: ______  Completion evidence:) Tj ET
+BT /F1 10 Tf 42 512 Td (______) Tj ET
+BT /F1 10 Tf 42 495 Td () Tj ET
+BT /F1 10 Tf 42 478 Td (FICTIONAL EXAMPLE ONLY - NOT AN APPROVED POLICY, LEGAL ADVICE OR EMPLOYER DOCUMENT.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1584
+%%EOF

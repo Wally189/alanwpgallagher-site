@@ -1,0 +1,64 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 2079 >>
+stream
+BT /F1 10 Tf 42 812 Td (WORKBENCH 2.0 / SYNTHETIC DEMONSTRATION) Tj ET
+BT /F1 10 Tf 42 795 Td () Tj ET
+BT /F1 17 Tf 42 778 Td (Standard operating procedure) Tj ET
+BT /F1 10 Tf 42 750 Td (Atlas Support Services - fictional SOP S-001 - Version 0.3 - NOT APPROVED) Tj ET
+BT /F1 10 Tf 42 733 Td () Tj ET
+BT /F1 10 Tf 42 716 Td () Tj ET
+BT /F1 10 Tf 42 699 Td (Trigger) Tj ET
+BT /F1 10 Tf 42 682 Td (A new request arrives in a fictional support mailbox.) Tj ET
+BT /F1 10 Tf 42 665 Td () Tj ET
+BT /F1 10 Tf 42 648 Td (1. Receive and safeguard) Tj ET
+BT /F1 10 Tf 42 631 Td (Record only necessary details. Do not place sensitive attachments in unrestricted working) Tj ET
+BT /F1 10 Tf 42 614 Td (folders.) Tj ET
+BT /F1 10 Tf 42 597 Td () Tj ET
+BT /F1 10 Tf 42 580 Td (2. Classify) Tj ET
+BT /F1 10 Tf 42 563 Td (Classify normal, urgent or out-of-scope against an approved definition; refer unclear) Tj ET
+BT /F1 10 Tf 42 546 Td (urgency to the service owner.) Tj ET
+BT /F1 10 Tf 42 529 Td () Tj ET
+BT /F1 10 Tf 42 512 Td (3. Assign) Tj ET
+BT /F1 10 Tf 42 495 Td (Name the responsible owner and record handoff acceptance. Escalate unowned requests at the) Tj ET
+BT /F1 10 Tf 42 478 Td (agreed checkpoint.) Tj ET
+BT /F1 10 Tf 42 461 Td () Tj ET
+BT /F1 10 Tf 42 444 Td (4. Process and record) Tj ET
+BT /F1 10 Tf 42 427 Td (Record decisions, missing information and current status for authorised staff.) Tj ET
+BT /F1 10 Tf 42 410 Td () Tj ET
+BT /F1 10 Tf 42 393 Td (5. Verify and close) Tj ET
+BT /F1 10 Tf 42 376 Td (Confirm the agreed action is complete, record outcome and retain evidence. Sample exceptions) Tj ET
+BT /F1 10 Tf 42 359 Td (for learning.) Tj ET
+BT /F1 10 Tf 42 342 Td () Tj ET
+BT /F1 10 Tf 42 325 Td (STOP conditions) Tj ET
+BT /F1 10 Tf 42 308 Td (Unknown legal basis, suspicious attachment, exposed personal data, absent approval or unsafe) Tj ET
+BT /F1 10 Tf 42 291 Td (handoff: stop and refer to the competent owner.) Tj ET
+BT /F1 10 Tf 42 274 Td () Tj ET
+BT /F1 10 Tf 42 257 Td (FICTIONAL EXAMPLE ONLY - NOT AN APPROVED POLICY, LEGAL ADVICE OR EMPLOYER DOCUMENT.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+2441
+%%EOF

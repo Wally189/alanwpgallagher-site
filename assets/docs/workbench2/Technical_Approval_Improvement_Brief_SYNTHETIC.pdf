@@ -1,0 +1,44 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Count 1 /Kids [4 0 R] >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 3 0 R >> >> /Contents 5 0 R >>
+endobj
+5 0 obj
+<< /Length 1068 >>
+stream
+BT /F1 10 Tf 40 804 Td (WORKBENCH 2.0 - SYNTHETIC PROCESS DEMONSTRATION) Tj ET
+BT /F1 10 Tf 40 778 Td (Technical approvals - process improvement brief) Tj ET
+BT /F1 10 Tf 40 752 Td (Fictional case: 24 invented technical approval requests.) Tj ET
+BT /F1 10 Tf 40 726 Td (Mean duration: 15.8 days, using the published example dataset.) Tj ET
+BT /F1 10 Tf 40 700 Td (Nine requests: missing specification.) Tj ET
+BT /F1 10 Tf 40 674 Td (Six requests: unclear ownership.) Tj ET
+BT /F1 10 Tf 40 648 Td (Five requests: market exception.) Tj ET
+BT /F1 10 Tf 40 622 Td (Four requests: supplier evidence.) Tj ET
+BT /F1 10 Tf 40 596 Td (These descriptive labels are not verified root causes.) Tj ET
+BT /F1 10 Tf 40 570 Td (Proposed test: minimum intake information and named triage responsibility.) Tj ET
+BT /F1 10 Tf 40 544 Td (Proposed test: explicit engineering exception review.) Tj ET
+BT /F1 10 Tf 40 518 Td (Measure completeness, unowned work, exception handling and timing.) Tj ET
+BT /F1 10 Tf 40 492 Td (No real employer outcome or claimed percentage improvement.) Tj ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000311 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1430
+%%EOF
